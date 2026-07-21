@@ -1,5 +1,22 @@
 const products = [
   {
+    id: 'art-147',
+    name: 'Gode Gonflable Premium – Volume Ajustable & Design Galaxy',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-147.jpg',
+    description: 'Conçu pour les amateurs de sensations personnalisées, ce modèle associe un système de gonflage innovant à un design inspiré des couleurs de l\'univers. Grâce à son volume ajustable, il permet d\'adapter progressivement les sensations selon vos envies.',
+    details: [
+      'Longueur totale : 16,2 cm',
+      'Longueur insérable : 12,7 cm',
+      'Diamètre du corps : 5,8 cm (jusqu\'à 6,5 cm gonflé)',
+      'Matière : Silicone premium au toucher doux',
+      'Système de gonflage manuel avec poire',
+      'Base évasée pour une excellente stabilité',
+      'Référence : ART-147'
+    ]
+  },
+  {
     id: 'art-165',
     name: 'Gode Vibrant XXL – Réalisme & Vibrations Intenses',
     category: 'Vibromasseurs',
