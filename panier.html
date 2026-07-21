@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panier | L'Extase des Sens</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        header { background: #fff; border-bottom: 1px solid #eaeaea; position: sticky; top: 0; z-index: 1000; width: 100%; }
-        .header-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: bold; font-size: 1.2rem; color: #000; text-decoration: none; }
-        nav { display: flex; gap: 20px; align-items: center; }
-        nav a { text-decoration: none; color: #333; font-size: 0.95rem; }
-        nav a.is-active, nav a:hover { color: #d63384; font-weight: 500; }
-        .cart-link { text-decoration: none; color: #000; font-weight: 500; }
-    </style>
 </head>
 <body>
 
@@ -27,30 +18,21 @@
                 <a href="guides.html">Guides</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <a href="panier.html" class="cart-link is-active">Panier <span data-cart-count>0</span></a>
+            <a href="panier.html" class="cart-link">Panier <span data-cart-count>0</span></a>
         </div>
     </header>
 
-    <!-- Contenu principal -->
     <main class="main-content">
-        <div style="max-width: 800px; margin: 30px auto; padding: 0 20px;">
+        <section class="section-container" style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
             <p style="color: #b5838d; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px;">VOTRE PANIER</p>
             <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Récapitulatif</h1>
 
-            <!-- Avertissement Ni repris ni échangé -->
-            <div style="background: #fff8f8; border: 1px solid #f5c6cb; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 0.9rem; color: #721c24; margin-bottom: 30px;">
-                <div style="font-size: 1.5em;">⚠️</div>
-                <div>
-                    <strong>Condition de vente :</strong> Pour des raisons d'hygiène et de sécurité, tous nos articles sont <strong>ni repris ni échangés</strong>.
-                </div>
+            <div data-cart-container>
+                <!-- Le contenu du panier géré par le script -->
             </div>
-
-            <!-- Conteneur ciblé par le script pour afficher les articles -->
-            <div id="cart-items" data-cart-container style="margin-top: 20px;"></div>
-        </div>
+        </section>
     </main>
 
-    <!-- Pied de page -->
     <footer style="padding: 20px 0; text-align: center; border-top: 1px solid #eaeaea; margin-top: 60px; color: #666; font-size: 0.9rem;">
         <div class="footer-container">
             <p>&copy; <span data-year></span> L'Extase des Sens. Tous droits réservés.</p>
