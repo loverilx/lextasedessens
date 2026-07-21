@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-149',
+    name: 'Gode Vibrant Premium – Design Arqué & Télécommande Sans Fil',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-149.jpg',
+    description: 'Conçu pour les amateurs de technologies et de confort, ce gode vibrant associe une silhouette légèrement arquée à un système de vibrations pilotable à distance. Son design bicolore moderne et sa prise en main ergonomique en font un modèle aussi élégant que performant.',
+    details: [
+      'Longueur totale : 18 cm',
+      'Diamètre : 3,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Télécommande sans fil incluse',
+      'Vibrations réglables (moteur performant)',
+      'Référence : ART-149'
+    ]
+  },
+  {
     id: 'art-167',
     name: 'Gode Ventouse Black Edition – Élégance Ébène & Grand Format',
     category: 'Gode',
