@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-152',
+    name: 'Gode Vibrant Premium – Élégance Pourpre & Sensations Profondes',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-152.jpg',
+    description: 'Conçu pour les amateurs de modèles élégants, ce gode vibrant associe une silhouette élancée, une légère courbure anatomique et des vibrations puissantes. Sa finition violette rehaussée de détails dorés lui confère un design raffiné, tout en offrant une expérience confortable et immersive.',
+    details: [
+      'Longueur totale : 22 cm',
+      'Diamètre : 3,9 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Vibrations réglables (moteur puissant)',
+      'Base ergonomique avec commandes intégrées',
+      'Référence : ART-152'
+    ]
+  },
+  {
     id: 'art-149',
     name: 'Gode Vibrant Premium – Design Arqué & Télécommande Sans Fil',
     category: 'Vibromasseurs',
