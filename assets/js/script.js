@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-144',
+    name: 'Kit d’Initiation BDSM & Bondage – Coffret Découverte Complet',
+    category: 'Accessoires',
+    price: 20.00,
+    image: 'assets/images/products/art-144.jpg',
+    description: 'Découvrez un ensemble complet pensé pour explorer l’univers du BDSM et du bondage en toute confiance. Ce kit réunit les accessoires essentiels pour créer une expérience basée sur la découverte, la complicité et la communication entre partenaires.',
+    details: [
+      'Système d’attache ajustable pour lit',
+      '4 menottes rembourrées pour poignets et chevilles',
+      'Paddle en similicuir pour stimulations progressives',
+      'Pinces à seins avec clochettes',
+      'Bandeau de privation sensorielle',
+      'Référence : ART-144'
+    ]
+  },
+  {
     id: 'art-145',
     name: 'Set de Cockrings Multi-Tailles & Design Géométrique',
     category: 'Accessoires',
