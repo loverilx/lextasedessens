@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-167',
+    name: 'Gode Ventouse Black Edition – Élégance Ébène & Grand Format',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-167.jpg',
+    description: 'Conçu pour les amateurs de modèles généreux, ce gode ventouse associe un design sobre et raffiné à des dimensions confortables. Sa finition noire intense met en valeur ses détails anatomiques et apporte une touche d\'élégance à cette pièce pensée pour les utilisateurs en quête de sensations de volume.',
+    details: [
+      'Longueur totale : 22 cm',
+      'Diamètre : 4,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-167'
+    ]
+  },
+  {
     id: 'art-166',
     name: 'Gode XXL Ventouse Premium – Grand Format & Réalisme Intense',
     category: 'Gode',
