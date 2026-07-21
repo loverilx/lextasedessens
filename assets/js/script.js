@@ -1,5 +1,23 @@
 const products = [
   {
+    id: 'art-151',
+    name: 'Gode Spiral Fantasy – Design Licorne Multicolore',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-151.jpg',
+    description: 'Apportez une touche d\'originalité à votre collection avec ce modèle au design inspiré de l\'univers fantasy. Sa silhouette torsadée, son dégradé de couleurs et sa forme évolutive en font un accessoire aussi esthétique qu\'agréable à découvrir.',
+    details: [
+      'Longueur totale : 19 cm',
+      'Diamètre du corps : 4,1 cm (jusqu\'à 5,5 cm max)',
+      'Matière : Silicone premium au toucher doux',
+      'Design fantasy avec texture en spirale',
+      'Dégradé multicolore élégant (violet vers bleu profond)',
+      'Forme conique progressive',
+      'Base évasée pour une excellente stabilité',
+      'Référence : ART-151'
+    ]
+  },
+  {
     id: 'art-150',
     name: 'Gode XL Bicolore Premium – Volume & Sensations Intenses',
     category: 'Gode',
