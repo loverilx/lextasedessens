@@ -1,5 +1,5 @@
 [
-  {"id":"eclat","name":"Éclat","category":"Vibromasseurs","price":49.90},
+  {"id":"art-143","name":"Gode Ventouse Premium","category":"Accessoires","price":25.00,"image":"assets/images/products/art-143.jpg","reference":"ART-143"},
   {"id":"velours","name":"Velours","category":"Bien-être","price":34.90},
   {"id":"aura","name":"Aura","category":"Jeux à deux","price":29.90},
   {"id":"lune","name":"Lune","category":"Accessoires","price":24.90},
