@@ -1,5 +1,20 @@
 const products = [
   {
+    id: 'art-166',
+    name: 'Gode XXL Ventouse Premium – Grand Format & Réalisme Intense',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-166.jpg',
+    description: 'Conçu pour les amateurs de modèles très généreux, ce gode XXL associe des dimensions imposantes à une finition anatomique soignée. Sa texture réaliste, son silicone premium et sa base ventouse renforcée en font un modèle pensé pour offrir une expérience confortable et immersive.',
+    details: [
+      'Longueur totale : 20 cm',
+      'Diamètre : 5,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse renforcée (mains libres)',
+      'Référence : ART-166'
+    ]
+  },
+  {
     id: 'art-164',
     name: 'Gode Ventouse Premium – Réalisme Anatomique & Format Confort',
     category: 'Gode',
