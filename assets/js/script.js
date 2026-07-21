@@ -508,7 +508,7 @@ function renderProduct() {
   if (!target) return;
   const product = products.find(item => item.id === new URLSearchParams(location.search).get('id')) || products[0];
   const image = product.image ? `<img src="${product.image}" alt="${product.name}">` : '';
-  target.innerHTML = `<div class="product-detail-art product-art-${products.indexOf(product) % 4}">${image}</div><div class="product-detail-info"><p class="eyebrow">${product.category}</p><h1>${product.name}</h1><p class="detail-price">${euro(product.price)}</p><p class="detail-description">${product.description}</p><ul>${product.details.map(detail => `<li>${detail}</li>`).join('')}</ul><button class="button button-dark" data-add-cart="${product.id}">Ajouter au panier <span>→</span></button><p class="detail-note">Expédition discrète · Paiement sécurisé via PayPal.Me.</p></div>`;
+  target.innerHTML = `<div class="product-detail-art product-art-${products.indexOf(product) % 4}">${image}</div><div class="product-detail-info"><p class="eyebrow">${product.category}</p><h1>${product.name}</h1><p class="detail-price">${euro(product.price)}</p><p class="detail-description">${product.description}</p><ul>${product.details.map(detail => `<li>${detail}</li>`).join('')}</ul><button class="button button-dark" data-add-cart="${product.id}">Ajouter au panier <span>→</span></button><p class="detail-note">Expédition discrète · Frais de port fixes de 6,00 € · Paiement sécurisé via PayPal.Me.</p></div>`;
   bindButtons();
 }
 
@@ -520,7 +520,10 @@ function renderCart() {
     target.innerHTML = '<p class="empty-cart">Votre panier est vide. <a href="boutique.html">Découvrir la boutique →</a></p>';
     return;
   }
-  const total = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  
+  const sousTotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  const fraisDePort = 6.00;
+  const total = sousTotal + fraisDePort;
   
   target.innerHTML = `
     <div class="cart-items">
@@ -542,9 +545,20 @@ function renderCart() {
       `).join('')}
     </div>
     <aside class="cart-summary">
-      <p>Sous-total</p>
-      <strong>${euro(total)}</strong>
-      <small>Cliquez ci-dessous pour régler directement via votre lien PayPal sécurisé.</small>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <span>Sous-total</span>
+        <span>${euro(sousTotal)}</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+        <span>Livraison</span>
+        <span>${euro(fraisDePort)}</span>
+      </div>
+      <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1em;">
+        <strong>Total</strong>
+        <strong>${euro(total)}</strong>
+      </div>
+      <small>Règlement sécurisé via votre lien PayPal.Me.</small>
       <a href="https://paypal.me/Loverilx/${total.toFixed(2)}EUR" target="_blank" class="button button-dark" id="paypal-checkout-btn" style="text-align: center; display: block; text-decoration: none; margin-top: 15px;">
         Payer ${euro(total)} avec PayPal <span>→</span>
       </a>
