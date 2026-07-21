@@ -1,1 +1,10 @@
-[{"id":"eclat","name":"Éclat","category":"Vibromasseur","price":49.9},{"id":"velours","name":"Velours","category":"Bien-être","price":34.9},{"id":"aura","name":"Aura","category":"Jeux à deux","price":29.9},{"id":"lune","name":"Lune","category":"Accessoire","price":24.9}]
+[
+  {"id":"eclat","name":"Éclat","category":"Vibromasseurs","price":49.90},
+  {"id":"velours","name":"Velours","category":"Bien-être","price":34.90},
+  {"id":"aura","name":"Aura","category":"Jeux à deux","price":29.90},
+  {"id":"lune","name":"Lune","category":"Accessoires","price":24.90},
+  {"id":"soie","name":"Soie","category":"Bien-être","price":19.90},
+  {"id":"secret","name":"Secret","category":"Jeux à deux","price":39.90},
+  {"id":"rive","name":"Rive","category":"Vibromasseurs","price":54.90},
+  {"id":"nuit","name":"Nuit","category":"Accessoires","price":17.90}
+]
