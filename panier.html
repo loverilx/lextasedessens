@@ -7,16 +7,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/js/script.js"></script>
     <style>
-        /* Correction pour centrer et aligner proprement les articles du panier */
-        [data-cart-page] img, [data-cart-page] .cart-item-image, [data-cart-page] svg {
-            display: block;
-            margin: auto;
+        /* Style pour harmoniser l'affichage du logo dans le panier */
+        [data-cart-page] img, [data-cart-page] svg, [data-cart-page] canvas {
+            max-width: 80px !important;
+            max-height: 80px !important;
             object-fit: contain;
-        }
-        [data-cart-page] > div, [data-cart-page] .cart-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -54,5 +50,24 @@
             <section data-cart-page></section>
         </div>
     </main>
+
+    <!-- Script pour remplacer les images du panier par votre logo -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const imagesPanier = document.querySelectorAll('[data-cart-page] img, [data-cart-page] svg, [data-cart-page] canvas');
+                imagesPanier.forEach(el => {
+                    // Remplace l'élément par une image propre pointant vers votre logo (à adapter si besoin selon le chemin de votre logo)
+                    const logoImg = document.createElement('img');
+                    logoImg.src = 'assets/images/logo.png'; // Remplacez par le chemin exact de votre logo si nécessaire
+                    logoImg.alt = "L'Extase des Sens";
+                    logoImg.style.width = '70px';
+                    logoImg.style.height = '70px';
+                    logoImg.style.objectFit = 'contain';
+                    el.replaceWith(logoImg);
+                });
+            }, 100); // Petit délai pour laisser le script.js d'origine charger le panier d'abord
+        });
+    </script>
 </body>
 </html>
