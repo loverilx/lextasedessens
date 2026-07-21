@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-145',
+    name: 'Set de Cockrings Multi-Tailles & Design Géométrique',
+    category: 'Accessoires',
+    price: 10.00,
+    image: 'assets/images/products/art-145.jpg',
+    description: 'Découvrez un ensemble complet de cockrings pensé pour varier les sensations et s’adapter facilement aux différentes morphologies. Avec son design octogonal moderne et ses multiples tailles, ce coffret permet une utilisation progressive et personnalisée.',
+    details: [
+      'Design octogonal géométrique original',
+      'Coffret complet de 9 pièces multi-tailles',
+      'Modèle spécifique triple anneau inclus',
+      'Silicone souple haute qualité',
+      'Finition douce "Soft Touch" mat',
+      'Référence : ART-145'
+    ]
+  },
+  {
     id: 'art-153',
     name: 'Douche Intime Portable Multifonction – Hygiène & Confort',
     category: 'Bien-être',
