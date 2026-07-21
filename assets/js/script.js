@@ -521,6 +521,11 @@ function renderProduct() {
   bindButtons();
 }
 
+// Variables pour stocker la réduction et le lien Google Sheet
+let appliedDiscount = 0; 
+let appliedPromoCode = '';
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwsn4wfCZ0t5CpHfQNLxDNI-tOW3lUCzjsrquBBguG69Qi-5XrRr-K4X7Dq3Ve2GpkkEw/exec";
+
 function renderCart() {
   const target = document.querySelector('[data-cart-page]');
   if (!target) return;
@@ -533,7 +538,10 @@ function renderCart() {
   
   const sousTotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   const fraisDePort = 6.00;
-  const total = sousTotal + fraisDePort;
+  
+  // Calcul de la remise selon le taux enregistré
+  const discountAmount = sousTotal * appliedDiscount;
+  const total = sousTotal - discountAmount + fraisDePort;
   
   target.innerHTML = `
     <div class="cart-items">
@@ -557,10 +565,22 @@ function renderCart() {
       `;}).join('')}
     </div>
     <aside class="cart-summary" style="margin-top: 30px; background: #fafafa; padding: 20px; border-radius: 8px;">
+      <!-- Bloc Code Promo -->
+      <div style="margin-bottom: 15px; display: flex; gap: 10px;">
+        <input type="text" id="promo-input" placeholder="Votre code promo" value="${appliedPromoCode}" style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; text-transform: uppercase;">
+        <button id="apply-promo-btn" style="padding: 8px 12px; background: #111; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Appliquer</button>
+      </div>
+      <p id="promo-msg" style="font-size: 0.85rem; margin: -5px 0 15px 0; color: ${appliedPromoCode ? 'green' : '#666'};">${appliedPromoCode ? `Code appliqué (-${appliedDiscount * 100}%) !` : ''}</p>
+
       <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
         <span>Sous-total</span>
         <span>${euro(sousTotal)}</span>
       </div>
+      ${discountAmount > 0 ? `
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px; color: #28a745;">
+        <span>Réduction</span>
+        <span>-${euro(discountAmount)}</span>
+      </div>` : ''}
       <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
         <span>Livraison</span>
         <span>${euro(fraisDePort)}</span>
@@ -577,6 +597,7 @@ function renderCart() {
     </aside>
   `;
 
+  // Gestion des quantités
   document.querySelectorAll('[data-change]').forEach(button => button.addEventListener('click', () => {
     const cart = getCart(), item = cart.find(entry => entry.id === button.dataset.quantity);
     item.quantity += Number(button.dataset.change);
@@ -584,10 +605,60 @@ function renderCart() {
     renderCart();
   }));
 
+  // Suppression d'un article
   document.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
     setCart(getCart().filter(item => item.id !== button.dataset.remove));
     renderCart();
   }));
+
+  // Vérification du code promo via Google Sheets
+  const promoBtn = document.getElementById('apply-promo-btn');
+  promoBtn?.addEventListener('click', async () => {
+    const inputVal = document.getElementById('promo-input').value.trim().toUpperCase();
+    const msgEl = document.getElementById('promo-msg');
+
+    if (!inputVal) return;
+
+    msgEl.style.color = '#666';
+    msgEl.textContent = "Vérification en cours...";
+
+    try {
+      const response = await fetch(`${WEB_APP_URL}?code=${inputVal}&action=check`);
+      const result = await response.json();
+
+      if (result.status === "valid") {
+        appliedPromoCode = inputVal;
+        appliedDiscount = inputVal.includes("10") ? 0.10 : 0.05;
+        
+        msgEl.style.color = 'green';
+        msgEl.textContent = `Code appliqué : -${appliedDiscount * 100}% !`;
+        renderCart();
+      } else if (result.status === "used") {
+        appliedPromoCode = '';
+        appliedDiscount = 0;
+        msgEl.style.color = '#d9534f';
+        msgEl.textContent = "Ce code a déjà été utilisé.";
+        renderCart();
+      } else {
+        appliedPromoCode = '';
+        appliedDiscount = 0;
+        msgEl.style.color = '#d9534f';
+        msgEl.textContent = "Code promo inconnu.";
+        renderCart();
+      }
+    } catch (error) {
+      msgEl.style.color = '#d9534f';
+      msgEl.textContent = "Erreur de connexion au serveur.";
+    }
+  });
+
+  // Consommation définitive du code dès que le client clique sur PayPal pour payer
+  const paypalBtn = document.getElementById('paypal-checkout-btn');
+  paypalBtn?.addEventListener('click', () => {
+    if (appliedPromoCode) {
+      fetch(`${WEB_APP_URL}?code=${appliedPromoCode}&action=use`).catch(() => {});
+    }
+  });
 }
 
 const toggle = document.querySelector('[data-menu-toggle]'), menu = document.querySelector('[data-menu]');
