@@ -1,5 +1,22 @@
 const products = [
   {
+    id: 'art-154',
+    name: 'Gode Vibrant Double Stimulation – Réalisme & Stimulateur Externe',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-154.jpg',
+    description: 'Conçu pour offrir une expérience complète, ce modèle associe une texture réaliste, des vibrations intégrées et un stimulateur externe. Son design ergonomique permet de combiner plusieurs types de stimulation dans un seul accessoire, tout en conservant un format confortable et facile à utiliser.',
+    details: [
+      'Longueur totale : 18 cm',
+      'Diamètre : 4 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Stimulateur externe intégré',
+      'Vibrations réglables',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-154'
+    ]
+  },
+  {
     id: 'art-152',
     name: 'Gode Vibrant Premium – Élégance Pourpre & Sensations Profondes',
     category: 'Vibromasseurs',
