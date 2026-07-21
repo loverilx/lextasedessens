@@ -27,7 +27,7 @@
                 <a href="guides.html">Guides</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <a href="panier.html" class="cart-link is-active">Panier <span data-cart-count>1</span></a>
+            <a href="panier.html" class="cart-link is-active">Panier <span data-cart-count>0</span></a>
         </div>
     </header>
 
@@ -45,22 +45,9 @@
                 </div>
             </div>
 
-            <!-- Bloc affichage du produit dans le panier -->
-            <div style="background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <div>
-                    <h3 style="margin: 0 0 5px 0; font-size: 1.1rem;">Article sélectionné</h3>
-                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Quantité : 1</p>
-                </div>
-                <div style="text-align: right;">
-                    <a href="boutique.html" style="font-size: 0.85rem; color: #d63384; text-decoration: underline;">Modifier / Vider</a>
-                </div>
-            </div>
-
-            <!-- Bouton de validation / Paiement -->
-            <div style="text-align: right; margin-top: 30px;">
-                <a href="https://www.paypal.com" target="_blank" style="background: #0070ba; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block;">
-                    Procéder au paiement (PayPal)
-                </a>
+            <!-- C'est ici que le JavaScript va injecter dynamiquement le détail des articles du panier -->
+            <div data-cart-container>
+                <p style="color: #666; font-style: italic;">Votre panier est vide ou en cours de chargement...</p>
             </div>
         </div>
     </main>
