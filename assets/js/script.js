@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-155',
+    name: 'Gode Éjaculateur Premium – Réalisme & Effet Éjaculation',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-155.jpg',
+    description: 'Conçu pour les amateurs de réalisme, ce modèle associe une finition anatomique soignée à un système permettant de simuler une éjaculation. Son format équilibré, sa texture détaillée et sa base ventouse en font un accessoire pensé pour offrir une expérience immersive.',
+    details: [
+      'Longueur totale : 16 cm',
+      'Diamètre : 3,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Système de simulation d\'éjaculation intégré (réservoir & pompe)',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-155'
+    ]
+  },
+  {
     id: 'art-154',
     name: 'Gode Vibrant Double Stimulation – Réalisme & Stimulateur Externe',
     category: 'Vibromasseurs',
