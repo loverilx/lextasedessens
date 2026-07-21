@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-161',
+    name: 'Gode Ventouse Premium – Réalisme Anatomique & Format Équilibré',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-161.jpg',
+    description: 'Conçu pour les amateurs de réalisme, ce gode ventouse associe une silhouette harmonieuse à des finitions anatomiques particulièrement soignées. Son format polyvalent, sa texture détaillée et son silicone premium en font un modèle idéal pour une expérience naturelle, confortable et immersive.',
+    details: [
+      'Longueur totale : 17 cm',
+      'Diamètre : 4,1 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-161'
+    ]
+  },
+  {
     id: 'art-160',
     name: 'Gode Ventouse Premium – Réalisme Anatomique & Format Polyvalent',
     category: 'Gode',
