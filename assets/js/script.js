@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-162',
+    name: 'Gode Ventouse Premium – Format Compact & Sensations de Volume',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-162.jpg',
+    description: 'Conçu pour les amateurs de modèles compacts, ce gode ventouse privilégie un diamètre généreux afin d\'offrir une sensation de volume dès les premiers instants. Son design réaliste, sa texture soignée et son silicone premium en font un modèle aussi confortable qu\'élégant.',
+    details: [
+      'Longueur totale : 15 cm',
+      'Diamètre : 4,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-162'
+    ]
+  },
+  {
     id: 'art-161',
     name: 'Gode Ventouse Premium – Réalisme Anatomique & Format Équilibré',
     category: 'Gode',
