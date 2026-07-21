@@ -1,5 +1,22 @@
 const products = [
   {
+    id: 'art-150',
+    name: 'Gode XL Bicolore Premium – Volume & Sensations Intenses',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-150.jpg',
+    description: 'Conçu pour les amateurs de modèles généreux, ce gode XL associe un design élégant, des dimensions imposantes et une finition soignée. Son dégradé de couleurs et sa forme ergonomique en font un accessoire aussi esthétique que performant.',
+    details: [
+      'Longueur totale : 23 cm',
+      'Diamètre du corps : 5 cm (jusqu\'à 7,3 cm max)',
+      'Matière : Silicone premium au toucher doux',
+      'Dégradé bicolore moderne (rose vers violet)',
+      'Forme progressive & pointe affinée',
+      'Base évasée pour une excellente stabilité',
+      'Référence : ART-150'
+    ]
+  },
+  {
     id: 'art-147',
     name: 'Gode Gonflable Premium – Volume Ajustable & Design Galaxy',
     category: 'Gode',
