@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-153',
+    name: 'Douche Intime Portable Multifonction – Hygiène & Confort',
+    category: 'Bien-être',
+    price: 20.00,
+    image: 'assets/images/products/art-153.jpg',
+    description: 'Découvrez une solution pratique et discrète dédiée au bien-être intime et à l’hygiène personnelle. Grâce à son format compact et ses différents embouts interchangeables, cette douche intime permet une utilisation simple à la maison comme en déplacement.',
+    details: [
+      'Format nomade compact et transportable',
+      'Embouts interchangeables inclus',
+      'Canule ergonomique inclinée',
+      'Système de pompage par tuyau d’aspiration',
+      'Coffret de rangement compartimenté inclus',
+      'Référence : ART-153'
+    ]
+  },
+  {
     id: 'art-140',
     name: 'Douche Intime Électrique Rechargeable – Hygiène & Confort Premium',
     category: 'Bien-être',
