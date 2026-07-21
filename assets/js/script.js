@@ -438,62 +438,6 @@ const products = [
       'Compatible avec les harnais',
       'Référence : ART-143'
     ]
-  },
-  {
-    id: 'velours',
-    name: 'Velours',
-    category: 'Bien-être',
-    price: 34.90,
-    description: 'Une attention délicate pour transformer chaque moment en rituel.',
-    details: ['Texture veloutée', 'Format compact', 'Nettoyage facile']
-  },
-  {
-    id: 'aura',
-    name: 'Aura',
-    category: 'Jeux à deux',
-    price: 29.90,
-    description: 'Pensé pour partager de nouveaux instants de complicité.',
-    details: ['Souple et léger', 'Adapté aux débutants', 'Guide inclus']
-  },
-  {
-    id: 'lune',
-    name: 'Lune',
-    category: 'Accessoires',
-    price: 24.90,
-    description: 'Un essentiel élégant qui accompagne vos moments intimes.',
-    details: ['Design discret', 'Matière body-safe', 'Pochette de rangement']
-  },
-  {
-    id: 'soie',
-    name: 'Soie',
-    category: 'Bien-être',
-    price: 19.90,
-    description: 'Un soin sensoriel pour prolonger vos instants de douceur.',
-    details: ['Formule douce', 'Parfum délicat', 'Format 100 ml']
-  },
-  {
-    id: 'secret',
-    name: 'Secret',
-    category: 'Jeux à deux',
-    price: 39.90,
-    description: 'Un jeu complice pour explorer vos envies à deux.',
-    details: ['Cartes d’inspiration', 'Règles simples', 'Pour deux adultes']
-  },
-  {
-    id: 'rive',
-    name: 'Rive',
-    category: 'Vibromasseurs',
-    price: 54.90,
-    description: 'Des vibrations modulables dans une silhouette raffinée.',
-    details: ['Plusieurs intensités', 'Rechargeable USB', 'Étanche']
-  },
-  {
-    id: 'nuit',
-    name: 'Nuit',
-    category: 'Accessoires',
-    price: 17.90,
-    description: 'Un accessoire sensuel pour créer une atmosphère à votre image.',
-    details: ['Tissu satiné', 'Taille ajustable', 'Lavable à la main']
   }
 ];
 
