@@ -537,24 +537,26 @@ function renderCart() {
   
   target.innerHTML = `
     <div class="cart-items">
-      ${items.map(item => `
-        <article class="cart-item">
-          <div class="cart-mini-art product-art-${products.indexOf(item.product) % 4}"></div>
-          <div>
-            <p class="product-category">${item.product.category}</p>
-            <h2>${item.product.name}</h2>
-            <strong>${euro(item.product.price)}</strong>
+      ${items.map(item => {
+        const itemImage = item.product.image ? `<img src="${item.product.image}" alt="${item.product.name}" style="width: 70px; height: 70px; object-fit: cover; border-radius: 6px; flex-shrink: 0;">` : '';
+        return `
+        <article class="cart-item" style="display: flex; align-items: center; gap: 20px; padding: 15px 0; border-bottom: 1px solid #eee;">
+          ${itemImage}
+          <div style="flex-grow: 1;">
+            <p class="product-category" style="margin: 0; font-size: 0.85rem; color: #666;">${item.product.category}</p>
+            <h2 style="margin: 4px 0; font-size: 1.05rem;">${item.product.name}</h2>
+            <strong style="color: #111;">${euro(item.product.price)}</strong>
           </div>
-          <div class="cart-quantity">
-            <button data-quantity="${item.product.id}" data-change="-1">−</button>
+          <div class="cart-quantity" style="display: flex; align-items: center; gap: 10px;">
+            <button data-quantity="${item.product.id}" data-change="-1" style="padding: 2px 8px; cursor: pointer;">−</button>
             <span>${item.quantity}</span>
-            <button data-quantity="${item.product.id}" data-change="1">+</button>
+            <button data-quantity="${item.product.id}" data-change="1" style="padding: 2px 8px; cursor: pointer;">+</button>
           </div>
-          <button class="remove-item" data-remove="${item.product.id}">Supprimer</button>
+          <button class="remove-item" data-remove="${item.product.id}" style="background: none; border: none; color: #d9534f; cursor: pointer; text-decoration: underline;">Supprimer</button>
         </article>
-      `).join('')}
+      `;}).join('')}
     </div>
-    <aside class="cart-summary">
+    <aside class="cart-summary" style="margin-top: 30px; background: #fafafa; padding: 20px; border-radius: 8px;">
       <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
         <span>Sous-total</span>
         <span>${euro(sousTotal)}</span>
