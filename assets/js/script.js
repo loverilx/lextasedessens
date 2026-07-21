@@ -1,5 +1,22 @@
 const products = [
   {
+    id: 'art-158',
+    name: 'Gode Chauffant & Vibrant XL – Réalisme & Confort Premium',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-158.jpg',
+    description: 'Conçu pour les amateurs de sensations réalistes, ce gode chauffant et vibrant associe une finition anatomique soignée à des technologies avancées pour offrir une expérience immersive. Son format XL, sa fonction chauffante et ses vibrations personnalisables en font un modèle alliant confort, performance et élégance.',
+    details: [
+      'Longueur totale : 18 cm',
+      'Diamètre : 4 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Fonction chauffante intégrée',
+      'Vibrations réglables',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-158'
+    ]
+  },
+  {
     id: 'art-156',
     name: 'Gode Chauffant & Vibrant Premium – Réalisme & Double Technologie',
     category: 'Vibromasseurs',
