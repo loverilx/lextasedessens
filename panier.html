@@ -6,7 +6,6 @@
     <title>Panier | L'Extase des Sens</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Style de sécurité pour le menu et la mise en page */
         header { background: #fff; border-bottom: 1px solid #eaeaea; position: sticky; top: 0; z-index: 1000; width: 100%; }
         .header-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: bold; font-size: 1.2rem; color: #000; text-decoration: none; }
@@ -28,7 +27,7 @@
                 <a href="guides.html">Guides</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <a href="panier.html" class="cart-link is-active">Panier <span data-cart-count>0</span></a>
+            <a href="panier.html" class="cart-link is-active">Panier <span data-cart-count>1</span></a>
         </div>
     </header>
 
@@ -45,12 +44,23 @@
                     <strong>Condition de vente :</strong> Pour des raisons d'hygiène et de sécurité, tous nos articles sont <strong>ni repris ni échangés</strong>.
                 </div>
             </div>
-        </div>
 
-        <!-- Section conteneur pour le panier dynamique géré par le script.js -->
-        <div class="section-container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-            <div data-cart-container>
-                <!-- Le contenu du panier s'affichera ici automatiquement via script.js -->
+            <!-- Bloc affichage du produit dans le panier -->
+            <div style="background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <div>
+                    <h3 style="margin: 0 0 5px 0; font-size: 1.1rem;">Article sélectionné</h3>
+                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Quantité : 1</p>
+                </div>
+                <div style="text-align: right;">
+                    <a href="boutique.html" style="font-size: 0.85rem; color: #d63384; text-decoration: underline;">Modifier / Vider</a>
+                </div>
+            </div>
+
+            <!-- Bouton de validation / Paiement -->
+            <div style="text-align: right; margin-top: 30px;">
+                <a href="https://www.paypal.com" target="_blank" style="background: #0070ba; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block;">
+                    Procéder au paiement (PayPal)
+                </a>
             </div>
         </div>
     </main>
