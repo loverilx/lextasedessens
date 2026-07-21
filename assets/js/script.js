@@ -1,5 +1,22 @@
 const products = [
   {
+    id: 'art-148',
+    name: 'Gode Ventouse Lava Réaliste – Texture Peau & Design Organique',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-148.jpg',
+    description: 'Découvrez un modèle au design spectaculaire combinant réalisme, texture travaillée et sensations intenses. Avec son apparence inspirée de la roche en fusion et ses détails anatomiques soignés, ce gode apporte une expérience visuelle et sensorielle originale.',
+    details: [
+      'Longueur totale : 21,6 cm',
+      'Diamètre : 5,1 cm',
+      'Silicone haute densité au toucher doux',
+      'Design original marbré effet "Lava" (noir et orange)',
+      'Texture ultra-réaliste avec reliefs anatomiques',
+      'Base ventouse renforcée (mains libres)',
+      'Référence : ART-148'
+    ]
+  },
+  {
     id: 'art-142',
     name: 'Stimulateur Connecté Va-et-Vient & Vibrations Premium',
     category: 'Vibromasseurs',
