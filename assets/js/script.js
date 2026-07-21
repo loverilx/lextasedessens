@@ -1,5 +1,21 @@
 const products = [
   {
+    id: 'art-140',
+    name: 'Douche Intime Électrique Rechargeable – Hygiène & Confort Premium',
+    category: 'Bien-être',
+    price: 20.00,
+    image: 'assets/images/products/art-140.jpg',
+    description: 'Découvrez une solution moderne dédiée au bien-être intime et à l’hygiène personnelle. Cette douche intime électrique rechargeable associe simplicité d’utilisation, confort et technologie pour une routine d’hygiène plus pratique.',
+    details: [
+      'Système électrique automatique motorisé',
+      'Réservoir intégré transparent',
+      'Embout ergonomique souple (silicone & ABS)',
+      'Rechargeable via USB',
+      'Format pratique et discret',
+      'Référence : ART-140'
+    ]
+  },
+  {
     id: 'art-148',
     name: 'Gode Ventouse Lava Réaliste – Texture Peau & Design Organique',
     category: 'Gode',
