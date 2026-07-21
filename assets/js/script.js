@@ -444,7 +444,16 @@ const products = [
 const euro = value => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(value);
 const cartKey = 'extase-cart';
 const getCart = () => JSON.parse(localStorage.getItem(cartKey) || '[]');
-const cartCount = () => getCart().reduce((n, item) => n + item.quantity, 0);
+
+const cartCount = () => {
+  const cart = getCart();
+  const items = cart.map(item => ({ ...item, product: products.find(product => product.id === item.id) })).filter(item => item.product);
+  if (items.length === 0) {
+    if (cart.length > 0) localStorage.removeItem(cartKey);
+    return 0;
+  }
+  return items.reduce((n, item) => n + item.quantity, 0);
+};
 
 function updateCartCount() {
   document.querySelectorAll('[data-cart-count]').forEach(el => el.textContent = cartCount());
@@ -518,6 +527,7 @@ function renderCart() {
   const cart = getCart(), items = cart.map(item => ({ ...item, product: products.find(product => product.id === item.id) })).filter(item => item.product);
   if (!items.length) {
     target.innerHTML = '<p class="empty-cart">Votre panier est vide. <a href="boutique.html">Découvrir la boutique →</a></p>';
+    updateCartCount();
     return;
   }
   
