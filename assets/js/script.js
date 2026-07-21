@@ -1,5 +1,22 @@
 const products = [
   {
+    id: 'art-156',
+    name: 'Gode Chauffant & Vibrant Premium – Réalisme & Double Technologie',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-156.jpg',
+    description: 'Conçu pour les amateurs de sensations réalistes, ce gode associe une finition anatomique soignée à une double technologie de pointe. Grâce à sa fonction chauffante et à ses vibrations personnalisables, il offre une expérience immersive tout en conservant un format équilibré et facile à prendre en main.',
+    details: [
+      'Longueur totale : 16 cm',
+      'Diamètre : 4 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Fonction chauffante intégrée',
+      'Vibrations réglables',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-156'
+    ]
+  },
+  {
     id: 'art-155',
     name: 'Gode Éjaculateur Premium – Réalisme & Effet Éjaculation',
     category: 'Gode',
