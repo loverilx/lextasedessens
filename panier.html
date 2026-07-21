@@ -1,1 +1,45 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Panier | L’Extase des Sens</title><link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/script.js"></script></head><body><header class="site-header is-scrolled" data-header><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">E</span><span>L'Extase<br><em>des Sens</em></span></a><nav class="main-nav"><a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="blog.html">Guides</a><a href="contact.html">Contact</a><a class="nav-cart is-current" href="panier.html">Panier <span data-cart-count>0</span></a></nav></div></header><main class="cart-main"><div class="container"><p class="eyebrow">Votre sélection</p><h1>Votre panier</h1><section data-cart-page></section></div></main></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Panier | L’Extase des Sens</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+    <header class="site-header is-scrolled" data-header>
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">E</span>
+                <span>L'Extase<br><em>des Sens</em></span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Accueil</a>
+                <a href="boutique.html">Boutique</a>
+                <a href="blog.html">Guides</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cart is-current" href="panier.html">Panier <span data-cart-count>0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <div class="container">
+            <p class="eyebrow">Votre sélection</p>
+            <h1>Votre panier</h1>
+
+            <!-- Avertissement Ni repris ni échangé -->
+            <div style="background: #fff8f8; border: 1px solid #f5c6cb; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 0.9rem; color: #721c24; margin-bottom: 25px;">
+                <div style="font-size: 1.5em;">⚠️</div>
+                <div>
+                    <strong>Condition de vente :</strong> Pour des raisons d'hygiène et de sécurité, tous nos articles sont <strong>ni repris ni échangés</strong>.
+                </div>
+            </div>
+
+            <!-- Conteneur officiel du panier géré par script.js -->
+            <section data-cart-page></section>
+        </div>
+    </main>
+</body>
+</html>
