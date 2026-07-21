@@ -1,5 +1,23 @@
 const products = [
   {
+    id: 'art-142',
+    name: 'Stimulateur Connecté Va-et-Vient & Vibrations Premium',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-142.jpg',
+    description: 'Découvrez une nouvelle génération de stimulateurs connectés alliant mouvement automatique, vibrations puissantes et contrôle intelligent. Conçu pour offrir une expérience immersive, ce modèle associe plusieurs technologies dans un design élégant et performant.',
+    details: [
+      'Longueur totale : 14,33 cm',
+      'Diamètre : 3,32 cm (pointe) à 3,88 cm (zone texturée)',
+      'Mouvement automatique de va-et-vient motorisé',
+      'Vibrations puissantes & réglables',
+      'Contrôle intelligent par smartphone (App) & télécommande',
+      'Base ventouse stable (mains libres)',
+      'Rechargeable',
+      'Référence : ART-142'
+    ]
+  },
+  {
     id: 'art-151',
     name: 'Gode Spiral Fantasy – Design Licorne Multicolore',
     category: 'Gode',
