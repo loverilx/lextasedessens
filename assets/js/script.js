@@ -530,24 +530,31 @@ function renderCart() {
   const target = document.querySelector('[data-cart-page]');
   if (!target) return;
   
-  // Vérifier si l'URL indique qu'on est sur l'écran de validation/remerciement
+  // Vérifier si l'URL indique qu'on est sur l'écran de validation/remerciement (corrigé et aéré)
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('success') === 'true') {
     const totalPay = urlParams.get('total') || '0.00';
     target.innerHTML = `
-      <div style="max-width: 600px; margin: 40px auto; background: #fafafa; padding: 30px; border-radius: 8px; text-align: center; border: 1px solid #ddd;">
-        <h2 style="color: #28a745; margin-top: 0;">Commande enregistrée avec succès !</h2>
-        <p style="font-size: 1.05rem; line-height: 1.5; color: #333;">
+      <div style="max-width: 650px; margin: 50px auto; background: #ffffff; padding: 40px; border-radius: 12px; text-align: center; border: 1px solid #e5e5e5; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <div style="font-size: 3rem; margin-bottom: 15px;">✨</div>
+        <h2 style="color: #28a745; margin-top: 0; font-size: 1.8rem; margin-bottom: 20px;">Commande enregistrée avec succès !</h2>
+        
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 15px;">
           Merci pour votre confiance. Vos coordonnées et votre panier ont bien été transmis.
         </p>
-        <p style="font-size: 0.95rem; color: #666; margin-bottom: 25px;">
-          Pour finaliser votre commande d'un montant de <strong>${totalPay} €</strong>, veuillez procéder au paiement sécurisé via notre lien PayPal.Me :
+        
+        <p style="font-size: 1rem; color: #666; line-height: 1.5; margin-bottom: 30px;">
+          Pour finaliser votre commande d'un montant total de <strong style="color: #111; font-size: 1.2rem;">${totalPay} €</strong>, veuillez procéder au paiement sécurisé via notre lien PayPal.Me :
         </p>
-        <a href="https://paypal.me/Loverilx/${totalPay}EUR" target="_blank" class="button button-dark" style="display: inline-block; background: #0070ba; color: #fff; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-bottom: 20px;">
-          Payer ${totalPay} € sur PayPal.Me →
-        </a>
-        <p style="font-size: 0.8rem; color: #999; margin-top: 15px;">
-          Une fois le paiement effectué, votre commande sera préparée et expédiée discrètement. Vous pouvez fermer cette page après le paiement.
+        
+        <div style="margin-bottom: 30px;">
+          <a href="https://paypal.me/Loverilx/${totalPay}EUR" target="_blank" class="button button-dark" style="display: inline-block; background: #0070ba; color: #fff; padding: 15px 35px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,112,186,0.2);">
+            Payer ${totalPay} € sur PayPal.Me →
+          </a>
+        </div>
+        
+        <p style="font-size: 0.85rem; color: #888; border-top: 1px solid #eee; padding-top: 20px; margin-top: 20px; line-height: 1.4;">
+          Une fois le paiement effectué, votre commande sera préparée et expédiée discrètement.<br>Vous pouvez fermer cette page en toute sécurité après votre règlement.
         </p>
       </div>
     `;
@@ -719,7 +726,6 @@ function renderCart() {
       return;
     }
 
-    // Vérification basique du format e-mail
     if (!emailInput.includes('@') || !emailInput.includes('.')) {
       alert('Veuillez entrer une adresse e-mail valide.');
       return;
@@ -751,7 +757,6 @@ function renderCart() {
 
       localStorage.removeItem(cartKey);
 
-      // Redirection vers la page de remerciement interne au site au lieu de PayPal direct
       window.location.href = `panier.html?success=true&total=${total.toFixed(2)}`;
 
     } catch (e) {
