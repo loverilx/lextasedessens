@@ -530,33 +530,34 @@ function renderCart() {
   const target = document.querySelector('[data-cart-page]');
   if (!target) return;
   
-  // Vérification écran de succès avec formatage strict en bloc pour éviter les colonnes parasites
+  // Écran de succès avec forçage absolu anti-flex via !important
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('success') === 'true') {
     const totalPay = urlParams.get('total') || '0.00';
+    target.style.cssText = "display: block !important; width: 100% !important; float: none !important;";
     target.innerHTML = `
-      <div style="width: 100%; display: block; text-align: center; margin: 40px 0;">
-        <div style="max-width: 600px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 12px; border: 1px solid #e5e5e5; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; box-sizing: border-box;">
+      <div style="width: 100% !important; display: block !important; text-align: center !important; margin: 40px auto !important; float: none !important; clear: both !important;">
+        <div style="max-width: 600px !important; width: 100% !important; margin: 0 auto !important; background: #ffffff !important; padding: 40px !important; border-radius: 12px !important; border: 1px solid #e5e5e5 !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; text-align: center !important; box-sizing: border-box !important; display: block !important; float: none !important;">
           
-          <div style="font-size: 3rem; margin-bottom: 15px; display: block; width: 100%;">✨</div>
+          <div style="font-size: 3rem !important; margin-bottom: 15px !important; display: block !important; width: 100% !important;">✨</div>
           
-          <h2 style="color: #28a745; font-size: 1.8rem; margin: 0 0 20px 0; display: block; width: 100%;">Commande enregistrée avec succès !</h2>
+          <h2 style="color: #28a745 !important; font-size: 1.8rem !important; margin: 0 0 20px 0 !important; display: block !important; width: 100% !important;">Commande enregistrée avec succès !</h2>
           
-          <p style="font-size: 1.1rem; line-height: 1.6; color: #444; margin: 0 0 15px 0; display: block; width: 100%;">
+          <p style="font-size: 1.1rem !important; line-height: 1.6 !important; color: #444 !important; margin: 0 0 15px 0 !important; display: block !important; width: 100% !important;">
             Merci pour votre confiance. Vos coordonnées et votre panier ont bien été transmis.
           </p>
           
-          <p style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0 0 30px 0; display: block; width: 100%;">
-            Pour finaliser votre commande d'un montant total de <strong style="color: #111; font-size: 1.2rem;">${totalPay} €</strong>, veuillez procéder au paiement sécurisé via notre lien PayPal.Me :
+          <p style="font-size: 1rem !important; color: #666 !important; line-height: 1.5 !important; margin: 0 0 30px 0 !important; display: block !important; width: 100% !important;">
+            Pour finaliser votre commande d'un montant total de <strong style="color: #111 !important; font-size: 1.2rem !important;">${totalPay} €</strong>, veuillez procéder au paiement sécurisé via notre lien PayPal.Me :
           </p>
           
-          <div style="margin: 0 0 30px 0; display: block; width: 100%;">
-            <a href="https://paypal.me/Loverilx/${totalPay}EUR" target="_blank" style="display: inline-block; background: #0070ba; color: #fff; padding: 15px 35px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,112,186,0.2);">
+          <div style="margin: 0 0 30px 0 !important; display: block !important; width: 100% !important;">
+            <a href="https://paypal.me/Loverilx/${totalPay}EUR" target="_blank" style="display: inline-block !important; background: #0070ba !important; color: #fff !important; padding: 15px 35px !important; border-radius: 6px !important; text-decoration: none !important; font-weight: bold !important; font-size: 1.2rem !important; box-shadow: 0 4px 10px rgba(0,112,186,0.2) !important;">
               Payer ${totalPay} € sur PayPal.Me →
             </a>
           </div>
           
-          <p style="font-size: 0.85rem; color: #888; border-top: 1px solid #eee; padding-top: 20px; margin: 20px 0 0 0; display: block; width: 100%; line-height: 1.4;">
+          <p style="font-size: 0.85rem !important; color: #888 !important; border-top: 1px solid #eee !important; padding-top: 20px !important; margin: 20px 0 0 0 !important; display: block !important; width: 100% !important; line-height: 1.4 !important;">
             Une fois le paiement effectué, votre commande sera préparée et expédiée discrètement.<br>Vous pouvez fermer cette page en toute sécurité après votre règlement.
           </p>
           
