@@ -529,6 +529,32 @@ const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwSw_CZG7SNAYzGUhAX
 function renderCart() {
   const target = document.querySelector('[data-cart-page]');
   if (!target) return;
+  
+  // Vérifier si l'URL indique qu'on est sur l'écran de validation/remerciement
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    const totalPay = urlParams.get('total') || '0.00';
+    target.innerHTML = `
+      <div style="max-width: 600px; margin: 40px auto; background: #fafafa; padding: 30px; border-radius: 8px; text-align: center; border: 1px solid #ddd;">
+        <h2 style="color: #28a745; margin-top: 0;">Commande enregistrée avec succès !</h2>
+        <p style="font-size: 1.05rem; line-height: 1.5; color: #333;">
+          Merci pour votre confiance. Vos coordonnées et votre panier ont bien été transmis.
+        </p>
+        <p style="font-size: 0.95rem; color: #666; margin-bottom: 25px;">
+          Pour finaliser votre commande d'un montant de <strong>${totalPay} €</strong>, veuillez procéder au paiement sécurisé via notre lien PayPal.Me :
+        </p>
+        <a href="https://paypal.me/Loverilx/${totalPay}EUR" target="_blank" class="button button-dark" style="display: inline-block; background: #0070ba; color: #fff; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-bottom: 20px;">
+          Payer ${totalPay} € sur PayPal.Me →
+        </a>
+        <p style="font-size: 0.8rem; color: #999; margin-top: 15px;">
+          Une fois le paiement effectué, votre commande sera préparée et expédiée discrètement. Vous pouvez fermer cette page après le paiement.
+        </p>
+      </div>
+    `;
+    updateCartCount();
+    return;
+  }
+
   const cart = getCart(), items = cart.map(item => ({ ...item, product: products.find(product => product.id === item.id) })).filter(item => item.product);
   if (!items.length) {
     target.innerHTML = '<p class="empty-cart">Votre panier est vide. <a href="boutique.html">Découvrir la boutique →</a></p>';
@@ -594,7 +620,7 @@ function renderCart() {
         <strong>${euro(total)}</strong>
       </div>
 
-      <!-- Formulaire coordonnées client (Nom, Email, Téléphone, Adresse) -->
+      <!-- Formulaire coordonnées client avec vérification format -->
       <div style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #ddd;">
         <h3 style="margin-top: 0; font-size: 1rem;">Vos coordonnées de livraison</h3>
         <div style="margin-bottom: 10px;">
@@ -614,7 +640,7 @@ function renderCart() {
           <textarea id="customer-address" placeholder="12 rue de la Paix, 75001 Paris" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; height: 60px; resize: vertical;"></textarea>
         </div>
         <button class="button button-dark" id="checkout-sheet-btn" style="width: 100%; text-align: center; display: block; border: none; cursor: pointer; padding: 10px; background: #111; color: #fff; border-radius: 4px; font-weight: bold;">
-          Commander et payer ${euro(total)} →
+          Valider la commande (${euro(total)}) →
         </button>
       </div>
     </aside>
@@ -689,7 +715,13 @@ function renderCart() {
     const addressInput = document.getElementById('customer-address').value.trim();
 
     if (!nameInput || !emailInput || !phoneInput || !addressInput) {
-      alert('Veuillez remplir tous les champs (Nom, Email, Téléphone et Adresse) pour procéder au paiement.');
+      alert('Veuillez remplir tous les champs (Nom, Email, Téléphone et Adresse).');
+      return;
+    }
+
+    // Vérification basique du format e-mail
+    if (!emailInput.includes('@') || !emailInput.includes('.')) {
+      alert('Veuillez entrer une adresse e-mail valide.');
       return;
     }
 
@@ -697,7 +729,7 @@ function renderCart() {
     checkoutBtn.disabled = true;
 
     const articlesList = items.map(i => `${i.quantity}x ${i.product.name}`).join(', ');
-    const referencesList = items.map(i => `${i.quantity}x ${i.product.id}`).join(', '); // Enregistre les références type art-xxx
+    const referencesList = items.map(i => `${i.quantity}x ${i.product.id}`).join(', ');
 
     try {
       await fetch(WEB_APP_URL, {
@@ -708,7 +740,7 @@ function renderCart() {
           phone: phoneInput,
           address: addressInput,
           items: articlesList,
-          references: referencesList, // Transmet les références au Google Sheet
+          references: referencesList,
           total: total.toFixed(2)
         })
       });
@@ -719,10 +751,11 @@ function renderCart() {
 
       localStorage.removeItem(cartKey);
 
-      window.location.href = `https://paypal.me/Loverilx/${total.toFixed(2)}EUR`;
+      // Redirection vers la page de remerciement interne au site au lieu de PayPal direct
+      window.location.href = `panier.html?success=true&total=${total.toFixed(2)}`;
 
     } catch (e) {
-      window.location.href = `https://paypal.me/Loverilx/${total.toFixed(2)}EUR`;
+      window.location.href = `panier.html?success=true&total=${total.toFixed(2)}`;
     }
   });
 }
