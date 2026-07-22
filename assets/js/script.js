@@ -540,11 +540,13 @@ function renderCart() {
   const fraisDePort = 6.00;
   
   let discountAmount = appliedDiscountAmount;
-  if (discountAmount > sousTotal) {
-    discountAmount = sousTotal;
+  // Plafonnement de la réduction pour ne pas dépasser le montant total (Panier + Frais de port)
+  if (discountAmount > (sousTotal + fraisDePort)) {
+    discountAmount = sousTotal + fraisDePort;
   }
 
-  const total = sousTotal - discountAmount + fraisDePort;
+  // Le total inclut les frais de port moins la réduction globale
+  const total = Math.max(0, (sousTotal + fraisDePort) - discountAmount);
   
   target.innerHTML = `
     <div class="cart-items">
@@ -573,21 +575,21 @@ function renderCart() {
         <input type="text" id="promo-input" placeholder="Votre code promo" value="${appliedPromoCode}" style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; text-transform: uppercase;">
         <button id="apply-promo-btn" style="padding: 8px 12px; background: #111; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Appliquer</button>
       </div>
-      <p id="promo-msg" style="font-size: 0.85rem; margin: -5px 0 15px 0; color: ${appliedPromoCode ? 'green' : '#666'};">${appliedPromoCode ? `Code appliqué (-15,00 €) !` : ''}</p>
+      <p id="promo-msg" style="font-size: 0.85rem; margin: -5px 0 15px 0; color: ${appliedPromoCode ? 'green' : '#666'};">${appliedPromoCode ? `Code appliqué (-15,00 € sur panier & port) !` : ''}</p>
 
       <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
         <span>Sous-total</span>
         <span>${euro(sousTotal)}</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+        <span>Livraison</span>
+        <span>${euro(fraisDePort)}</span>
       </div>
       ${discountAmount > 0 ? `
       <div style="display: flex; justify-content: space-between; margin-bottom: 8px; color: #28a745;">
         <span>Réduction</span>
         <span>-${euro(discountAmount)}</span>
       </div>` : ''}
-      <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
-        <span>Livraison</span>
-        <span>${euro(fraisDePort)}</span>
-      </div>
       <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">
       <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1em;">
         <strong>Total</strong>
@@ -688,4 +690,4 @@ updateCartCount();
 renderFeatured();
 renderShop();
 renderProduct();
-renderCart(); // <--- Ligne ajoutée pour forcer l'affichage du panier sur panier.html
+renderCart();
