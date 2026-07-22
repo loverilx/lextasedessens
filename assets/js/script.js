@@ -521,11 +521,9 @@ function renderProduct() {
   bindButtons();
 }
 
-// Variables pour stocker la réduction et le code promo
 let appliedDiscountAmount = 0; 
 let appliedPromoCode = '';
 
-// URL de l'application Web Google Apps Script
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwSw_CZG7SNAYzGUhAXzTuTgzQRR-2P9ygLM1ol7dpec0LT-Xs4-NWEPG4lRS4orRki/exec";
 
 function renderCart() {
@@ -596,16 +594,24 @@ function renderCart() {
         <strong>${euro(total)}</strong>
       </div>
 
-      <!-- Formulaire coordonnées client + enregistrement Google Sheet avant PayPal.Me -->
+      <!-- Formulaire coordonnées client élargi (Nom, Email, Téléphone, Adresse) -->
       <div style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #ddd;">
-        <h3 style="margin-top: 0; font-size: 1rem;">Vos coordonnées pour la commande</h3>
+        <h3 style="margin-top: 0; font-size: 1rem;">Vos coordonnées de livraison</h3>
         <div style="margin-bottom: 10px;">
           <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">Nom et Prénom :</label>
           <input type="text" id="customer-name" placeholder="Ex: Jean Dupont" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
         </div>
-        <div style="margin-bottom: 15px;">
+        <div style="margin-bottom: 10px;">
           <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">E-mail :</label>
           <input type="email" id="customer-email" placeholder="Ex: jean@exemple.fr" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">Téléphone :</label>
+          <input type="tel" id="customer-phone" placeholder="Ex: 06 12 34 56 78" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">Adresse postale complète :</label>
+          <textarea id="customer-address" placeholder="12 rue de la Paix, 75001 Paris" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; height: 60px; resize: vertical;"></textarea>
         </div>
         <button class="button button-dark" id="checkout-sheet-btn" style="width: 100%; text-align: center; display: block; border: none; cursor: pointer; padding: 10px; background: #111; color: #fff; border-radius: 4px; font-weight: bold;">
           Commander et payer ${euro(total)} →
@@ -675,14 +681,15 @@ function renderCart() {
     }
   });
 
-  // Gestion du clic pour enregistrer dans le Sheet puis rediriger vers PayPal.Me
   const checkoutBtn = document.getElementById('checkout-sheet-btn');
   checkoutBtn?.addEventListener('click', async () => {
     const nameInput = document.getElementById('customer-name').value.trim();
     const emailInput = document.getElementById('customer-email').value.trim();
+    const phoneInput = document.getElementById('customer-phone').value.trim();
+    const addressInput = document.getElementById('customer-address').value.trim();
 
-    if (!nameInput || !emailInput) {
-      alert('Veuillez renseigner votre nom et votre e-mail avant de procéder au paiement.');
+    if (!nameInput || !emailInput || !phoneInput || !addressInput) {
+      alert('Veuillez remplir tous les champs (Nom, Email, Téléphone et Adresse) pour procéder au paiement.');
       return;
     }
 
@@ -692,36 +699,32 @@ function renderCart() {
     const articlesList = items.map(i => `${i.quantity}x ${i.product.name}`).join(', ');
 
     try {
-      // 1. Enregistrement de la commande dans Google Sheet
       await fetch(WEB_APP_URL, {
         method: 'POST',
         body: JSON.stringify({
           name: nameInput,
           email: emailInput,
+          phone: phoneInput,
+          address: addressInput,
           items: articlesList,
           total: total.toFixed(2)
         })
       });
 
-      // 2. Si un code promo valide a été utilisé, on le marque comme utilisé dans le Sheet
       if (appliedPromoCode && appliedPromoCode !== "TEST15") {
         await fetch(`${WEB_APP_URL}?code=${appliedPromoCode}&action=use`).catch(() => {});
       }
 
-      // 3. Vider le panier
       localStorage.removeItem(cartKey);
 
-      // 4. Redirection vers PayPal.Me avec le montant exact
       window.location.href = `https://paypal.me/Loverilx/${total.toFixed(2)}EUR`;
 
     } catch (e) {
-      // Sécurité en cas de coupure réseau : redirection quand même vers PayPal
       window.location.href = `https://paypal.me/Loverilx/${total.toFixed(2)}EUR`;
     }
   });
 }
 
-// Initialisation globale des éléments de la page
 const toggle = document.querySelector('[data-menu-toggle]'), menu = document.querySelector('[data-menu]');
 toggle?.addEventListener('click', () => {
   const open = menu.classList.toggle('is-open');
@@ -730,7 +733,6 @@ toggle?.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => document.querySelector('[data-header]')?.classList.toggle('is-scrolled', window.scrollY > 20));
 
-// Lancement des fonctions selon la page active
 updateCartCount();
 renderFeatured();
 renderShop();
