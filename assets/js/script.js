@@ -524,7 +524,9 @@ function renderProduct() {
 // Variables pour stocker la réduction et le code promo
 let appliedDiscountAmount = 0; 
 let appliedPromoCode = '';
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwsn4wfCZ0t5CpHfQNLxDNI-tOW3lUCzjsrquBBguG69Qi-5XrRr-K4X7Dq3Ve2GpkkEw/exec";
+
+// URL de l'application Web Google Apps Script mise à jour
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwSw_CZG7SNAYzGUhAXzTuTgzQRR-2P9ygLM1ol7dpec0LT-Xs4-NWEPG4lRS4orRki/exec";
 
 function renderCart() {
   const target = document.querySelector('[data-cart-page]');
@@ -678,14 +680,9 @@ toggle?.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', open);
 });
 
-window.addEventListener('scroll', () => document.querySelector('[data-header]')?.classList.toggle('is-scrolled', scrollY > 25));
-document.querySelector('[data-year]')?.append(new Date().getFullYear());
-document.querySelector('[data-newsletter]')?.addEventListener('submit', event => {
-  event.preventDefault();
-  document.querySelector('[data-form-message]').textContent = 'Merci — votre inscription a bien été prise en compte.';
-});
+window.addEventListener('scroll', () => document.querySelector('[data-header]')?.classList.toggle('is-scrolled', window.scrollY > 20));
 
-// Initialise l'affichage du compteur et des pages correspondantes
+// Lancement des fonctions selon la page active
 updateCartCount();
 renderFeatured();
 renderShop();
