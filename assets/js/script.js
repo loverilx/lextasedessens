@@ -521,7 +521,7 @@ function renderProduct() {
   bindButtons();
 }
 
-// Variables pour stocker la réduction (en euros fixes pour TEST15) ou en pourcentage
+// Variables pour stocker la réduction et le code promo
 let appliedDiscountAmount = 0; 
 let appliedPromoCode = '';
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwsn4wfCZ0t5CpHfQNLxDNI-tOW3lUCzjsrquBBguG69Qi-5XrRr-K4X7Dq3Ve2GpkkEw/exec";
@@ -539,7 +539,6 @@ function renderCart() {
   const sousTotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   const fraisDePort = 6.00;
   
-  // Si le code TEST15 est actif, la réduction est de 15€ fixes (bloquée pour ne pas dépasser le sous-total)
   let discountAmount = appliedDiscountAmount;
   if (discountAmount > sousTotal) {
     discountAmount = sousTotal;
@@ -601,7 +600,6 @@ function renderCart() {
     </aside>
   `;
 
-  // Gestion des quantités
   document.querySelectorAll('[data-change]').forEach(button => button.addEventListener('click', () => {
     const cart = getCart(), item = cart.find(entry => entry.id === button.dataset.quantity);
     item.quantity += Number(button.dataset.change);
@@ -609,13 +607,11 @@ function renderCart() {
     renderCart();
   }));
 
-  // Suppression d'un article
   document.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
     setCart(getCart().filter(item => item.id !== button.dataset.remove));
     renderCart();
   }));
 
-  // Vérification du code promo (Test local prioritaire pour TEST15 puis Google Sheets)
   const promoBtn = document.getElementById('apply-promo-btn');
   promoBtn?.addEventListener('click', async () => {
     const inputVal = document.getElementById('promo-input').value.trim().toUpperCase();
@@ -623,7 +619,6 @@ function renderCart() {
 
     if (!inputVal) return;
 
-    // Si c'est votre code de test spécial pour payer 1€
     if (inputVal === "TEST15") {
       appliedPromoCode = "TEST15";
       appliedDiscountAmount = 15.00;
@@ -666,7 +661,6 @@ function renderCart() {
     }
   });
 
-  // Consommation définitive du code dès que le client clique sur PayPal pour payer
   const paypalBtn = document.getElementById('paypal-checkout-btn');
   paypalBtn?.addEventListener('click', () => {
     if (appliedPromoCode && appliedPromoCode !== "TEST15") {
@@ -675,6 +669,7 @@ function renderCart() {
   });
 }
 
+// Initialisation globale des éléments de la page
 const toggle = document.querySelector('[data-menu-toggle]'), menu = document.querySelector('[data-menu]');
 toggle?.addEventListener('click', () => {
   const open = menu.classList.toggle('is-open');
@@ -687,3 +682,10 @@ document.querySelector('[data-newsletter]')?.addEventListener('submit', event =>
   event.preventDefault();
   document.querySelector('[data-form-message]').textContent = 'Merci — votre inscription a bien été prise en compte.';
 });
+
+// Initialise l'affichage du compteur et des pages correspondantes
+updateCartCount();
+renderFeatured();
+renderShop();
+renderProduct();
+renderCart(); // <--- Ligne ajoutée pour forcer l'affichage du panier sur panier.html
