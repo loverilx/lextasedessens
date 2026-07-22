@@ -220,7 +220,7 @@ const products = [
   {
     id: 'art-155',
     name: 'Gode Éjaculateur Premium – Réalisme & Effet Éjaculation',
-    category: 'Gode',
+    category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-155.jpg',
     description: 'Conçu pour les amateurs de réalisme, ce modèle associe une finition anatomique soignée à un système permettant de simuler une éjaculation. Son format équilibré, sa texture détaillée et sa base ventouse en font un accessoire pensé pour offrir une expérience immersive.',
@@ -554,7 +554,7 @@ function renderCart() {
         <article class="cart-item" style="display: flex; align-items: center; gap: 20px; padding: 15px 0; border-bottom: 1px solid #eee;">
           ${itemImage}
           <div style="flex-grow: 1;">
-            <p class="product-category" style="margin: 0; font-size: 0.85rem; color: #666;">${item.product.category}</p>
+            <p class="product-category" style="margin: 0; font-size: 0.85rem; color: #666;">${item.product.category} (Réf: ${item.product.id})</p>
             <h2 style="margin: 4px 0; font-size: 1.05rem;">${item.product.name}</h2>
             <strong style="color: #111;">${euro(item.product.price)}</strong>
           </div>
@@ -594,7 +594,7 @@ function renderCart() {
         <strong>${euro(total)}</strong>
       </div>
 
-      <!-- Formulaire coordonnées client élargi (Nom, Email, Téléphone, Adresse) -->
+      <!-- Formulaire coordonnées client (Nom, Email, Téléphone, Adresse) -->
       <div style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #ddd;">
         <h3 style="margin-top: 0; font-size: 1rem;">Vos coordonnées de livraison</h3>
         <div style="margin-bottom: 10px;">
@@ -697,6 +697,7 @@ function renderCart() {
     checkoutBtn.disabled = true;
 
     const articlesList = items.map(i => `${i.quantity}x ${i.product.name}`).join(', ');
+    const referencesList = items.map(i => `${i.quantity}x ${i.product.id}`).join(', '); // Enregistre les références type art-xxx
 
     try {
       await fetch(WEB_APP_URL, {
@@ -707,6 +708,7 @@ function renderCart() {
           phone: phoneInput,
           address: addressInput,
           items: articlesList,
+          references: referencesList, // Transmet les références au Google Sheet
           total: total.toFixed(2)
         })
       });
