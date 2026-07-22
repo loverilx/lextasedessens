@@ -525,7 +525,7 @@ function renderProduct() {
 let appliedDiscountAmount = 0; 
 let appliedPromoCode = '';
 
-// URL de l'application Web Google Apps Script mise à jour
+// URL de l'application Web Google Apps Script
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwSw_CZG7SNAYzGUhAXzTuTgzQRR-2P9ygLM1ol7dpec0LT-Xs4-NWEPG4lRS4orRki/exec";
 
 function renderCart() {
@@ -542,12 +542,10 @@ function renderCart() {
   const fraisDePort = 6.00;
   
   let discountAmount = appliedDiscountAmount;
-  // Plafonnement de la réduction pour ne pas dépasser le montant total (Panier + Frais de port)
   if (discountAmount > (sousTotal + fraisDePort)) {
     discountAmount = sousTotal + fraisDePort;
   }
 
-  // Le total inclut les frais de port moins la réduction globale
   const total = Math.max(0, (sousTotal + fraisDePort) - discountAmount);
   
   target.innerHTML = `
@@ -577,7 +575,7 @@ function renderCart() {
         <input type="text" id="promo-input" placeholder="Votre code promo" value="${appliedPromoCode}" style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; text-transform: uppercase;">
         <button id="apply-promo-btn" style="padding: 8px 12px; background: #111; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Appliquer</button>
       </div>
-      <p id="promo-msg" style="font-size: 0.85rem; margin: -5px 0 15px 0; color: ${appliedPromoCode ? 'green' : '#666'};">${appliedPromoCode ? `Code appliqué (-15,00 € sur panier & port) !` : ''}</p>
+      <p id="promo-msg" style="font-size: 0.85rem; margin: -5px 0 15px 0; color: ${appliedPromoCode ? 'green' : '#666'};">${appliedPromoCode ? `Code appliqué !` : ''}</p>
 
       <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
         <span>Sous-total</span>
@@ -597,10 +595,22 @@ function renderCart() {
         <strong>Total</strong>
         <strong>${euro(total)}</strong>
       </div>
-      <small>Règlement sécurisé via votre lien PayPal.Me.</small>
-      <a href="https://paypal.me/Loverilx/${total.toFixed(2)}EUR" target="_blank" class="button button-dark" id="paypal-checkout-btn" style="text-align: center; display: block; text-decoration: none; margin-top: 15px;">
-        Payer ${euro(total)} avec PayPal <span>→</span>
-      </a>
+
+      <!-- Formulaire coordonnées client + enregistrement Google Sheet avant PayPal.Me -->
+      <div style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #ddd;">
+        <h3 style="margin-top: 0; font-size: 1rem;">Vos coordonnées pour la commande</h3>
+        <div style="margin-bottom: 10px;">
+          <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">Nom et Prénom :</label>
+          <input type="text" id="customer-name" placeholder="Ex: Jean Dupont" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">E-mail :</label>
+          <input type="email" id="customer-email" placeholder="Ex: jean@exemple.fr" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        </div>
+        <button class="button button-dark" id="checkout-sheet-btn" style="width: 100%; text-align: center; display: block; border: none; cursor: pointer; padding: 10px; background: #111; color: #fff; border-radius: 4px; font-weight: bold;">
+          Commander et payer ${euro(total)} →
+        </button>
+      </div>
     </aside>
   `;
 
@@ -665,10 +675,48 @@ function renderCart() {
     }
   });
 
-  const paypalBtn = document.getElementById('paypal-checkout-btn');
-  paypalBtn?.addEventListener('click', () => {
-    if (appliedPromoCode && appliedPromoCode !== "TEST15") {
-      fetch(`${WEB_APP_URL}?code=${appliedPromoCode}&action=use`).catch(() => {});
+  // Gestion du clic pour enregistrer dans le Sheet puis rediriger vers PayPal.Me
+  const checkoutBtn = document.getElementById('checkout-sheet-btn');
+  checkoutBtn?.addEventListener('click', async () => {
+    const nameInput = document.getElementById('customer-name').value.trim();
+    const emailInput = document.getElementById('customer-email').value.trim();
+
+    if (!nameInput || !emailInput) {
+      alert('Veuillez renseigner votre nom et votre e-mail avant de procéder au paiement.');
+      return;
+    }
+
+    checkoutBtn.textContent = 'Enregistrement en cours...';
+    checkoutBtn.disabled = true;
+
+    const articlesList = items.map(i => `${i.quantity}x ${i.product.name}`).join(', ');
+
+    try {
+      // 1. Enregistrement de la commande dans Google Sheet
+      await fetch(WEB_APP_URL, {
+        method: 'POST',
+        body: JSON.stringify({
+          name: nameInput,
+          email: emailInput,
+          items: articlesList,
+          total: total.toFixed(2)
+        })
+      });
+
+      // 2. Si un code promo valide a été utilisé, on le marque comme utilisé dans le Sheet
+      if (appliedPromoCode && appliedPromoCode !== "TEST15") {
+        await fetch(`${WEB_APP_URL}?code=${appliedPromoCode}&action=use`).catch(() => {});
+      }
+
+      // 3. Vider le panier
+      localStorage.removeItem(cartKey);
+
+      // 4. Redirection vers PayPal.Me avec le montant exact
+      window.location.href = `https://paypal.me/Loverilx/${total.toFixed(2)}EUR`;
+
+    } catch (e) {
+      // Sécurité en cas de coupure réseau : redirection quand même vers PayPal
+      window.location.href = `https://paypal.me/Loverilx/${total.toFixed(2)}EUR`;
     }
   });
 }
