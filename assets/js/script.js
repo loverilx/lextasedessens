@@ -521,8 +521,8 @@ function renderProduct() {
   bindButtons();
 }
 
-// Variables pour stocker la réduction et le lien Google Sheet
-let appliedDiscount = 0; 
+// Variables pour stocker la réduction (en euros fixes pour TEST15) ou en pourcentage
+let appliedDiscountAmount = 0; 
 let appliedPromoCode = '';
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwsn4wfCZ0t5CpHfQNLxDNI-tOW3lUCzjsrquBBguG69Qi-5XrRr-K4X7Dq3Ve2GpkkEw/exec";
 
@@ -539,8 +539,12 @@ function renderCart() {
   const sousTotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   const fraisDePort = 6.00;
   
-  // Calcul de la remise selon le taux enregistré
-  const discountAmount = sousTotal * appliedDiscount;
+  // Si le code TEST15 est actif, la réduction est de 15€ fixes (bloquée pour ne pas dépasser le sous-total)
+  let discountAmount = appliedDiscountAmount;
+  if (discountAmount > sousTotal) {
+    discountAmount = sousTotal;
+  }
+
   const total = sousTotal - discountAmount + fraisDePort;
   
   target.innerHTML = `
@@ -570,7 +574,7 @@ function renderCart() {
         <input type="text" id="promo-input" placeholder="Votre code promo" value="${appliedPromoCode}" style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; text-transform: uppercase;">
         <button id="apply-promo-btn" style="padding: 8px 12px; background: #111; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Appliquer</button>
       </div>
-      <p id="promo-msg" style="font-size: 0.85rem; margin: -5px 0 15px 0; color: ${appliedPromoCode ? 'green' : '#666'};">${appliedPromoCode ? `Code appliqué (-${appliedDiscount * 100}%) !` : ''}</p>
+      <p id="promo-msg" style="font-size: 0.85rem; margin: -5px 0 15px 0; color: ${appliedPromoCode ? 'green' : '#666'};">${appliedPromoCode ? `Code appliqué (-15,00 €) !` : ''}</p>
 
       <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
         <span>Sous-total</span>
@@ -611,13 +615,23 @@ function renderCart() {
     renderCart();
   }));
 
-  // Vérification du code promo via Google Sheets
+  // Vérification du code promo (Test local prioritaire pour TEST15 puis Google Sheets)
   const promoBtn = document.getElementById('apply-promo-btn');
   promoBtn?.addEventListener('click', async () => {
     const inputVal = document.getElementById('promo-input').value.trim().toUpperCase();
     const msgEl = document.getElementById('promo-msg');
 
     if (!inputVal) return;
+
+    // Si c'est votre code de test spécial pour payer 1€
+    if (inputVal === "TEST15") {
+      appliedPromoCode = "TEST15";
+      appliedDiscountAmount = 15.00;
+      msgEl.style.color = 'green';
+      msgEl.textContent = "Code test appliqué (-15,00 €) !";
+      renderCart();
+      return;
+    }
 
     msgEl.style.color = '#666';
     msgEl.textContent = "Vérification en cours...";
@@ -628,20 +642,20 @@ function renderCart() {
 
       if (result.status === "valid") {
         appliedPromoCode = inputVal;
-        appliedDiscount = inputVal.includes("10") ? 0.10 : 0.05;
+        appliedDiscountAmount = sousTotal * (inputVal.includes("10") ? 0.10 : 0.05);
         
         msgEl.style.color = 'green';
-        msgEl.textContent = `Code appliqué : -${appliedDiscount * 100}% !`;
+        msgEl.textContent = "Code appliqué avec succès !";
         renderCart();
       } else if (result.status === "used") {
         appliedPromoCode = '';
-        appliedDiscount = 0;
+        appliedDiscountAmount = 0;
         msgEl.style.color = '#d9534f';
         msgEl.textContent = "Ce code a déjà été utilisé.";
         renderCart();
       } else {
         appliedPromoCode = '';
-        appliedDiscount = 0;
+        appliedDiscountAmount = 0;
         msgEl.style.color = '#d9534f';
         msgEl.textContent = "Code promo inconnu.";
         renderCart();
@@ -655,7 +669,7 @@ function renderCart() {
   // Consommation définitive du code dès que le client clique sur PayPal pour payer
   const paypalBtn = document.getElementById('paypal-checkout-btn');
   paypalBtn?.addEventListener('click', () => {
-    if (appliedPromoCode) {
+    if (appliedPromoCode && appliedPromoCode !== "TEST15") {
       fetch(`${WEB_APP_URL}?code=${appliedPromoCode}&action=use`).catch(() => {});
     }
   });
@@ -672,11 +686,4 @@ document.querySelector('[data-year]')?.append(new Date().getFullYear());
 document.querySelector('[data-newsletter]')?.addEventListener('submit', event => {
   event.preventDefault();
   document.querySelector('[data-form-message]').textContent = 'Merci — votre inscription a bien été prise en compte.';
-  event.currentTarget.reset();
 });
-
-renderFeatured();
-renderShop();
-renderProduct();
-renderCart();
-updateCartCount();
