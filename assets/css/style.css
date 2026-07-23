@@ -56,3 +56,13 @@ border-radius:18px;
 .btn-outline{border:2px solid currentColor;padding:.8rem 1.2rem;border-radius:999px;text-decoration:none}
 .card-premium{border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .25s ease,box-shadow .25s ease}
 .card-premium:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.12)}
+
+
+.premium-highlight{padding:80px 20px;background:#faf7f5}
+.premium-highlight h2{text-align:center;font-size:2rem;margin-bottom:.5rem}
+.premium-highlight> .container>p{text-align:center;max-width:700px;margin:0 auto 2rem}
+.premium-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.premium-grid>div{background:#fff;border-radius:18px;padding:24px;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:.3s}
+.premium-grid>div:hover{transform:translateY(-6px)}
+.reveal{opacity:0;transform:translateY(25px);transition:all .7s ease}
+.reveal.visible{opacity:1;transform:none}
