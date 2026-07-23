@@ -73,3 +73,6 @@ border-radius:18px;
 .v5-premium .card:hover,.v5-premium .product-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.14);}
 
 .v5-highlight{padding:80px 20px;background:linear-gradient(180deg,#fff,#f8f3f8)}.v5-highlight .container{max-width:900px;margin:auto;text-align:center}.v5-highlight h2{font-size:2.2rem}.v5-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}.v5-actions .btn{padding:.9rem 1.6rem;border-radius:999px;text-decoration:none}.btn-primary{background:#6b2c7a;color:#fff}.btn-secondary{border:2px solid #6b2c7a;color:#6b2c7a}
+
+.v52-premium{padding:5rem 1rem;background:linear-gradient(180deg,#fff,#f6f0f8);text-align:center}.v52-premium h2{font-size:2.2rem;margin-bottom:1rem}.v52-premium p{max-width:760px;margin:0 auto 2rem;color:#555}.v52-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}.v52-premium .btn{border-radius:999px;padding:.9rem 1.6rem;transition:.3s}.v52-premium .btn:hover{transform:translateY(-2px)}
+.reveal{opacity:0;transform:translateY(24px);transition:.6s}.reveal.visible{opacity:1;transform:none}
