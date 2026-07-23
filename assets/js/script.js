@@ -13,7 +13,10 @@ const products = [
       'Pinces à seins avec clochettes',
       'Bandeau de privation sensorielle',
       'Référence : ART-144'
-    ]
+    ],
+    seoTitle: 'Kit d’Initiation BDSM & Bondage Complet | Coffret Découverte',
+    metaDescription: 'Découvrez notre kit d’initiation BDSM et bondage complet. Ce coffret découverte intègre des attaches et accessoires pour vos jeux érotiques en toute sérénité.',
+    alt: 'Kit d’initiation BDSM et bondage complet avec accessoires et menottes ART-144'
   },
   {
     id: 'art-145',
@@ -29,7 +32,10 @@ const products = [
       'Silicone souple haute qualité',
       'Finition douce "Soft Touch" mat',
       'Référence : ART-145'
-    ]
+    ],
+    seoTitle: 'Set de Cockrings Multi-Tailles en Silicone Souple Mat',
+    metaDescription: 'Variez vos sensations avec ce set de cockrings multi-tailles au design géométrique. Conçu en silicone souple mat, il offre confort et maintien optimal.',
+    alt: 'Set de cockrings multi-tailles en silicone souple mat design géométrique ART-145'
   },
   {
     id: 'art-153',
@@ -45,7 +51,10 @@ const products = [
       'Système de pompage par tuyau d’aspiration',
       'Coffret de rangement compartimenté inclus',
       'Référence : ART-153'
-    ]
+    ],
+    seoTitle: 'Douche Intime Portable Multifonction pour le Voyage',
+    metaDescription: 'Prenez soin de votre hygiène avec cette douche intime portable multifonction. Format nomade discret avec embouts interchangeables et canule ergonomique.',
+    alt: 'Douche intime portable multifonction avec embouts et coffret de rangement ART-153'
   },
   {
     id: 'art-140',
@@ -61,7 +70,10 @@ const products = [
       'Rechargeable via USB',
       'Format pratique et discret',
       'Référence : ART-140'
-    ]
+    ],
+    seoTitle: 'Douche Intime Électrique Rechargeable USB et Automatique',
+    metaDescription: 'Optimisez votre hygiène intime avec cette douche électrique rechargeable par USB. Système motorisé automatique avec réservoir transparent et embout souple.',
+    alt: 'Douche intime électrique rechargeable par USB avec réservoir transparent ART-140'
   },
   {
     id: 'art-148',
@@ -78,7 +90,10 @@ const products = [
       'Texture ultra-réaliste avec reliefs anatomiques',
       'Base ventouse renforcée (mains libres)',
       'Référence : ART-148'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Lava Réaliste en Silicone Premium',
+    metaDescription: 'Découvrez le gode ventouse Lava en silicone premium avec texture réaliste, base ventouse renforcée et design original.',
+    alt: 'Gode ventouse Lava réaliste en silicone noir et orange ART-148'
   },
   {
     id: 'art-142',
@@ -96,7 +111,10 @@ const products = [
       'Base ventouse stable (mains libres)',
       'Rechargeable',
       'Référence : ART-142'
-    ]
+    ],
+    seoTitle: 'Stimulateur Connecté Va-et-Vient & Vibrations App',
+    metaDescription: 'Profitez d’un stimulateur connecté à va-et-vient et vibrations puissantes. Pilotable par application mobile avec base ventouse mains libres rechargeable.',
+    alt: 'Stimulateur connecté va-et-vient et vibrations avec application mobile ART-142'
   },
   {
     id: 'art-151',
@@ -114,7 +132,10 @@ const products = [
       'Forme conique progressive',
       'Base évasée pour une excellente stabilité',
       'Référence : ART-151'
-    ]
+    ],
+    seoTitle: 'Gode Spiral Fantasy Multicolore en Silicone Doux',
+    metaDescription: 'Laissez-vous tenter par le gode Spiral Fantasy en silicone doux. Design torsadé multicolore avec forme conique progressive et base évasée stable.',
+    alt: 'Gode spiral fantasy design licorne multicolore en silicone doux ART-151'
   },
   {
     id: 'art-150',
@@ -131,7 +152,10 @@ const products = [
       'Forme progressive & pointe affinée',
       'Base évasée pour une excellente stabilité',
       'Référence : ART-150'
-    ]
+    ],
+    seoTitle: 'Gode XL Bicolore en Silicone Premium pour Sensations Intenses',
+    metaDescription: 'Explorez des sensations amples avec ce gode XL bicolore en silicone premium. Corps volumineux, pointe effilée et base évasée sécurisante.',
+    alt: 'Gode XL bicolore rose et violet en silicone premium au toucher doux ART-150'
   },
   {
     id: 'art-147',
@@ -148,7 +172,10 @@ const products = [
       'Système de gonflage manuel avec poire',
       'Base évasée pour une excellente stabilité',
       'Référence : ART-147'
-    ]
+    ],
+    seoTitle: 'Gode Gonflable à Volume Ajustable en Silicone Doux',
+    metaDescription: 'Mododulez votre plaisir avec ce gode gonflable en silicone souple doté d’une poire manuelle. Design cosmique unique et base large stable.',
+    alt: 'Gode gonflable design galaxy avec poire de gonflage manuelle ART-147'
   },
   {
     id: 'art-165',
@@ -164,7 +191,10 @@ const products = [
       'Vibrations réglables (moteur puissant)',
       'Base ventouse stable (mains libres)',
       'Référence : ART-165'
-    ]
+    ],
+    seoTitle: 'Gode Vibrant XXL en Silicone avec Vibrations Intenses',
+    metaDescription: 'Profitez de vibrations intenses avec ce gode vibrant XXL en silicone souple. Modèle texturé long avec base ventouse mains libres.',
+    alt: 'Gode vibrant XXL texturé en silicone souple avec base ventouse ART-165'
   },
   {
     id: 'art-159',
@@ -181,7 +211,10 @@ const products = [
       'Vibrations réglables',
       'Base ventouse stable (mains libres)',
       'Référence : ART-159'
-    ]
+    ],
+    seoTitle: 'Gode Chauffant & Vibrant XXL en Silicone Velouté',
+    metaDescription: 'Vivez une expérience unique avec ce gode chauffant et vibrant XXL en silicone haut de gamme. Diamètre généreux et base ventouse stable.',
+    alt: 'Gode chauffant et vibrant XXL grand diamètre en silicone doux ART-159'
   },
   {
     id: 'art-158',
@@ -189,7 +222,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-158.jpg',
-    description: 'Associez la chaleur réconfortante à l’efficacité de vibrations stimulantes avec ce gode au format XL pensé pour les adeptes de réalisme. Son design anatomique détaillé épouse harmonieusement l’anatomie, tandis que la technologie chauffante intégrée procure une sensation de réalisme saisissante dès les premiers contacts. Conçu en silicone souple de qualité supérieure, il offre un toucher extrêmement doux et hygiénique. Sa base ventouse stable permet de varier les positions et les usages en toute liberté.',
+    description: 'Associez la chaleur réconfortante à l’efficacité de vibrations stimulantes avec ce gode au format XL pensé pour des adeptes de réalisme. Son design anatomique détaillé épouse harmonieusement l’anatomie, tandis que la technologie chauffante intégrée procure une sensation de réalisme saisissante dès les premiers contacts. Conçu en silicone souple de qualité supérieure, il offre un toucher extrêmement doux et hygiénique. Sa base ventouse stable permet de varier les positions et les usages en toute liberté.',
     details: [
       'Longueur totale : 18 cm',
       'Diamètre : 4 cm',
@@ -198,7 +231,10 @@ const products = [
       'Vibrations réglables',
       'Base ventouse stable (mains libres)',
       'Référence : ART-158'
-    ]
+    ],
+    seoTitle: 'Gode Chauffant & Vibrant XL Réaliste en Silicone Doux',
+    metaDescription: 'Alliez chaleur relaxante et vibrations avec ce gode chauffant et vibrant XL réaliste en silicone doux. Base ventouse stable pour usage mains libres.',
+    alt: 'Gode chauffant et vibrant XL anatomique en silicone souple ART-158'
   },
   {
     id: 'art-156',
@@ -215,7 +251,10 @@ const products = [
       'Vibrations réglables',
       'Base ventouse stable (mains libres)',
       'Référence : ART-156'
-    ]
+    ],
+    seoTitle: 'Gode Chauffant & Vibrant Réaliste en Silicone Premium',
+    metaDescription: 'Découvrez ce gode chauffant et vibrant doté d’un moteur puissant et d’une fonction chauffe. Design réaliste en silicone doux avec base ventouse.',
+    alt: 'Gode chauffant et vibrant en silicone doux avec base ventouse ART-156'
   },
   {
     id: 'art-155',
@@ -231,7 +270,10 @@ const products = [
       'Système de simulation d\'éjaculation intégré (réservoir & pompe)',
       'Base ventouse stable (mains libres)',
       'Référence : ART-155'
-    ]
+    ],
+    seoTitle: 'Gode Éjaculateur Réaliste avec Système de Pompe Interne',
+    metaDescription: 'Intensifiez vos jeux avec ce gode éjaculateur réaliste en silicone souple. Système de simulation avec réservoir interne et base ventouse stable.',
+    alt: 'Gode éjaculateur réaliste avec réservoir et pompe intégrés en silicone ART-155'
   },
   {
     id: 'art-154',
@@ -248,7 +290,10 @@ const products = [
       'Vibrations réglables',
       'Base ventouse stable (mains libres)',
       'Référence : ART-154'
-    ]
+    ],
+    seoTitle: 'Gode Vibrant Double Stimulation Interne et Externe',
+    metaDescription: 'Profitez d’une double stimulation avec ce gode vibrant doté d’un stimulateur externe flexible. Silicone doux et base ventouse mains libres.',
+    alt: 'Gode vibrant double stimulation avec stimulateur externe en silicone ART-154'
   },
   {
     id: 'art-152',
@@ -264,7 +309,10 @@ const products = [
       'Vibrations réglables (moteur puissant)',
       'Base ergonomique avec commandes intégrées',
       'Référence : ART-152'
-    ]
+    ],
+    seoTitle: 'Gode Vibrant Pourpre Élégant en Silicone Velouté',
+    metaDescription: 'Découvrez ce gode vibrant pourpre au design incurvé élégant. Moteur puissant à vibrations réglables et base ergonomique en silicone doux.',
+    alt: 'Gode vibrant pourpre incurvé avec commandes intégrées en silicone ART-152'
   },
   {
     id: 'art-149',
@@ -280,7 +328,10 @@ const products = [
       'Télécommande sans fil incluse',
       'Vibrations réglables (moteur performant)',
       'Référence : ART-149'
-    ]
+    ],
+    seoTitle: 'Gode Vibrant Arqué avec Télécommande Sans Fil',
+    metaDescription: 'Commandez vos plaisirs à distance avec ce gode vibrant arqué doté d’une télécommande sans fil. Design bicolore moderne en silicone souple.',
+    alt: 'Gode vibrant arqué bicolore avec télécommande sans fil en silicone ART-149'
   },
   {
     id: 'art-167',
@@ -296,7 +347,10 @@ const products = [
       'Base ventouse stable (mains libres)',
       'Compatible avec les harnais',
       'Référence : ART-167'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Black Edition Grand Format en Silicone',
+    metaDescription: 'Optez pour le gode ventouse Black Edition en noir ébène. Grand format anatomique compatible harnais avec base ventouse stable.',
+    alt: 'Gode ventouse Black Edition noir ébène en silicone souple ART-167'
   },
   {
     id: 'art-166',
@@ -311,7 +365,10 @@ const products = [
       'Matière : Silicone premium au toucher doux',
       'Base ventouse renforcée (mains libres)',
       'Référence : ART-166'
-    ]
+    ],
+    seoTitle: 'Gode XXL Ventouse Réaliste en Silicone Haut de Gamme',
+    metaDescription: 'Recherchez l’intensité avec ce grand gode XXL ventouse en silicone souple. Structure robuste et base ventouse renforcée pour un usage mains libres.',
+    alt: 'Gode XXL ventouse grand format en silicone souple haut de gamme ART-166'
   },
   {
     id: 'art-164',
@@ -326,7 +383,10 @@ const products = [
       'Matière : Silicone premium au toucher doux',
       'Base ventouse stable (mains libres)',
       'Référence : ART-164'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Anatomique Format Confort en Silicone',
+    metaDescription: 'Appréciez le réalisme de ce gode ventouse au format confortable et équilibré. Conçu en silicone souple avec une base ventouse stable.',
+    alt: 'Gode ventouse anatomique format confort en silicone souple ART-164'
   },
   {
     id: 'art-163',
@@ -342,7 +402,10 @@ const products = [
       'Base ventouse stable (mains libres)',
       'Compatible avec les harnais',
       'Référence : ART-163'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Élancé et Réaliste en Silicone Doux',
+    metaDescription: 'Découvrez ce gode ventouse à la silhouette élancée pour une insertion progressive. Compatible harnais avec base ventouse stable.',
+    alt: 'Gode ventouse élancé réaliste en silicone doux compatible harnais ART-163'
   },
   {
     id: 'art-162',
@@ -358,7 +421,10 @@ const products = [
       'Base ventouse stable (mains libres)',
       'Compatible avec les harnais',
       'Référence : ART-162'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Compact à Diamètre Généreux en Silicone',
+    metaDescription: 'Optez pour le format compact de ce gode ventouse au diamètre généreux. Silicone souple, base ventouse stable et compatible harnais.',
+    alt: 'Gode ventouse compact grand diamètre en silicone souple ART-162'
   },
   {
     id: 'art-161',
@@ -374,7 +440,10 @@ const products = [
       'Base ventouse stable (mains libres)',
       'Compatible avec les harnais',
       'Référence : ART-161'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Équilibré aux Proportions Réalistes',
+    metaDescription: 'Profitez d’un confort naturel avec ce gode ventouse aux proportions équilibrées. Silicone velouté, base stable et compatibilité harnais.',
+    alt: 'Gode ventouse aux proportions équilibrées en silicone velouté ART-161'
   },
   {
     id: 'art-160',
@@ -389,7 +458,10 @@ const products = [
       'Matière : Silicone premium au toucher doux',
       'Base ventouse stable (mains libres)',
       'Référence : ART-160'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Polyvalent en Silicone Souple Haut de Gamme',
+    metaDescription: 'Laissez-vous séduire par ce gode ventouse polyvalent aux finitions anatomiques réalistes. Silicone souple et base ventouse pour un usage mains libres.',
+    alt: 'Gode ventouse polyvalent texturé en silicone souple haut de gamme ART-160'
   },
   {
     id: 'art-157',
@@ -405,7 +477,10 @@ const products = [
       'Base ventouse stable (mains libres)',
       'Compatible avec les harnais',
       'Référence : ART-157'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Hypoallergénique Confort et Discrétion',
+    metaDescription: 'Intégrez ce gode ventouse à vos routines avec son format intermédiaire confortable. Silicone hypoallergénique, base stable et compatible harnais.',
+    alt: 'Gode ventouse format confort hypoallergénique en silicone doux ART-157'
   },
   {
     id: 'art-146',
@@ -421,7 +496,10 @@ const products = [
       'Base ventouse stable (mains libres)',
       'Compatible avec les harnais',
       'Référence : ART-146'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse XXL Réaliste en Silicone Supérieur',
+    metaDescription: 'Vivez des sensations d’envergure avec ce gode ventouse XXL aux dimensions généreuses. Silicone souple de qualité supérieure compatible harnais.',
+    alt: 'Gode ventouse XXL grand format réaliste en silicone souple ART-146'
   },
   {
     id: 'art-143',
@@ -437,7 +515,10 @@ const products = [
       'Base ventouse stable',
       'Compatible avec les harnais',
       'Référence : ART-143'
-    ]
+    ],
+    seoTitle: 'Gode Ventouse Polyvalent en Silicone Premium Doux',
+    metaDescription: 'Faites le choix de la polyvalence avec ce gode ventouse aux lignes épurées. Conçu en silicone premium avec base ventouse et compatible harnais.',
+    alt: 'Gode ventouse polyvalent aux lignes épurées en silicone premium ART-143'
   }
 ];
 
@@ -472,7 +553,7 @@ function addToCart(id) {
 }
 
 function productCard(product, index) {
-  const image = product.image ? `<img src="${product.image}" alt="${product.name}" loading="lazy">` : '';
+  const image = product.image ? `<img src="${product.image}" alt="${product.alt || product.name}" loading="lazy">` : '';
   return `<article class="product-card shop-product-card"><a href="produit.html?id=${product.id}" aria-label="Voir ${product.name}"><div class="product-visual product-art-${index % 4}">${image}</div><div class="product-info"><span class="product-category">${product.category}</span><h3>${product.name}</h3><span class="product-price">${euro(product.price)}</span></div></a><button class="add-to-cart" type="button" data-add-cart="${product.id}">Ajouter</button></article>`;
 }
 
@@ -516,7 +597,7 @@ function renderProduct() {
   const target = document.querySelector('[data-product-page]');
   if (!target) return;
   const product = products.find(item => item.id === new URLSearchParams(location.search).get('id')) || products[0];
-  const image = product.image ? `<img src="${product.image}" alt="${product.name}">` : '';
+  const image = product.image ? `<img src="${product.image}" alt="${product.alt || product.name}">` : '';
   target.innerHTML = `<div class="product-detail-art product-art-${products.indexOf(product) % 4}">${image}</div><div class="product-detail-info"><p class="eyebrow">${product.category}</p><h1>${product.name}</h1><p class="detail-price">${euro(product.price)}</p><p class="detail-description">${product.description}</p><ul>${product.details.map(detail => `<li>${detail}</li>`).join('')}</ul><button class="button button-dark" data-add-cart="${product.id}">Ajouter au panier <span>→</span></button><p class="detail-note">Expédition discrète · Frais de port fixes de 6,00 € · Paiement sécurisé via PayPal.Me.</p></div>`;
   bindButtons();
 }
@@ -530,7 +611,6 @@ function renderCart() {
   const target = document.querySelector('[data-cart-page]');
   if (!target) return;
   
-  // Écran de succès avec forçage absolu anti-flex via !important
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('success') === 'true') {
     const totalPay = urlParams.get('total') || '0.00';
@@ -588,7 +668,7 @@ function renderCart() {
   target.innerHTML = `
     <div class="cart-items">
       ${items.map(item => {
-        const itemImage = item.product.image ? `<img src="${item.product.image}" alt="${item.product.name}" style="width: 70px; height: 70px; object-fit: cover; border-radius: 6px; flex-shrink: 0;">` : '';
+        const itemImage = item.product.image ? `<img src="${item.product.image}" alt="${item.product.alt || item.product.name}" style="width: 70px; height: 70px; object-fit: cover; border-radius: 6px; flex-shrink: 0;">` : '';
         return `
         <article class="cart-item" style="display: flex; align-items: center; gap: 20px; padding: 15px 0; border-bottom: 1px solid #eee;">
           ${itemImage}
@@ -607,7 +687,6 @@ function renderCart() {
       `;}).join('')}
     </div>
     <aside class="cart-summary" style="margin-top: 30px; background: #fafafa; padding: 20px; border-radius: 8px;">
-      <!-- Bloc Code Promo -->
       <div style="margin-bottom: 15px; display: flex; gap: 10px;">
         <input type="text" id="promo-input" placeholder="Votre code promo" value="${appliedPromoCode}" style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; text-transform: uppercase;">
         <button id="apply-promo-btn" style="padding: 8px 12px; background: #111; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Appliquer</button>
@@ -633,7 +712,6 @@ function renderCart() {
         <strong>${euro(total)}</strong>
       </div>
 
-      <!-- Formulaire coordonnées client avec vérification format -->
       <div style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #ddd;">
         <h3 style="margin-top: 0; font-size: 1rem;">Vos coordonnées de livraison</h3>
         <div style="margin-bottom: 10px;">
