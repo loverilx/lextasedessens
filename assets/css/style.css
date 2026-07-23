@@ -39,3 +39,11 @@ border-radius:18px;
 .hero-intro h2{font-size:2.6rem;margin-bottom:1rem}
 .hero-intro p{max-width:760px;margin:0 auto 2rem;color:#555}
 .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+
+/* V4.5 premium additions */
+.bestsellers{padding:5rem 0;background:#f8f4f1}
+.best-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.best-card{background:#fff;border-radius:18px;padding:2rem;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:.3s;text-align:center}
+.best-card:hover{transform:translateY(-6px)}
+.best-badge{display:inline-block;background:#5b2a6d;color:#fff;padding:.3rem .7rem;border-radius:999px;font-size:.75rem;margin-bottom:1rem}
