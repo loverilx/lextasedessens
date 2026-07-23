@@ -71,3 +71,5 @@ border-radius:18px;
 .v5-premium .hero,.v5-premium header{transition:.3s ease;}
 .v5-premium .card,.v5-premium .product-card{border-radius:20px;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:transform .25s ease,box-shadow .25s ease;}
 .v5-premium .card:hover,.v5-premium .product-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.14);}
+
+.v5-highlight{padding:80px 20px;background:linear-gradient(180deg,#fff,#f8f3f8)}.v5-highlight .container{max-width:900px;margin:auto;text-align:center}.v5-highlight h2{font-size:2.2rem}.v5-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}.v5-actions .btn{padding:.9rem 1.6rem;border-radius:999px;text-decoration:none}.btn-primary{background:#6b2c7a;color:#fff}.btn-secondary{border:2px solid #6b2c7a;color:#6b2c7a}
