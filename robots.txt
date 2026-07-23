@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lextasedessens.fr/sitemap.xml
+Sitemap: https://loverilx.github.io/lextasedessens/sitemap.xml
