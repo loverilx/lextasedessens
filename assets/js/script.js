@@ -692,6 +692,9 @@ function renderCart() {
 
     try {
       const response = await fetch(`${WEB_APP_URL}?code=${inputVal}&action=check`);
+      if (!response.ok) {
+          throw new Error(`Erreur serveur (${response.status})`);
+      }
       const result = await response.json();
 
       if (result.status === "valid") {
@@ -744,7 +747,7 @@ function renderCart() {
     const referencesList = items.map(i => `${i.quantity}x ${i.product.id}`).join(', ');
 
     try {
-      await fetch(WEB_APP_URL, {
+      const response = await fetch(WEB_APP_URL, {
         method: 'POST',
         body: JSON.stringify({
           name: nameInput,
@@ -756,6 +759,9 @@ function renderCart() {
           total: total.toFixed(2)
         })
       });
+      if (!response.ok) {
+          throw new Error(`Erreur serveur (${response.status})`);
+      }
 
       if (appliedPromoCode && appliedPromoCode !== "TEST15") {
         await fetch(`${WEB_APP_URL}?code=${appliedPromoCode}&action=use`).catch(() => {});
