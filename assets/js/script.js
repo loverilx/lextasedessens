@@ -1,587 +1,602 @@
-// Données globales de la boutique
 const products = [
   {
-    id: "art-144",
-    name: "L'Étreinte Satinée",
-    category: "Lingerie & Accessoires",
-    price: 49.00,
-    description: "Une pièce délicate conçue pour envelopper la silhouette avec sensualité et raffinement.",
-    details: [
-      "Matière satinée douce et fluide",
-      "Design élégant et confortable",
-      "Idéal pour toutes les occasions intimes"
-    ],
-    image: "assets/images/product-144.jpg",
-    alt: "Lingerie L'Étreinte Satinée",
-    seoTitle: "L'Étreinte Satinée - Lingerie & Accessoires | L'Extase des Sens",
-    metaDescription: "Découvrez L'Étreinte Satinée, une pièce délicate et raffinée conçue pour envelopper la silhouette avec sensualité."
-  },
-  {
-    id: "art-145",
-    name: "Brume Sensorielle Velours",
-    category: "Cosmétiques & Soins",
-    price: 29.00,
-    description: "Une brume légère aux notes envoûtantes pour éveiller les sens et parfumer délicatement la peau.",
-    details: [
-      "Parfum subtil et longue tenue",
-      "Formule douce testée dermatologiquement",
-      "Flacon vaporisateur élégant de 100ml"
-    ],
-    image: "assets/images/product-145.jpg",
-    alt: "Brume Sensorielle Velours",
-    seoTitle: "Brume Sensorielle Velours - Cosmétiques | L'Extase des Sens",
-    metaDescription: "Éveillez vos sens avec la Brume Sensorielle Velours, un parfum délicat et envoûtant pour la peau."
-  },
-  {
-    id: "art-153",
-    name: "Huile de Massage Ambre Noir",
-    category: "Bien-être & Massage",
-    price: 35.00,
-    description: "Une huile de massage somptueuse aux effluves chaleureux d'ambre pour des moments de détente absolue.",
-    details: [
-      "Texture non grasse et glissante",
-      "Notes boisées et ambrées",
-      "Flacon de 150ml avec bouchon doseur"
-    ],
-    image: "assets/images/product-153.jpg",
-    alt: "Huile de Massage Ambre Noir",
-    seoTitle: "Huile de Massage Ambre Noir - Bien-être | L'Extase des Sens",
-    metaDescription: "Profitez d'un moment de détente absolue avec l'Huile de Massage Ambre Noir aux notes chaleureuses."
-  },
-  {
-    id: "art-140",
-    name: "Masque Vénitien Dentelle",
-    category: "Jeux & Accessoires",
-    price: 24.00,
-    description: "Ajoutez une touche de mystère et de séduction à vos soirées avec ce masque en dentelle fine.",
-    details: [
-      "Dentelle noire délicatement ajourée",
-      "Attaches en ruban satiné",
-      "Confortable et léger à porter"
-    ],
-    image: "assets/images/product-140.jpg",
-    alt: "Masque Vénitien Dentelle",
-    seoTitle: "Masque Vénitien Dentelle - Jeux & Accessoires | L'Extase des Sens",
-    metaDescription: "Apportez mystère et séduction à vos soirées avec ce masque vénitien en dentelle fine."
-  },
-  {
-    id: "art-148",
-    name: "Bougie de Massage Cire Gourmande",
-    category: "Bien-être & Massage",
-    price: 26.00,
-    description: "Une bougie parfumée qui se transforme en une huile tiède et onctueuse une fois allumée.",
-    details: [
-      "Cire végétale naturelle",
-      "Température de fusion basse et sécurisée",
-      "Parfum vanille et bois de santal"
-    ],
-    image: "assets/images/product-148.jpg",
-    alt: "Bougie de Massage Cire Gourmande",
-    seoTitle: "Bougie de Massage Cire Gourmande | L'Extase des Sens",
-    metaDescription: "Laissez-vous tenter par la Bougie de Massage Cire Gourmande pour des massages sensuels et chaleureux."
-  },
-  {
-    id: "art-142",
-    name: "Menottes Douces en Soie",
-    category: "Jeux & Accessoires",
-    price: 22.00,
-    description: "Explorez de nouvelles sensations en toute délicatesse grâce à ces menottes gainées de soie.",
-    details: [
-      "Doublure ultra-douce pour la peau",
-      "Système d'attache rapide et sécurisé",
-      "Design élégant et discret"
-    ],
-    image: "assets/images/product-142.jpg",
-    alt: "Menottes Douces en Soie",
-    seoTitle: "Menottes Douces en Soie - Accessoires | L'Extase des Sens",
-    metaDescription: "Explorez de nouvelles sensations avec ces menottes douces en soie, alliant confort et élégance."
-  },
-  {
-    id: "art-151",
-    name: "Coffret Plaisir Partagé",
-    category: "Coffrets",
-    price: 89.00,
-    description: "Un ensemble complet pensé pour pimenter l'intimité et multiplier les découvertes à deux.",
-    details: [
-      "Assortiment de produits haut de gamme",
-      "Présentation soignée en coffret cadeau",
-      "Idéal pour offrir ou se faire plaisir"
-    ],
-    image: "assets/images/product-151.jpg",
-    alt: "Coffret Plaisir Partagé",
-    seoTitle: "Coffret Plaisir Partagé - Coffrets Cadeaux | L'Extase des Sens",
-    metaDescription: "Découvrez le Coffret Plaisir Partagé, un ensemble complet pour pimenter votre intimité à deux."
-  },
-  {
-    id: "art-150",
-    name: "Plumeau de Sensation Céleste",
-    category: "Jeux & Accessoires",
-    price: 19.00,
-    description: "Un accessoire léger et aérien pour caresser la peau et éveiller les zones érogènes.",
-    details: [
-      "Fibres douces et soyeuses",
-      "Manche ergonomique en bois vernis",
-      "Sensations de frissons garanties"
-    ],
-    image: "assets/images/product-150.jpg",
-    alt: "Plumeau de Sensation Céleste",
-    seoTitle: "Plumeau de Sensation Céleste - Accessoires | L'Extase des Sens",
-    metaDescription: "Éveillez vos sens avec le Plumeau de Sensation Céleste pour des caresses douces et aériennes."
-  },
-  {
-    id: "art-147",
-    name: "Gel Stimulant Intense",
-    category: "Cosmétiques & Soins",
-    price: 25.00,
-    description: "Un gel formulé pour intensifier les sensations et stimuler l'afflux sanguin en douceur.",
-    details: [
-      "Action rapide et ciblée",
-      "Compatible avec les accessoires",
-      "Tube nomade de 50ml"
-    ],
-    image: "assets/images/product-147.jpg",
-    alt: "Gel Stimulant Intense",
-    seoTitle: "Gel Stimulant Intense - Cosmétiques | L'Extase des Sens",
-    metaDescription: "Intensifiez vos moments de plaisir avec le Gel Stimulant Intense à l'action rapide et ciblée."
-  },
-  {
-    id: "art-165",
-    name: "String Ouvert Dentelle Fine",
-    category: "Lingerie & Accessoires",
-    price: 28.00,
-    description: "Un sous-vêtement audacieux et raffiné, confectionné dans une dentelle délicatement ciselée.",
-    details: [
-      "Coupe sensuelle et minimaliste",
-      "Élastiques confortables qui ne marquent pas",
-      "Finitions haut de gamme"
-    ],
-    image: "assets/images/product-165.jpg",
-    alt: "String Ouvert Dentelle Fine",
-    seoTitle: "String Ouvert Dentelle Fine - Lingerie | L'Extase des Sens",
-    metaDescription: "Succombez au charme de ce string ouvert en dentelle fine, à la fois audacieux et raffiné."
-  },
-  {
-    id: "art-159",
-    name: "Bandeau de Privation Satin",
-    category: "Jeux & Accessoires",
-    price: 18.00,
-    description: "Laissez place à l'imagination et aiguisez vos autres sens avec ce bandeau occultant en satin.",
-    details: [
-      "Satin doux et agréable sur les yeux",
-      "Lien ajustable pour un maintien parfait",
-      "Occultation totale"
-    ],
-    image: "assets/images/product-159.jpg",
-    alt: "Bandeau de Privation Satin",
-    seoTitle: "Bandeau de Privation Satin - Accessoires | L'Extase des Sens",
-    metaDescription: "Aiguisez vos sens avec le bandeau de privation en satin doux et entièrement occultant."
-  },
-  {
-    id: "art-158",
-    name: "Sérum Aphrodisiaque Floral",
-    category: "Cosmétiques & Soins",
-    price: 32.00,
-    description: "Un élixir précieux aux extraits de plantes reconnues pour stimuler le désir et le bien-être.",
-    details: [
-      "Formule naturelle concentrée",
-      "Parfum floral enivrant",
-      "Pipette compte-gouttes pratique"
-    ],
-    image: "assets/images/product-158.jpg",
-    alt: "Sérum Aphrodisiaque Floral",
-    seoTitle: "Sérum Aphrodisiaque Floral - Cosmétiques | L'Extase des Sens",
-    metaDescription: "Stimulez votre désir avec le sérum aphrodisiaque floral aux extraits de plantes naturelles."
-  },
-  {
-    id: "art-156",
-    name: "Kimono Transparent Nocturne",
-    category: "Lingerie & Accessoires",
-    price: 65.00,
-    description: "Un vêtement d'intérieur vaporeux qui laisse deviner la silhouette avec élégance et mystère.",
-    details: [
-      "Voile léger effet mousseline",
-      "Ceinture à nouer incluse",
-      "Taille unique élégante et fluide"
-    ],
-    image: "assets/images/product-156.jpg",
-    alt: "Kimono Transparent Nocturne",
-    seoTitle: "Kimono Transparent Nocturne - Lingerie | L'Extase des Sens",
-    metaDescription: "enveloppez-vous de mystère avec le Kimono Transparent Nocturne en voile léger."
-  },
-  {
-    id: "art-155",
-    name: "Cravache de Sagesse Cuir Souple",
-    category: "Jeux & Accessoires",
-    price: 34.00,
-    description: "Pour des jeux de domination maîtrisés, alliant esthétisme et souplesse d'utilisation.",
-    details: [
-      "Cuir véritable souple et résistant",
-      "Poignée tressée ergonomique",
-      "Lanière de poignet de sécurité"
-    ],
-    image: "assets/images/product-155.jpg",
-    alt: "Cravache de Sagesse Cuir Souple",
-    seoTitle: "Cravache de Sagesse Cuir Souple - Accessoires | L'Extase des Sens",
-    metaDescription: "Maîtrisez vos jeux de rôle avec la cravache de sagesse en cuir véritable souple et résistant."
-  },
-  {
-    id: "art-154",
-    name: "Lubrifiant Sensuel Acide Hyaluronique",
-    category: "Cosmétiques & Soins",
-    price: 27.00,
-    description: "Une formule haut de gamme enrichie en acide hyaluronique pour une hydratation longue durée.",
-    details: [
-      "Effet glissant longue durée",
-      "Hydrate et respecte les muqueuses",
-      "Base aqueuse compatible accessoires"
-    ],
-    image: "assets/images/product-154.jpg",
-    alt: "Lubrifiant Sensuel Acide Hyaluronique",
-    seoTitle: "Lubrifiant Acide Hyaluronique - Cosmétiques | L'Extase des Sens",
-    metaDescription: "Profitez d'un confort optimal avec le lubrifiant sensuel enrichi en acide hyaluronique."
-  },
-  {
-    id: "art-152",
-    name: "Body Découpé Fusion",
-    category: "Lingerie & Accessoires",
-    price: 52.00,
-    description: "Un body aux lignes audacieuses qui épouse les formes pour un effet visuel saisissant.",
-    details: [
-      "Matière extensible confortable",
-      "Découpes géométriques flatteuses",
-      "Maintien irréprochable"
-    ],
-    image: "assets/images/product-152.jpg",
-    alt: "Body Découpé Fusion",
-    seoTitle: "Body Découpé Fusion - Lingerie | L'Extase des Sens",
-    metaDescription: "Mettez vos formes en valeur avec le body découpé Fusion aux lignes audacieuses."
-  },
-  {
-    id: "art-149",
-    name: "Cocktail de Poudre Scintillante",
-    category: "Cosmétiques & Soins",
-    price: 31.00,
-    description: "Une poudre corporelle pailletée délicatement parfumée pour illuminer la peau lors des soirées intimes.",
-    details: [
-      "Reflets nacrés subtils",
-      "Touche de parfum irrésistible",
-      "Application douce avec houppette incluse"
-    ],
-    image: "assets/images/product-149.jpg",
-    alt: "Cocktail de Poudre Scintillante",
-    seoTitle: "Poudre Scintillante - Cosmétiques | L'Extase des Sens",
-    metaDescription: "Illumine votre peau avec la poudre corporelle scintillante et délicatement parfumée."
-  },
-  {
-    id: "art-167",
-    name: "Plug Bijou Cristal",
-    category: "Jeux & Accessoires",
-    price: 39.00,
-    description: "Un objet d'apparat étincelant combinant plaisir anal et raffinement visuel.",
-    details: [
-      "Base en acier inoxydable hypoallergénique",
-      "Cristal étincelant à la base",
-      "Forme ergonomique pour insertion facile"
-    ],
-    image: "assets/images/product-167.jpg",
-    alt: "Plug Bijou Cristal",
-    seoTitle: "Plug Bijou Cristal - Jeux & Accessoires | L'Extase des Sens",
-    metaDescription: "Alliez plaisir et esthétisme avec le plug anal bijou surmonté d'un cristal étincelant."
-  },
-  {
-    id: "art-166",
-    name: "Oeuf de Geisha Connecté",
-    category: "Jeux & Accessoires",
-    price: 59.00,
-    description: "Musclez votre périnée tout en stimulant vos sens grâce aux vibrations contrôlées à distance.",
-    details: [
-      "Silicone médical soyeux",
-      "Contrôle par application mobile",
-      "Plusieurs modes de vibration discrets"
-    ],
-    image: "assets/images/product-166.jpg",
-    alt: "Oeuf de Geisha Connecté",
-    seoTitle: "Oeuf de Geisha Connecté - Accessoires | L'Extase des Sens",
-    metaDescription: "Découvrez l'œuf de geisha connecté pour tonifier votre périnée avec des vibrations contrôlées."
-  },
-  {
-    id: "art-164",
-    name: "Ensemble Jarretelles Velours",
-    category: "Lingerie & Accessoires",
-    price: 55.00,
-    description: "Un ensemble de jarretelles en velours stretch pour un look rétro et follement sensuel.",
-    details: [
-      "Velours doux et extensible",
-      "Attaches métalliques robustes",
-      "S'associe parfaitement avec vos bas"
-    ],
-    image: "assets/images/product-164.jpg",
-    alt: "Ensemble Jarretelles Velours",
-    seoTitle: "Ensemble Jarretelles Velours - Lingerie | L'Extase des Sens",
-    metaDescription: "Craquez pour cet ensemble de jarretelles en velours stretch au style rétro et sensuel."
-  },
-  {
-    id: "art-163",
-    name: "Vibreur Wand Rose Pur",
-    category: "Jeux & Accessoires",
-    price: 69.00,
-    description: "Un masseur intime puissant doté de multiples vitesses pour des vagues de plaisir intenses.",
-    details: [
-      "Moteur puissant et silencieux",
-      "Tête souple en silicone velouté",
-      "Rechargeable par USB"
-    ],
-    image: "assets/images/product-163.jpg",
-    alt: "Vibreur Wand Rose Pur",
-    seoTitle: "Vibreur Wand Rose Pur - Accessoires | L'Extase des Sens",
-    metaDescription: "Offrez-vous des vagues de plaisir intense avec le vibreur Wand puissant et silencieux."
-  },
-  {
-    id: "art-162",
-    name: "Gant de Caresse Exquis",
-    category: "Jeux & Accessoires",
-    price: 15.00,
-    description: "Un gant texturé conçu pour amplifier chaque effleurement et décupler les sensations tactiles.",
-    details: [
-      "Matière extensible adaptée à toutes les mains",
-      "Texturations variées sur les doigts et la paume",
-      "Lavable et réutilisable"
-    ],
-    image: "assets/images/product-162.jpg",
-    alt: "Gant de Caresse Exquis",
-    seoTitle: "Gant de Caresse Exquis - Accessoires | L'Extase des Sens",
-    metaDescription: "Décuplez vos sensations tactiles avec le gant de caresse texturé et agréable."
-  },
-  {
-    id: "art-161",
-    name: "Huile Chauffante Vanille Gourmande",
-    category: "Bien-être & Massage",
-    price: 28.00,
-    description: "Une huile qui chauffe délicatement au contact de la peau et sous l'effet du souffle.",
-    details: [
-      "Effet thermique activé par le souffle",
-      "Délicieuse saveur vanillée",
-      "Flacon de 100ml"
-    ],
-    image: "assets/images/product-161.jpg",
-    alt: "Huile Chauffante Vanille Gourmande",
-    seoTitle: "Huile Chauffante Vanille Gourmande | L'Extase des Sens",
-    metaDescription: "Éveillez vos sens avec l'huile chauffante à la vanille activée par le souffle."
-  },
-  {
-    id: "art-160",
-    name: "Collier de Soumission Cuir & Chaîne",
-    category: "Jeux & Accessoires",
-    price: 29.00,
-    description: "Un bijou de caractère pour affirmer ses envies et explorer les jeux de rôle en toute élégance.",
-    details: [
-      "Cuir noir mat et anneau en métal argenté",
-      "Boucle de réglage sécurisée",
-      "Confortable à porter"
-    ],
-    image: "assets/images/product-160.jpg",
-    alt: "Collier de Soumission Cuir & Chaîne",
-    seoTitle: "Collier de Soumission Cuir - Accessoires | L'Extase des Sens",
-    metaDescription: "Affirmez vos envies avec ce collier de soumission en cuir mat et anneau argenté."
-  },
-  {
-    id: "art-157",
-    name: "Sels de Bain Aphrodisiaques Pétillants",
-    category: "Bien-être & Massage",
-    price: 21.00,
-    description: "Plongez dans un bain relaxant aux cristaux parfumés pour préparer l'esprit et le corps à l'intimité.",
-    details: [
-      "Sels minéraux naturels et huiles essentielles",
-      "Effet légèrement effervescent",
-      "Sachet refermable de 400g"
-    ],
-    image: "assets/images/product-157.jpg",
-    alt: "Sels de Bain Aphrodisiaques Pétillants",
-    seoTitle: "Sels de Bain Aphrodisiaques - Bien-être | L'Extase des Sens",
-    metaDescription: "Détendez-vous dans un bain relaxant aux sels minéraux et huiles essentielles aphrodisiaques."
-  },
-  {
-    id: "art-146",
-    name: "Jeu de Cartes 'Confessions Intimes'",
-    category: "Jeux & Accessoires",
+    id: 'art-144',
+    name: 'Kit d’Initiation BDSM & Bondage – Coffret Découverte Complet',
+    category: 'Accessoires',
     price: 20.00,
-    description: "Brisez la glace et brisez les tabous grâce à des questions coquines et des gages audacieux.",
+    image: 'assets/images/products/art-144.jpg',
+    description: 'Explorez de nouvelles dimensions de complicité et de lâcher-prise avec cet ensemble complet, spécialement pensé pour aborder les pratiques du bondage en toute sérénité. Ce coffret réunit les indispensables pour structurer vos jeux érotiques tout en privilégiant le dialogue et la confiance mutuelle. Conçu pour s’adapter à vos envies, il intègre des attaches ajustables, des éléments de privation sensorielle ainsi que des accessoires de stimulation douce pour varier les rythmes. Une approche idéale pour allier découverte sensorielle et maîtrise du moment présent.',
     details: [
-      "Plus de 100 cartes de défis et questions",
-      "Plusieurs niveaux d'intensité",
-      "Format compact idéal pour emporter partout"
+      'Système d’attache ajustable pour lit',
+      '4 menottes rembourrées pour poignets et chevilles',
+      'Paddle en similicuir pour stimulations progressives',
+      'Pinces à seins avec clochettes',
+      'Bandeau de privation sensorielle',
+      'Référence : ART-144'
     ],
-    image: "assets/images/product-146.jpg",
-    alt: "Jeu de Cartes Confessions Intimes",
-    seoTitle: "Jeu de Cartes Confessions Intimes - Jeux | L'Extase des Sens",
-    metaDescription: "Brisez la glace avec le jeu de cartes Confessions Intimes aux questions et gages coquins."
+    seoTitle: 'Kit d’Initiation BDSM & Bondage Complet | Coffret Découverte',
+    metaDescription: 'Découvrez notre kit d’initiation BDSM et bondage complet. Ce coffret découverte intègre des attaches et accessoires pour vos jeux érotiques en toute sérénité.',
+    alt: 'Kit d’initiation BDSM et bondage complet avec accessoires et menottes ART-144'
   },
   {
-    id: "art-143",
-    name: "Sangle de Maintien Ajustable",
-    category: "Jeux & Accessoires",
-    price: 45.00,
-    description: "Un accessoire modulable et robuste pour diversifier les positions et intensifier l'abandon.",
+    id: 'art-145',
+    name: 'Set de Cockrings Multi-Tailles & Design Géométrique',
+    category: 'Accessoires',
+    price: 10.00,
+    image: 'assets/images/products/art-145.jpg',
+    description: 'Apportez une dimension inédite à vos intimités grâce à ce set de cockrings aux formes géométriques étudiées. Conçu en silicone souple doté d’une finition mate très douce au toucher, cet assortiment de neuf pièces permet d’expérimenter différentes tailles et configurations selon vos sensations recherchées. Le modèle triple anneau inclus offre un maintien optimal et une répartition harmonieuse. Un choix judicieux pour conjuguer esthétisme contemporain, confort d’utilisation et intensité maîtrisée lors de vos moments à deux.',
     details: [
-      "Sangles solides et réglables",
-      "Boucles d'attache sécurisées",
-      "Installation facile et discrète"
+      'Design octogonal géométrique original',
+      'Coffret complet de 9 pièces multi-tailles',
+      'Modèle spécifique triple anneau inclus',
+      'Silicone souple haute qualité',
+      'Finition douce "Soft Touch" mat',
+      'Référence : ART-145'
     ],
-    image: "assets/images/product-143.jpg",
-    alt: "Sangle de Maintien Ajustable",
-    seoTitle: "Sangle de Maintien Ajustable - Accessoires | L'Extase des Sens",
-    metaDescription: "Diversifiez vos positions avec la sangle de maintien ajustable robuste et sécurisée."
+    seoTitle: 'Set de Cockrings Multi-Tailles en Silicone Souple Mat',
+    metaDescription: 'Variez vos sensations avec ce set de cockrings multi-tailles au design géométrique. Conçu en silicone souple mat, il offre confort et maintien optimal.',
+    alt: 'Set de cockrings multi-tailles en silicone souple mat design géométrique ART-145'
+  },
+  {
+    id: 'art-153',
+    name: 'Douche Intime Portable Multifonction – Hygiène & Confort',
+    category: 'Bien-être',
+    price: 20.00,
+    image: 'assets/images/products/art-153.jpg',
+    description: 'Prenez soin de votre bien-être intime au quotidien avec cet accessoire nomade, discret et fonctionnel. Pensé pour vous accompagner aussi bien à la maison qu’en voyage, ce kit de douche intime dispose d’une canule ergonomique inclinée et d’embouts interchangeables pour s’adapter précisément à vos besoins d’hygiène. Son système de pompage par tuyau d’aspiration garantit une utilisation fluide et maîtrisée. Livré dans un coffret de rangement compartimenté, il assure une discrétion absolue et un entretien simplifié après chaque usage.',
+    details: [
+      'Format nomade compact et transportable',
+      'Embouts interchangeables inclus',
+      'Canule ergonomique inclinée',
+      'Système de pompage par tuyau d’aspiration',
+      'Coffret de rangement compartimenté inclus',
+      'Référence : ART-153'
+    ],
+    seoTitle: 'Douche Intime Portable Multifonction pour le Voyage',
+    metaDescription: 'Prenez soin de votre hygiène avec cette douche intime portable multifonction. Format nomade discret avec embouts interchangeables et canule ergonomique.',
+    alt: 'Douche intime portable multifonction avec embouts et coffret de rangement ART-153'
+  },
+  {
+    id: 'art-140',
+    name: 'Douche Intime Électrique Rechargeable – Hygiène & Confort Premium',
+    category: 'Bien-être',
+    price: 20.00,
+    image: 'assets/images/products/art-140.jpg',
+    description: 'Modernisez votre routine de soins personnels avec cette douche intime électrique et rechargeable par USB. Conçue pour offrir un confort d’utilisation optimal, elle intègre un système motorisé automatique qui dispense un flux régulier sans effort. Son réservoir transparent permet de contrôler facilement le niveau d’eau, tandis que son embout ergonomique en silicone et ABS souple assure une manipulation douce et respectueuse des zones sensibles. Un équipement technique, discret et parfaitement adapté aux exigences d’hygiène actuelles.',
+    details: [
+      'Système électrique automatique motorisé',
+      'Réservoir intégré transparent',
+      'Embout ergonomique souple (silicone & ABS)',
+      'Rechargeable via USB',
+      'Format pratique et discret',
+      'Référence : ART-140'
+    ],
+    seoTitle: 'Douche Intime Électrique Rechargeable USB et Automatique',
+    metaDescription: 'Optimisez votre hygiène intime avec cette douche électrique rechargeable par USB. Système motorisé automatique avec réservoir transparent et embout souple.',
+    alt: 'Douche intime électrique rechargeable par USB avec réservoir transparent ART-140'
+  },
+  {
+    id: 'art-148',
+    name: 'Gode Ventouse Lava Réaliste – Texture Peau & Design Organique',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-148.jpg',
+    description: 'Laissez-vous séduire par l’esthétisme unique de ce gode à ventouse, dont l’apparence évoque la roche en fusion avec un élégant marbré noir et orange. Fabriqué en silicone haute densité au toucher soyeux, il présente des reliefs anatomiques minutieusement travaillés pour procurer un réalisme visuel et tactile saisissant. Sa base dotée d’une ventouse solidement renforcée permet une utilisation mains libres en toute stabilité sur les surfaces lisses. Une pièce de choix qui allie caractère visuel, ergonomie soignée et confort d’insertion.',
+    details: [
+      'Longueur totale : 21,6 cm',
+      'Diamètre : 5,1 cm',
+      'Silicone haute densité au toucher doux',
+      'Design original marbré effet "Lava" (noir et orange)',
+      'Texture ultra-réaliste avec reliefs anatomiques',
+      'Base ventouse renforcée (mains libres)',
+      'Référence : ART-148'
+    ],
+    seoTitle: 'Gode Ventouse Lava Réaliste en Silicone Premium',
+    metaDescription: 'Découvrez le gode ventouse Lava en silicone premium avec texture réaliste, base ventouse renforcée et design original.',
+    alt: 'Gode ventouse Lava réaliste en silicone noir et orange ART-148'
+  },
+  {
+    id: 'art-142',
+    name: 'Stimulateur Connecté Va-et-Vient & Vibrations Premium',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-142.jpg',
+    description: 'Plongez au cœur de l’innovation avec ce stimulateur polyvalent qui associe un mouvement de va-et-vient motorisé à des pulsations vibratoires profondes. Pilotable à distance via une application mobile dédiée ou sa télécommande, il s’adapte à toutes vos envies d’exploration connectée. Son design ergonomique met en valeur une zone texturée pensée pour cibler les zones érogènes avec précision. Reposant sur une base ventouse stable pour un usage mains libres et une conception étanche rechargeable, cet accessoire incarne l’alliance parfaite entre technologie de pointe et plaisir personnalisable.',
+    details: [
+      'Longueur totale : 14,33 cm',
+      'Diamètre : 3,32 cm (pointe) à 3,88 cm (zone texturée)',
+      'Mouvement automatique de va-et-vient motorisé',
+      'Vibrations puissantes & réglables',
+      'Contrôle intelligent par smartphone (App) & télécommande',
+      'Base ventouse stable (mains libres)',
+      'Rechargeable',
+      'Référence : ART-142'
+    ],
+    seoTitle: 'Stimulateur Connecté Va-et-Vient & Vibrations App',
+    metaDescription: 'Profitez d’un stimulateur connecté à va-et-vient et vibrations puissantes. Pilotable par application mobile avec base ventouse mains libres rechargeable.',
+    alt: 'Stimulateur connecté va-et-vient et vibrations avec application mobile ART-142'
+  },
+  {
+    id: 'art-151',
+    name: 'Gode Spiral Fantasy – Design Licorne Multicolore',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-151.jpg',
+    description: 'Invitez la fantaisie dans votre intimité avec ce modèle sculpté en spirale aux superbes nuances allant du violet au bleu profond. Sa forme conique progressive et ses reliefs torsadés offrent une stimulation originale et changeante au gré des mouvements. Confectionné en silicone de qualité supérieure au toucher extrêmement doux, ce gode garantit une glisse agréable et un entretien facile. Sa base évasée assure quant à elle une parfaite stabilité pour une utilisation en toute quiétude.',
+    details: [
+      'Longueur totale : 19 cm',
+      'Diamètre du corps : 4,1 cm (jusqu\'à 5,5 cm max)',
+      'Matière : Silicone premium au toucher doux',
+      'Design fantasy avec texture en spirale',
+      'Dégradé multicolore élégant (violet vers bleu profond)',
+      'Forme conique progressive',
+      'Base évasée pour une excellente stabilité',
+      'Référence : ART-151'
+    ],
+    seoTitle: 'Gode Spiral Fantasy Multicolore en Silicone Doux',
+    metaDescription: 'Laissez-vous tenter par le gode Spiral Fantasy en silicone doux. Design torsadé multicolore avec forme conique progressive et base évasée stable.',
+    alt: 'Gode spiral fantasy design licorne multicolore en silicone doux ART-151'
+  },
+  {
+    id: 'art-150',
+    name: 'Gode XL Bicolore Premium – Volume & Sensations Intenses',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-150.jpg',
+    description: 'Destiné aux amateurs de sensations amples et généreuses, ce gode XL séduit par ses dimensions imposantes et son esthétique moderne aux teintes roses et violettes. Sa silhouette effilée vers la pointe facilite l’insertion tandis que son corps volumineux procure un remplissage intense et satisfaisant. Réalisé en silicone souple haut de gamme, il procure un contact chaleureux et respectueux de la peau. Doté d’une base évasée sécurisante, il associe robustesse, confort et élégance visuelle.',
+    details: [
+      'Longueur totale : 23 cm',
+      'Diamètre du corps : 5 cm (jusqu\'à 7,3 cm max)',
+      'Matière : Silicone premium au toucher doux',
+      'Dégradé bicolore moderne (rose vers violet)',
+      'Forme progressive & pointe affinée',
+      'Base évasée pour une excellente stabilité',
+      'Référence : ART-150'
+    ],
+    seoTitle: 'Gode XL Bicolore en Silicone Premium pour Sensations Intenses',
+    metaDescription: 'Explorez des sensations amples avec ce gode XL bicolore en silicone premium. Corps volumineux, pointe effilée et base évasée sécurisante.',
+    alt: 'Gode XL bicolore rose et violet en silicone premium au toucher doux ART-150'
+  },
+  {
+    id: 'art-147',
+    name: 'Gode Gonflable Premium – Volume Adjustable & Design Galaxy',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-147.jpg',
+    description: 'Maîtrisez chaque instant de votre plaisir grâce à ce gode gonflable innovant qui permet de moduler le volume du corps selon vos préférences du moment. Équipé d’une discrète poire de gonflage manuelle, il passe en quelques instants d’un profil confortable à une épaisseur plus soutenue. Son design aux inspirations cosmiques s’associe à une fabrication en silicone souple de grande qualité pour un confort optimal. Sa base large et stable complète l’ensemble pour des expériences variées en toute sécurité.',
+    details: [
+      'Longueur totale : 16,2 cm',
+      'Longueur insérable : 12,7 cm',
+      'Diamètre du corps : 5,8 cm (jusqu\'à 6,5 cm gonflé)',
+      'Matière : Silicone premium au toucher doux',
+      'Système de gonflage manuel avec poire',
+      'Base évasée pour une excellente stabilité',
+      'Référence : ART-147'
+    ],
+    seoTitle: 'Gode Gonflable à Volume Ajustable en Silicone Doux',
+    metaDescription: 'Mododulez votre plaisir avec ce gode gonflable en silicone souple doté d’une poire manuelle. Design cosmique unique et base large stable.',
+    alt: 'Gode gonflable design galaxy avec poire de gonflage manuelle ART-147'
+  },
+  {
+    id: 'art-165',
+    name: 'Gode Vibrant XXL – Réalisme & Vibrations Intenses',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-165.jpg',
+    description: 'Alliez le plaisir du format XXL à la puissance de vibrations modulables avec ce modèle conçu pour des vagues de sensations profondes. Sa structure longue et ses finitions texturées épousent naturellement les formes pour une immersion totale. Fabriqué en silicone souple hypoallergénique, il offre un toucher particulièrement soyeux et respectueux de l’épiderme. Grâce à sa base ventouse intégrée, vous profitez d’un maintien stable sur toutes les surfaces lisses, libérant ainsi vos mouvements pour un confort d’utilisation absolu.',
+    details: [
+      'Longueur totale : 21,5 cm',
+      'Diamètre : 4 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Vibrations réglables (moteur puissant)',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-165'
+    ],
+    seoTitle: 'Gode Vibrant XXL en Silicone avec Vibrations Intenses',
+    metaDescription: 'Profitez de vibrations intenses avec ce gode vibrant XXL en silicone souple. Modèle texturé long avec base ventouse mains libres.',
+    alt: 'Gode vibrant XXL texturé en silicone souple avec base ventouse ART-165'
+  },
+  {
+    id: 'art-159',
+    name: 'Gode Chauffant & Vibrant XXL – Confort Thermique & Sensations Intenses',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-159.jpg',
+    description: 'Découvrez une expérience sensorielle enveloppante grâce à ce modèle XXL qui intègre une fonction chauffante relaxante et des vibrations ajustables. Son diamètre généreux procure une sensation de plénitude immédiate, tandis que la douce chaleur diffusée simule une proximité naturelle et chaleureuse. Revêtu de silicone haut de gamme au toucher velouté, il garantit un confort d’insertion optimal et une glisse parfaite. Sa base ventouse assure une fixation sûre pour explorer vos envies en toute tranquillité.',
+    details: [
+      'Longueur totale : 15 cm',
+      'Diamètre : 6,05 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Fonction chauffante intégrée',
+      'Vibrations réglables',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-159'
+    ],
+    seoTitle: 'Gode Chauffant & Vibrant XXL en Silicone Velouté',
+    metaDescription: 'Vivez une expérience unique avec ce gode chauffant et vibrant XXL en silicone haut de gamme. Diamètre généreux et base ventouse stable.',
+    alt: 'Gode chauffant et vibrant XXL grand diamètre en silicone doux ART-159'
+  },
+  {
+    id: 'art-158',
+    name: 'Gode Chauffant & Vibrant XL – Réalisme & Confort Premium',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-158.jpg',
+    description: 'Associez la chaleur réconfortante à l’efficacité de vibrations stimulantes avec ce gode au format XL pensé pour des adeptes de réalisme. Son design anatomique détaillé épouse harmonieusement l’anatomie, tandis que la technologie chauffante intégrée procure une sensation de réalisme saisissante dès les premiers contacts. Conçu en silicone souple de qualité supérieure, il offre un toucher extrêmement doux et hygiénique. Sa base ventouse stable permet de varier les positions et les usages en toute liberté.',
+    details: [
+      'Longueur totale : 18 cm',
+      'Diamètre : 4 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Fonction chauffante intégrée',
+      'Vibrations réglables',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-158'
+    ],
+    seoTitle: 'Gode Chauffant & Vibrant XL Réaliste en Silicone Doux',
+    metaDescription: 'Alliez chaleur relaxante et vibrations avec ce gode chauffant et vibrant XL réaliste en silicone doux. Base ventouse stable pour usage mains libres.',
+    alt: 'Gode chauffant et vibrant XL anatomique en silicone souple ART-158'
+  },
+  {
+    id: 'art-156',
+    name: 'Gode Chauffant & Vibrant Premium – Réalisme & Double Technologie',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-156.jpg',
+    description: 'Profitez d’un équilibre parfait entre dimensions maniables et technologies de pointe avec ce gode chauffant et vibrant. Sa fonction de chauffe procure une tiédeur corporelle très appréciable, tandis que son moteur à vibrations réglables stimule intensément vos zones sensibles. Doté d’une silhouette réaliste aux finitions soignées en silicone doux, il garantit un confort d’utilisation remarquable. La base ventouse intégrée offre par ailleurs la liberté d’une utilisation stable et mains libres.',
+    details: [
+      'Longueur totale : 16 cm',
+      'Diamètre : 4 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Fonction chauffante intégrée',
+      'Vibrations réglables',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-156'
+    ],
+    seoTitle: 'Gode Chauffant & Vibrant Réaliste en Silicone Premium',
+    metaDescription: 'Découvrez ce gode chauffant et vibrant doté d’un moteur puissant et d’une fonction chauffe. Design réaliste en silicone doux avec base ventouse.',
+    alt: 'Gode chauffant et vibrant en silicone doux avec base ventouse ART-156'
+  },
+  {
+    id: 'art-155',
+    name: 'Gode Éjaculateur Premium – Réalisme & Effet Éjaculation',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-155.jpg',
+    description: 'Poussez le réalisme de vos jeux intimes encore plus loin grâce à ce gode doté d’un ingénieux système de simulation d’éjaculation. Équipé d’un réservoir interne et d’une pompe discrète, il permet de restituer visuellement les moments de plénitude avec un réalisme saisissant. Sa texture détaillée et sa composition en silicone souple de qualité supérieure assurent un confort d’insertion irréprochable et un toucher agréable. Sa base ventouse assure une excellente stabilité pour profiter pleinement de chaque instant.',
+    details: [
+      'Longueur totale : 16 cm',
+      'Diamètre : 3,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Système de simulation d\'éjaculation intégré (réservoir & pompe)',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-155'
+    ],
+    seoTitle: 'Gode Éjaculateur Réaliste avec Système de Pompe Interne',
+    metaDescription: 'Intensifiez vos jeux avec ce gode éjaculateur réaliste en silicone souple. Système de simulation avec réservoir interne et base ventouse stable.',
+    alt: 'Gode éjaculateur réaliste avec réservoir et pompe intégrés en silicone ART-155'
+  },
+  {
+    id: 'art-154',
+    name: 'Gode Vibrant Double Stimulation – Réalisme & Stimulateur Externe',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-154.jpg',
+    description: 'Multipliez les sources de plaisir avec ce modèle pensé pour offrir une double stimulation simultanée, interne et externe. Son corps texturé aux finitions réalistes s’accompagne d’un stimulateur externe flexible pour éveiller toutes vos zones érogènes en un seul geste. Les vibrations réglables permettent d’ajuster l’intensité selon vos envies du moment, tandis que le silicone soyeux garantit une douceur de chaque instant. Muni d’une base ventouse stable, il se fixe aisément pour des moments de détente en toute autonomie.',
+    details: [
+      'Longueur totale : 18 cm',
+      'Diamètre : 4 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Stimulateur externe intégré',
+      'Vibrations réglables',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-154'
+    ],
+    seoTitle: 'Gode Vibrant Double Stimulation Interne et Externe',
+    metaDescription: 'Profitez d’une double stimulation avec ce gode vibrant doté d’un stimulateur externe flexible. Silicone doux et base ventouse mains libres.',
+    alt: 'Gode vibrant double stimulation avec stimulateur externe en silicone ART-154'
+  },
+  {
+    id: 'art-152',
+    name: 'Gode Vibrant Premium – Élégance Pourpre & Sensations Profondes',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-152.jpg',
+    description: 'Alliez raffinement esthétique et performances vibratoires avec ce modèle élancé à la teinte pourpre rehaussée de délicats détails. Sa légère courbure anatomique a été pensée pour cibler précisément les zones sensibles avec un grand confort. Équipé d’un moteur puissant et discret, il propose des modes de vibration variés facilement pilotables depuis sa base ergonomique. Façonné en silicone de haute qualité, il offre un toucher velouté pour des explorations sensorielles tout en douceur.',
+    details: [
+      'Longueur totale : 22 cm',
+      'Diamètre : 3,9 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Vibrations réglables (moteur puissant)',
+      'Base ergonomique avec commandes intégrées',
+      'Référence : ART-152'
+    ],
+    seoTitle: 'Gode Vibrant Pourpre Élégant en Silicone Velouté',
+    metaDescription: 'Découvrez ce gode vibrant pourpre au design incurvé élégant. Moteur puissant à vibrations réglables et base ergonomique en silicone doux.',
+    alt: 'Gode vibrant pourpre incurvé avec commandes intégrées en silicone ART-152'
+  },
+  {
+    id: 'art-149',
+    name: 'Gode Vibrant Premium – Design Arqué & Télécommande Sans Fil',
+    category: 'Vibromasseurs',
+    price: 25.00,
+    image: 'assets/images/products/art-149.jpg',
+    description: 'Goûtez au confort du contrôle à distance avec ce gode vibrant à la silhouette subtilement arquée. Conçu pour épouser les lignes naturelles du corps, il associe un design bicolore moderne à des vibrations performantes pilotables via une télécommande sans fil intuitive. Sa prise en main ergonomique et sa matière en silicone souple garantissent une utilisation agréable et intuitive, que vous soyez seul ou à deux. Un accessoire élégant qui facilite le lâcher-prise et renouvelle vos pratiques.',
+    details: [
+      'Longueur totale : 18 cm',
+      'Diamètre : 3,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Télécommande sans fil incluse',
+      'Vibrations réglables (moteur performant)',
+      'Référence : ART-149'
+    ],
+    seoTitle: 'Gode Vibrant Arqué avec Télécommande Sans Fil',
+    metaDescription: 'Commandez vos plaisirs à distance avec ce gode vibrant arqué doté d’une télécommande sans fil. Design bicolore moderne en silicone souple.',
+    alt: 'Gode vibrant arqué bicolore avec télécommande sans fil en silicone ART-149'
+  },
+  {
+    id: 'art-167',
+    name: 'Gode Ventouse Black Edition – Élégance Ébène & Grand Format',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-167.jpg',
+    description: 'Affirmez vos préférences avec cette édition spéciale habillée d’un noir ébène profond, conjuguant sobriété visuelle et dimensions généreuses. Ce modèle ventouse met en valeur des détails anatomiques soignés pour offrir une prise en main et un confort d’insertion optimisés. Sa composition en silicone doux de haute qualité assure un contact respectueux de la peau et une excellente durabilité. Compatible avec les harnais et doté d’une base stable, il s’adapte à toutes vos envies de découverte.',
+    details: [
+      'Longueur totale : 22 cm',
+      'Diamètre : 4,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-167'
+    ],
+    seoTitle: 'Gode Ventouse Black Edition Grand Format en Silicone',
+    metaDescription: 'Optez pour le gode ventouse Black Edition en noir ébène. Grand format anatomique compatible harnais avec base ventouse stable.',
+    alt: 'Gode ventouse Black Edition noir ébène en silicone souple ART-167'
+  },
+  {
+    id: 'art-166',
+    name: 'Gode XXL Ventouse Premium – Grand Format & Réalisme Intense',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-166.jpg',
+    description: 'Découvrez des sensations de plénitude absolue avec ce gode XXL conçu pour répondre aux attentes des amateurs de grands formats. Sa structure robuste et son réalisme anatomique prononcé procurent un remplissage intense et des sensations profondes. Fabriqué en silicone souple haut de gamme, il intègre une base ventouse renforcée garantissant une stabilité irréprochable lors de vos utilisations mains libres. Une pièce maîtresse alliant dimensions remarquables et confort d’utilisation.',
+    details: [
+      'Longueur totale : 20 cm',
+      'Diamètre : 5,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse renforcée (mains libres)',
+      'Référence : ART-166'
+    ],
+    seoTitle: 'Gode XXL Ventouse Réaliste en Silicone Haut de Gamme',
+    metaDescription: 'Recherchez l’intensité avec ce grand gode XXL ventouse en silicone souple. Structure robuste et base ventouse renforcée pour un usage mains libres.',
+    alt: 'Gode XXL ventouse grand format en silicone souple haut de gamme ART-166'
+  },
+  {
+    id: 'art-164',
+    name: 'Gode Ventouse Premium – Réalisme Anatomique & Format Confort',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-164.jpg',
+    description: 'Appréciez la simplicité et l’efficacité d’un modèle intemporel avec ce gode ventouse au format équilibré. Ses finitions anatomiques détaillées et sa texture soigneusement étudiée procurent un ressenti naturel à chaque utilisation. Conçu en silicone souple de qualité supérieure, il garantit une hygiène irréprochable et un toucher extrêmement doux. Sa base ventouse stable permet de l’utiliser en toute autonomie sur toute surface adaptée, pour des moments de détente privilégiés.',
+    details: [
+      'Longueur totale : 16 cm',
+      'Diamètre : 3,8 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-164'
+    ],
+    seoTitle: 'Gode Ventouse Anatomique Format Confort en Silicone',
+    metaDescription: 'Appréciez le réalisme de ce gode ventouse au format confortable et équilibré. Conçu en silicone souple avec une base ventouse stable.',
+    alt: 'Gode ventouse anatomique format confort en silicone souple ART-164'
+  },
+  {
+    id: 'art-163',
+    name: 'Gode Ventouse Premium – Réalisme Anatomique & Format Élancé',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-163.jpg',
+    description: 'Laissez-vous charmer par la finesse et le réalisme de ce gode ventouse à la silhouette élancée. Pensé pour offrir une insertion progressive et confortable, il reproduit fidèlement les formes naturelles grâce à un travail minutieux des textures. Sa fabrication en silicone doux procure un contact agréable et respectueux. Équipé d’une base ventouse stable et compatible avec les harnais, il se révèle d’une grande polyvalence pour accompagner toutes vos explorations intimes.',
+    details: [
+      'Longueur totale : 17 cm',
+      'Diamètre : 3,8 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-163'
+    ],
+    seoTitle: 'Gode Ventouse Élancé et Réaliste en Silicone Doux',
+    metaDescription: 'Découvrez ce gode ventouse à la silhouette élancée pour une insertion progressive. Compatible harnais avec base ventouse stable.',
+    alt: 'Gode ventouse élancé réaliste en silicone doux compatible harnais ART-163'
+  },
+  {
+    id: 'art-162',
+    name: 'Gode Ventouse Premium – Format Compact & Sensations de Volume',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-162.jpg',
+    description: 'Conçu pour celles et ceux qui privilégient les formats compacts sans compromis sur la plénitude, ce gode mise sur un diamètre généreux dès les premiers centimètres. Son design réaliste et ses finitions soignées en silicone souple garantissent un confort d’utilisation optimal et une prise en main aisée. Sa base ventouse stable offre une totale liberté de mouvement, tandis que sa compatibilité avec les harnais en fait un accessoire polyvalent pour diversifier vos expériences.',
+    details: [
+      'Longueur totale : 15 cm',
+      'Diamètre : 4,5 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-162'
+    ],
+    seoTitle: 'Gode Ventouse Compact à Diamètre Généreux en Silicone',
+    metaDescription: 'Optez pour le format compact de ce gode ventouse au diamètre généreux. Silicone souple, base ventouse stable et compatible harnais.',
+    alt: 'Gode ventouse compact grand diamètre en silicone souple ART-162'
+  },
+  {
+    id: 'art-161',
+    name: 'Gode Ventouse Premium – Réalisme Anatomique & Format Équilibré',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-161.jpg',
+    description: 'Trouvez l’harmonie parfaite entre longueur et largeur avec ce gode ventouse aux proportions minutieusement étudiées. Sa silhouette harmonieuse et ses détails anatomiques réalistes procurent un confort d’insertion naturel et des sensations enveloppantes. Réalisé en silicone de haute qualité au toucher velouté, il assure une hygiène parfaite et un entretien aisé. Sa base stable et sa compatibilité avec les harnais complètent les caractéristiques de ce modèle polyvalent.',
+    details: [
+      'Longueur totale : 17 cm',
+      'Diamètre : 4,1 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-161'
+    ],
+    seoTitle: 'Gode Ventouse Équilibré aux Proportions Réalistes',
+    metaDescription: 'Profitez d’un confort naturel avec ce gode ventouse aux proportions équilibrées. Silicone velouté, base stable et compatibilité harnais.',
+    alt: 'Gode ventouse aux proportions équilibrées en silicone velouté ART-161'
+  },
+  {
+    id: 'art-160',
+    name: 'Gode Ventouse Premium – Réalisme Anatomique & Format Polyvalent',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-160.jpg',
+    description: 'Adapté à une multitude d’envies, ce gode ventouse se distingue par son diamètre équilibré et ses finitions anatomiques d’un grand réalisme. Sa texture travaillée épouse idéalement les courbes pour des sensations authentiques et un confort permanent. Confectionné en silicone souple haut de gamme, il garantit douceur et sécurité lors de chaque utilisation. Sa base ventouse solide permet une fixation aisée, vous offrant des moments de détente en toute sérénité.',
+    details: [
+      'Longueur totale : 17 cm',
+      'Diamètre : 4,2 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Référence : ART-160'
+    ],
+    seoTitle: 'Gode Ventouse Polyvalent en Silicone Souple Haut de Gamme',
+    metaDescription: 'Laissez-vous séduire par ce gode ventouse polyvalent aux finitions anatomiques réalistes. Silicone souple et base ventouse pour un usage mains libres.',
+    alt: 'Gode ventouse polyvalent texturé en silicone souple haut de gamme ART-160'
+  },
+  {
+    id: 'art-157',
+    name: 'Gode Ventouse Premium – Format Confort & Réalisme Anatomique',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-157.jpg',
+    description: 'Appréciez la fiabilité et la discrétion de ce gode ventouse pensé pour un usage régulier et confortable. Son format intermédiaire et ses détails anatomiques soignés assurent une prise en main intuitive et un plaisir naturel. Fabriqué en silicone souple hypoallergénique, il offre un toucher extrêmement doux et respectueux de la peau. Compatible avec les harnais et doté d’une base stable, il s’intègre parfaitement à toutes vos routines de bien-être.',
+    details: [
+      'Longueur totale : 16 cm',
+      'Diamètre : 3,8 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-157'
+    ],
+    seoTitle: 'Gode Ventouse Hypoallergénique Confort et Discrétion',
+    metaDescription: 'Intégrez ce gode ventouse à vos routines avec son format intermédiaire confortable. Silicone hypoallergénique, base stable et compatible harnais.',
+    alt: 'Gode ventouse format confort hypoallergénique en silicone doux ART-157'
+  },
+  {
+    id: 'art-146',
+    name: 'Gode Ventouse XXL Premium – Grand Format & Réalisme Intense',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-146.jpg',
+    description: 'Explorez des sensations d’envergure avec ce gode ventouse XXL qui associe un grand format à un design anatomique particulièrement réaliste. Ses dimensions généreuses et sa texture travaillée procurent un remplissage profond et satisfaisant. Conçu en silicone souple de qualité supérieure, il allie solidité, confort et douceur au toucher. Sa base ventouse stable et sa compatibilité avec les harnais vous offrent une totale liberté pour varier les plaisirs selon vos envies.',
+    details: [
+      'Longueur totale : 23 cm',
+      'Diamètre : 4,8 cm',
+      'Matière : Silicone premium au toucher doux',
+      'Base ventouse stable (mains libres)',
+      'Compatible avec les harnais',
+      'Référence : ART-146'
+    ],
+    seoTitle: 'Gode Ventouse XXL Réaliste en Silicone Supérieur',
+    metaDescription: 'Vivez des sensations d’envergure avec ce gode ventouse XXL aux dimensions généreuses. Silicone souple de qualité supérieure compatible harnais.',
+    alt: 'Gode ventouse XXL grand format réaliste en silicone souple ART-146'
+  },
+  {
+    id: 'art-143',
+    name: 'Gode Ventouse Premium',
+    category: 'Gode',
+    price: 25.00,
+    image: 'assets/images/products/art-143.jpg',
+    description: 'Faites le choix de la polyvalence avec ce gode ventouse aux lignes réalistes et épurées. Conçu en silicone premium doux au toucher, il offre un confort d’insertion optimal et une excellente flexibilité d’utilisation. Sa base ventouse stable permet de profiter d’une utilisation mains libres en toute simplicité, tandis que sa compatibilité avec les harnais élargit vos possibilités de jeux. Un incontournable de qualité pour vos moments d’intimité.',
+    details: [
+      'Longueur totale : 20 cm',
+      'Diamètre : 3,8 cm',
+      'Silicone premium doux au toucher',
+      'Base ventouse stable',
+      'Compatible avec les harnais',
+      'Référence : ART-143'
+    ],
+    seoTitle: 'Gode Ventouse Polyvalent en Silicone Premium Doux',
+    metaDescription: 'Faites le choix de la polyvalence avec ce gode ventouse aux lignes épurées. Conçu en silicone premium avec base ventouse et compatible harnais.',
+    alt: 'Gode ventouse polyvalent aux lignes épurées en silicone premium ART-143'
   }
 ];
 
-// Gestion du panier (localStorage)
-function getCart() {
-  try {
-    const cart = localStorage.getItem('lextase_cart');
-    return cart ? JSON.parse(cart) : [];
-  } catch (e) {
-    return [];
-  }
-}
+const euro = value => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(value);
+const cartKey = 'extase-cart';
+const getCart = () => JSON.parse(localStorage.getItem(cartKey) || '[]');
 
-function saveCart(cart) {
-  try {
-    localStorage.setItem('lextase_cart', JSON.stringify(cart));
-    updateCartCount();
-  } catch (e) {}
-}
-
-function addToCart(productId, quantity = 1) {
+const cartCount = () => {
   const cart = getCart();
-  const existingIndex = cart.findIndex(item => item.id === productId);
-  if (existingIndex > -1) {
-    cart[existingIndex].quantity += quantity;
-  } else {
-    cart.push({ id: productId, quantity: quantity });
+  const items = cart.map(item => ({ ...item, product: products.find(product => product.id === item.id) })).filter(item => item.product);
+  if (items.length === 0) {
+    if (cart.length > 0) localStorage.removeItem(cartKey);
+    return 0;
   }
-  saveCart(cart);
-  showToast("Produit ajouté au panier avec succès !");
-}
-
-function removeFromCart(productId) {
-  let cart = getCart();
-  cart = cart.filter(item => item.id !== productId);
-  saveCart(cart);
-  renderCartPage();
-}
-
-function updateQuantity(productId, quantity) {
-  const cart = getCart();
-  const item = cart.find(item => item.id === productId);
-  if (item) {
-    item.quantity = parseInt(quantity, 10);
-    if (item.quantity <= 0) {
-      removeFromCart(productId);
-      return;
-    }
-    saveCart(cart);
-    renderCartPage();
-  }
-}
+  return items.reduce((n, item) => n + item.quantity, 0);
+};
 
 function updateCartCount() {
-  const cart = getCart();
-  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  document.querySelectorAll('[data-cart-count]').forEach(el => {
-    el.textContent = totalItems;
-    el.style.display = totalItems > 0 ? 'inline-flex' : 'none';
-  });
+  document.querySelectorAll('[data-cart-count]').forEach(el => el.textContent = cartCount());
 }
 
-function showToast(message) {
-  let toast = document.querySelector('.toast-notification');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.className = 'toast-notification';
-    document.body.appendChild(toast);
+function setCart(cart) {
+  localStorage.setItem(cartKey, JSON.stringify(cart));
+  updateCartCount();
+}
+
+function addToCart(id) {
+  const cart = getCart(), item = cart.find(entry => entry.id === id);
+  if (item) item.quantity += 1;
+  else cart.push({ id, quantity: 1 });
+  setCart(cart);
+}
+
+function productCard(product, index) {
+  const image = product.image ? `<img src="${product.image}" alt="${product.alt || product.name}" loading="lazy">` : '';
+  return `<article class="product-card shop-product-card"><a href="produit.html?id=${product.id}" aria-label="Voir ${product.name}"><div class="product-visual product-art-${index % 4}">${image}</div><div class="product-info"><span class="product-category">${product.category}</span><h3>${product.name}</h3><span class="product-price">${euro(product.price)}</span></div></a><button class="add-to-cart" type="button" data-add-cart="${product.id}">Ajouter</button></article>`;
+}
+
+function bindButtons() {
+  document.querySelectorAll('[data-add-cart]').forEach(button => button.addEventListener('click', () => {
+    addToCart(button.dataset.addCart);
+    const label = button.textContent;
+    button.textContent = 'Ajouté ✓';
+    setTimeout(() => button.textContent = label, 1200);
+  }));
+}
+
+function renderFeatured() {
+  const element = document.querySelector('#featured-products');
+  if (!element) return;
+  element.innerHTML = products.slice(0, 4).map(productCard).join('');
+  bindButtons();
+}
+
+function renderShop() {
+  const container = document.querySelector('[data-shop-products]');
+  if (!container) return;
+  const search = document.querySelector('[data-search]'), filters = document.querySelectorAll('[data-filter]'), count = document.querySelector('[data-results-count]');
+  let active = new URLSearchParams(location.search).get('categorie') || 'Tous';
+
+  function update() {
+    const term = (search.value || '').trim().toLowerCase();
+    const shown = products.filter(product => (active === 'Tous' || product.category === active) && `${product.name} ${product.category}`.toLowerCase().includes(term));
+    container.innerHTML = shown.map(productCard).join('') || '<p class="no-results">Aucun produit ne correspond à votre recherche.</p>';
+    count.textContent = `${shown.length} produit${shown.length > 1 ? 's' : ''}`;
+    bindButtons();
+    filters.forEach(button => button.classList.toggle('is-active', button.dataset.filter === active));
   }
-  toast.textContent = message;
-  toast.classList.add('show');
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3000);
-}
 
-function euro(amount) {
-  return amount.toFixed(2).replace('.', ',') + ' €';
-}
-
-// Rendu des pages
-function renderHomePage() {
-  const grid = document.querySelector('[data-featured-products]');
-  if (!grid) return;
-  const featured = products.slice(0, 4);
-  grid.innerHTML = featured.map((product, index) => `
-    <div class="product-card" onclick="location.href='produit.html?id=${product.id}'">
-      <div class="product-card-img product-art-${index % 4}">
-        ${product.image ? `<img src="${product.image}" alt="${product.alt || product.name}">` : ''}
-      </div>
-      <div class="product-card-content">
-        <span class="eyebrow">${product.category}</span>
-        <h3>${product.name}</h3>
-        <p class="price">${euro(product.price)}</p>
-        <button class="button button-outline" onclick="event.stopPropagation(); addToCart('${product.id}')">Ajouter</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderBoutiquePage() {
-  const grid = document.querySelector('[data-boutique-grid]');
-  if (!grid) return;
-  
-  const categoryFilter = document.querySelector('[data-category-filter]');
-  const searchInput = document.querySelector('[data-search-input]');
-  
-  function displayProducts() {
-    const selectedCategory = categoryFilter ? categoryFilter.value : 'all';
-    const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : '';
-    
-    const filtered = products.filter(product => {
-      const matchCat = selectedCategory === 'all' || product.category === selectedCategory;
-      const matchSearch = product.name.toLowerCase().includes(searchQuery) || product.description.toLowerCase().includes(searchQuery);
-      return matchCat && matchSearch;
-    });
-    
-    if (filtered.length === 0) {
-      grid.innerHTML = `<p class="no-products">Aucun produit ne correspond à votre recherche.</p>`;
-      return;
-    }
-    
-    grid.innerHTML = filtered.map((product, index) => `
-      <div class="product-card" onclick="location.href='produit.html?id=${product.id}'">
-        <div class="product-card-img product-art-${index % 4}">
-          ${product.image ? `<img src="${product.image}" alt="${product.alt || product.name}">` : ''}
-        </div>
-        <div class="product-card-content">
-          <span class="eyebrow">${product.category}</span>
-          <h3>${product.name}</h3>
-          <p class="price">${euro(product.price)}</p>
-          <button class="button button-outline" onclick="event.stopPropagation(); addToCart('${product.id}')">Ajouter</button>
-        </div>
-      </div>
-    `).join('');
-  }
-  
-  if (categoryFilter) categoryFilter.addEventListener('change', displayProducts);
-  if (searchInput) searchInput.addEventListener('input', displayProducts);
-  
-  displayProducts();
+  filters.forEach(button => button.addEventListener('click', () => { active = button.dataset.filter; update(); }));
+  search.addEventListener('input', update);
+  update();
 }
 
 function renderProduct() {
   const target = document.querySelector('[data-product-page]');
   if (!target) return;
   const product = products.find(item => item.id === new URLSearchParams(location.search).get('id')) || products[0];
-  
-  const baseUrl = "https://loverilx.github.io/lextasedessens/";
-  const currentCanonicalUrl = `${baseUrl}produit.html?id=${product.id}`;
-  const productImageFull = product.image ? (product.image.startsWith('http') ? product.image : baseUrl + product.image.replace(/^\/+/, '')) : '';
   
   if (product.seoTitle) {
     document.title = product.seoTitle;
@@ -597,74 +612,6 @@ function renderProduct() {
     metaDesc.content = product.metaDescription;
   }
 
-  let canonicalLink = document.querySelector('link[rel="canonical"]');
-  if (!canonicalLink) {
-    canonicalLink = document.createElement('link');
-    canonicalLink.rel = 'canonical';
-    document.head.appendChild(canonicalLink);
-  }
-  canonicalLink.href = currentCanonicalUrl;
-
-  const ogMetaTags = [
-    { property: 'og:title', content: product.seoTitle || product.name },
-    { property: 'og:description', content: product.metaDescription || product.description },
-    { property: 'og:image', content: productImageFull },
-    { property: 'og:url', content: currentCanonicalUrl },
-    { property: 'og:type', content: 'product' }
-  ];
-
-  ogMetaTags.forEach(tagData => {
-    let tag = document.querySelector(`meta[property="${tagData.property}"]`);
-    if (!tag) {
-      tag = document.createElement('meta');
-      tag.setAttribute('property', tagData.property);
-      document.head.appendChild(tag);
-    }
-    tag.content = tagData.content;
-  });
-
-  const twitterMetaTags = [
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: product.seoTitle || product.name },
-    { name: 'twitter:description', content: product.metaDescription || product.description },
-    { name: 'twitter:image', content: productImageFull }
-  ];
-
-  twitterMetaTags.forEach(tagData => {
-    let tag = document.querySelector(`meta[name="${tagData.name}"]`);
-    if (!tag) {
-      tag = document.createElement('meta');
-      tag.setAttribute('name', tagData.name);
-      document.head.appendChild(tag);
-    }
-    tag.content = tagData.content;
-  });
-
-  let jsonLdScript = document.querySelector('script[type="application/ld+json"][data-product-schema]');
-  if (!jsonLdScript) {
-    jsonLdScript = document.createElement('script');
-    jsonLdScript.type = 'application/ld+json';
-    jsonLdScript.setAttribute('data-product-schema', 'true');
-    document.head.appendChild(jsonLdScript);
-  }
-
-  const productSchema = {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": product.name,
-    "image": productImageFull ? [productImageFull] : [],
-    "description": product.description,
-    "sku": product.id,
-    "offers": {
-      "@type": "Offer",
-      "url": currentCanonicalUrl,
-      "priceCurrency": "EUR",
-      "price": product.price.toFixed(2),
-      "availability": "https://schema.org/InStock"
-    }
-  };
-  jsonLdScript.textContent = JSON.stringify(productSchema);
-
   const imageAlt = product.alt || product.name;
   const image = product.image ? `<img src="${product.image}" alt="${imageAlt}">` : '';
   
@@ -672,79 +619,271 @@ function renderProduct() {
   bindButtons();
 }
 
-function renderCartPage() {
-  const container = document.querySelector('[data-cart-container]');
-  if (!container) return;
+let appliedDiscountAmount = 0; 
+let appliedPromoCode = '';
+
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwSw_CZG7SNAYzGUhAXzTuTgzQRR-2P9ygLM1ol7dpec0LT-Xs4-NWEPG4lRS4orRki/exec";
+
+function renderCart() {
+  const target = document.querySelector('[data-cart-page]');
+  if (!target) return;
   
-  const cart = getCart();
-  if (cart.length === 0) {
-    container.innerHTML = `
-      <div class="empty-cart">
-        <h2>Votre panier est vide</h2>
-        <p>Découvrez notre collection et laissez-vous tenter par nos produits.</p>
-        <a href="boutique.html" class="button button-dark">Explorer la boutique</a>
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    const totalPay = urlParams.get('total') || '0.00';
+    target.style.cssText = "display: block !important; width: 100% !important; float: none !important;";
+    target.innerHTML = `
+      <div style="width: 100% !important; display: block !important; text-align: center !important; margin: 40px auto !important; float: none !important; clear: both !important;">
+        <div style="max-width: 600px !important; width: 100% !important; margin: 0 auto !important; background: #ffffff !important; padding: 40px !important; border-radius: 12px !important; border: 1px solid #e5e5e5 !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; text-align: center !important; box-sizing: border-box !important; display: block !important; float: none !important;">
+          
+          <div style="font-size: 3rem !important; margin-bottom: 15px !important; display: block !important; width: 100% !important;">✨</div>
+          
+          <h2 style="color: #28a745 !important; font-size: 1.8rem !important; margin: 0 0 20px 0 !important; display: block !important; width: 100% !important;">Commande enregistrée avec succès !</h2>
+          
+          <p style="font-size: 1.1rem !important; line-height: 1.6 !important; color: #444 !important; margin: 0 0 15px 0 !important; display: block !important; width: 100% !important;">
+            Merci pour votre confiance. Vos coordonnées et votre panier ont bien été transmis.
+          </p>
+          
+          <p style="font-size: 1rem !important; color: #666 !important; line-height: 1.5 !important; margin: 0 0 30px 0 !important; display: block !important; width: 100% !important;">
+            Pour finaliser votre commande d'un montant total de <strong style="color: #111 !important; font-size: 1.2rem !important;">${totalPay} €</strong>, veuillez procéder au paiement sécurisé via notre lien PayPal.Me :
+          </p>
+          
+          <div style="margin: 0 0 30px 0 !important; display: block !important; width: 100% !important;">
+            <a href="https://paypal.me/Loverilx/${totalPay}EUR" target="_blank" style="display: inline-block !important; background: #0070ba !important; color: #fff !important; padding: 15px 35px !important; border-radius: 6px !important; text-decoration: none !important; font-weight: bold !important; font-size: 1.2rem !important; box-shadow: 0 4px 10px rgba(0,112,186,0.2) !important;">
+              Payer ${totalPay} € sur PayPal.Me →
+            </a>
+          </div>
+          
+          <p style="font-size: 0.85rem !important; color: #888 !important; border-top: 1px solid #eee !important; padding-top: 20px !important; margin: 20px 0 0 0 !important; display: block !important; width: 100% !important; line-height: 1.4 !important;">
+            Une fois le paiement effectué, votre commande sera préparée et expédiée discrètement.<br>Vous pouvez fermer cette page en toute sécurité après votre règlement.
+          </p>
+          
+        </div>
       </div>
     `;
+    updateCartCount();
+    return;
+  }
+
+  const cart = getCart(), items = cart.map(item => ({ ...item, product: products.find(product => product.id === item.id) })).filter(item => item.product);
+  if (!items.length) {
+    target.innerHTML = '<p class="empty-cart">Votre panier est vide. <a href="boutique.html">Découvrir la boutique →</a></p>';
+    updateCartCount();
     return;
   }
   
-  let subtotal = 0;
-  const shippingFee = 6.00;
+  const sousTotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  const fraisDePort = 6.00;
   
-  const itemsHtml = cart.map(cartItem => {
-    const product = products.find(p => p.id === cartItem.id);
-    if (!product) return '';
-    const itemTotal = product.price * cartItem.quantity;
-    subtotal += itemTotal;
-    
-    return `
-      <div class="cart-item">
-        <div class="cart-item-img">
-          ${product.image ? `<img src="${product.image}" alt="${product.alt || product.name}">` : ''}
-        </div>
-        <div class="cart-item-details">
-          <h4>${product.name}</h4>
-          <p class="price">${euro(product.price)}</p>
-        </div>
-        <div class="cart-item-actions">
-          <input type="number" min="1" value="${cartItem.quantity}" onchange="updateQuantity('${product.id}', this.value)">
-          <button class="remove-btn" onclick="removeFromCart('${product.id}')">Supprimer</button>
-        </div>
-      </div>
-    `;
-  }).join('');
-  
-  const total = subtotal + shippingFee;
-  
-  container.innerHTML = `
-    <div class="cart-grid">
-      <div class="cart-items-list">${itemsHtml}</div>
-      <div class="cart-summary">
-        <h3>Résumé de la commande</h3>
-        <div class="summary-line"><span>Sous-total</span><span>${euro(subtotal)}</span></div>
-        <div class="summary-line"><span>Frais de port (fixes)</span><span>${euro(shippingFee)}</span></div>
-        <div class="summary-line total"><span>Total</span><span>${euro(total)}</span></div>
-        <a href="https://paypal.me/votrecompte/${total.toFixed(2)}EUR" target="_blank" class="button button-dark" style="width:100%; text-align:center; margin-top:20px; display:block;">Payer via PayPal.Me</a>
-        <p class="summary-note">Paiement sécurisé. Expédition ultra-discrète sous 24h.</p>
-      </div>
-    </div>
-  `;
-}
+  let discountAmount = appliedDiscountAmount;
+  if (discountAmount > (sousTotal + fraisDePort)) {
+    discountAmount = sousTotal + fraisDePort;
+  }
 
-function bindButtons() {
-  document.querySelectorAll('[data-add-cart]').forEach(button => {
-    button.addEventListener('click', () => {
-      const productId = button.getAttribute('data-add-cart');
-      addToCart(productId);
-    });
+  const total = Math.max(0, (sousTotal + fraisDePort) - discountAmount);
+  
+  target.innerHTML = `
+    <div class="cart-items">
+      ${items.map(item => {
+        const itemImage = item.product.image ? `<img src="${item.product.image}" alt="${item.product.alt || item.product.name}" style="width: 70px; height: 70px; object-fit: cover; border-radius: 6px; flex-shrink: 0;">` : '';
+        return `
+        <article class="cart-item" style="display: flex; align-items: center; gap: 20px; padding: 15px 0; border-bottom: 1px solid #eee;">
+          ${itemImage}
+          <div style="flex-grow: 1;">
+            <p class="product-category" style="margin: 0; font-size: 0.85rem; color: #666;">${item.product.category} (Réf: ${item.product.id})</p>
+            <h2 style="margin: 4px 0; font-size: 1.05rem;">${item.product.name}</h2>
+            <strong style="color: #111;">${euro(item.product.price)}</strong>
+          </div>
+          <div class="cart-quantity" style="display: flex; align-items: center; gap: 10px;">
+            <button data-quantity="${item.product.id}" data-change="-1" style="padding: 2px 8px; cursor: pointer;">−</button>
+            <span>${item.quantity}</span>
+            <button data-quantity="${item.product.id}" data-change="1" style="padding: 2px 8px; cursor: pointer;">+</button>
+          </div>
+          <button class="remove-item" data-remove="${item.product.id}" style="background: none; border: none; color: #d9534f; cursor: pointer; text-decoration: underline;">Supprimer</button>
+        </article>
+      `;}).join('')}
+    </div>
+    <aside class="cart-summary" style="margin-top: 30px; background: #fafafa; padding: 20px; border-radius: 8px;">
+      <div style="margin-bottom: 15px; display: flex; gap: 10px;">
+        <input type="text" id="promo-input" placeholder="Votre code promo" value="${appliedPromoCode}" style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; text-transform: uppercase;">
+        <button id="apply-promo-btn" style="padding: 8px 12px; background: #111; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Appliquer</button>
+      </div>
+      <p id="promo-msg" style="font-size: 0.85rem; margin: -5px 0 15px 0; color: ${appliedPromoCode ? 'green' : '#666'};">${appliedPromoCode ? `Code appliqué !` : ''}</p>
+
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <span>Sous-total</span>
+        <span>${euro(sousTotal)}</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+        <span>Livraison</span>
+        <span>${euro(fraisDePort)}</span>
+      </div>
+      ${discountAmount > 0 ? `
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px; color: #28a745;">
+        <span>Réduction</span>
+        <span>-${euro(discountAmount)}</span>
+      </div>` : ''}
+      <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1em;">
+        <strong>Total</strong>
+        <strong>${euro(total)}</strong>
+      </div>
+
+      <div style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #ddd;">
+        <h3 style="margin-top: 0; font-size: 1rem;">Vos coordonnées de livraison</h3>
+        <div style="margin-bottom: 10px;">
+          <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">Nom et Prénom :</label>
+          <input type="text" id="customer-name" placeholder="Ex: Jean Dupont" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">E-mail :</label>
+          <input type="email" id="customer-email" placeholder="Ex: jean@exemple.fr" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">Téléphone :</label>
+          <input type="tel" id="customer-phone" placeholder="Ex: 06 12 34 56 78" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label style="display: block; font-size: 0.85rem; margin-bottom: 4px;">Adresse postale complète :</label>
+          <textarea id="customer-address" placeholder="12 rue de la Paix, 75001 Paris" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; height: 60px; resize: vertical;"></textarea>
+        </div>
+        <button class="button button-dark" id="checkout-sheet-btn" style="width: 100%; text-align: center; display: block; border: none; cursor: pointer; padding: 10px; background: #111; color: #fff; border-radius: 4px; font-weight: bold;">
+          Valider la commande (${euro(total)}) →
+        </button>
+      </div>
+    </aside>
+  `;
+
+  document.querySelectorAll('[data-change]').forEach(button => button.addEventListener('click', () => {
+    const cart = getCart(), item = cart.find(entry => entry.id === button.dataset.quantity);
+    item.quantity += Number(button.dataset.change);
+    setCart(cart.filter(entry => entry.quantity > 0));
+    renderCart();
+  }));
+
+  document.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
+    setCart(getCart().filter(item => item.id !== button.dataset.remove));
+    renderCart();
+  }));
+
+  const promoBtn = document.getElementById('apply-promo-btn');
+  promoBtn?.addEventListener('click', async () => {
+    const inputVal = document.getElementById('promo-input').value.trim().toUpperCase();
+    const msgEl = document.getElementById('promo-msg');
+
+    if (!inputVal) return;
+
+    if (inputVal === "TEST15") {
+      appliedPromoCode = "TEST15";
+      appliedDiscountAmount = 15.00;
+      msgEl.style.color = 'green';
+      msgEl.textContent = "Code test appliqué (-15,00 €) !";
+      renderCart();
+      return;
+    }
+
+    msgEl.style.color = '#666';
+    msgEl.textContent = "Vérification en cours...";
+
+    try {
+      const response = await fetch(`${WEB_APP_URL}?code=${inputVal}&action=check`);
+      if (!response.ok) {
+          throw new Error(`Erreur serveur (${response.status})`);
+      }
+      const result = await response.json();
+
+      if (result.status === "valid") {
+        appliedPromoCode = inputVal;
+        appliedDiscountAmount = sousTotal * (inputVal.includes("10") ? 0.10 : 0.05);
+        
+        msgEl.style.color = 'green';
+        msgEl.textContent = "Code appliqué avec succès !";
+        renderCart();
+      } else if (result.status === "used") {
+        appliedPromoCode = '';
+        appliedDiscountAmount = 0;
+        msgEl.style.color = '#d9534f';
+        msgEl.textContent = "Ce code a déjà été utilisé.";
+        renderCart();
+      } else {
+        appliedPromoCode = '';
+        appliedDiscountAmount = 0;
+        msgEl.style.color = '#d9534f';
+        msgEl.textContent = "Code promo inconnu.";
+        renderCart();
+      }
+    } catch (error) {
+      msgEl.style.color = '#d9534f';
+      msgEl.textContent = "Erreur de connexion au serveur.";
+    }
+  });
+
+  const checkoutBtn = document.getElementById('checkout-sheet-btn');
+  checkoutBtn?.addEventListener('click', async () => {
+    const nameInput = document.getElementById('customer-name').value.trim();
+    const emailInput = document.getElementById('customer-email').value.trim();
+    const phoneInput = document.getElementById('customer-phone').value.trim();
+    const addressInput = document.getElementById('customer-address').value.trim();
+
+    if (!nameInput || !emailInput || !phoneInput || !addressInput) {
+      alert('Veuillez remplir tous les champs (Nom, Email, Téléphone et Adresse).');
+      return;
+    }
+
+    if (!emailInput.includes('@') || !emailInput.includes('.')) {
+      alert('Veuillez entrer une adresse e-mail valide.');
+      return;
+    }
+
+    checkoutBtn.textContent = 'Enregistrement en cours...';
+    checkoutBtn.disabled = true;
+
+    const articlesList = items.map(i => `${i.quantity}x ${i.product.name}`).join(', ');
+    const referencesList = items.map(i => `${i.quantity}x ${i.product.id}`).join(', ');
+
+    try {
+      const response = await fetch(WEB_APP_URL, {
+        method: 'POST',
+        body: JSON.stringify({
+          name: nameInput,
+          email: emailInput,
+          phone: phoneInput,
+          address: addressInput,
+          items: articlesList,
+          references: referencesList,
+          total: total.toFixed(2)
+        })
+      });
+      if (!response.ok) {
+          throw new Error(`Erreur serveur (${response.status})`);
+      }
+
+      if (appliedPromoCode && appliedPromoCode !== "TEST15") {
+        await fetch(`${WEB_APP_URL}?code=${appliedPromoCode}&action=use`).catch(() => {});
+      }
+
+      localStorage.removeItem(cartKey);
+
+      window.location.href = `panier.html?success=true&total=${total.toFixed(2)}`;
+
+    } catch (e) {
+      alert('La commande n\'a pas pu être envoyée. Veuillez réessayer.');
+      checkoutBtn.textContent = `Valider la commande (${euro(total)}) →`;
+      checkoutBtn.disabled = false;
+    }
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  updateCartCount();
-  renderHomePage();
-  renderBoutiquePage();
-  renderProduct();
-  renderCartPage();
-  bindButtons();
+const toggle = document.querySelector('[data-menu-toggle]'), menu = document.querySelector('[data-menu]');
+toggle?.addEventListener('click', () => {
+  const open = menu.classList.toggle('is-open');
+  toggle.setAttribute('aria-expanded', open);
 });
+
+window.addEventListener('scroll', () => document.querySelector('[data-header]')?.classList.toggle('is-scrolled', window.scrollY > 20));
+
+updateCartCount();
+renderFeatured();
+renderShop();
+renderProduct();
+renderCart();
