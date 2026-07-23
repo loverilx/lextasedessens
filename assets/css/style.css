@@ -19,3 +19,9 @@ border-radius:18px;
 .trust-item h3{margin:8px 0;font-size:1rem}
 .trust-item p{font-size:.9rem;color:#555}
 .section-title{text-align:center;margin:50px 0 25px}
+
+
+.trust-bar{padding:60px 20px;background:#f8f2f4;text-align:center}
+.trust-bar h2{margin-bottom:30px}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;max-width:1000px;margin:auto}
+.trust-item{background:#fff;padding:20px;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.08);font-weight:600}
