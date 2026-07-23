@@ -597,7 +597,24 @@ function renderProduct() {
   const target = document.querySelector('[data-product-page]');
   if (!target) return;
   const product = products.find(item => item.id === new URLSearchParams(location.search).get('id')) || products[0];
-  const image = product.image ? `<img src="${product.image}" alt="${product.alt || product.name}">` : '';
+  
+  if (product.seoTitle) {
+    document.title = product.seoTitle;
+  }
+  
+  if (product.metaDescription) {
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = product.metaDescription;
+  }
+
+  const imageAlt = product.alt || product.name;
+  const image = product.image ? `<img src="${product.image}" alt="${imageAlt}">` : '';
+  
   target.innerHTML = `<div class="product-detail-art product-art-${products.indexOf(product) % 4}">${image}</div><div class="product-detail-info"><p class="eyebrow">${product.category}</p><h1>${product.name}</h1><p class="detail-price">${euro(product.price)}</p><p class="detail-description">${product.description}</p><ul>${product.details.map(detail => `<li>${detail}</li>`).join('')}</ul><button class="button button-dark" data-add-cart="${product.id}">Ajouter au panier <span>→</span></button><p class="detail-note">Expédition discrète · Frais de port fixes de 6,00 € · Paiement sécurisé via PayPal.Me.</p></div>`;
   bindButtons();
 }
