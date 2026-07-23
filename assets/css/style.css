@@ -66,3 +66,8 @@ border-radius:18px;
 .premium-grid>div:hover{transform:translateY(-6px)}
 .reveal{opacity:0;transform:translateY(25px);transition:all .7s ease}
 .reveal.visible{opacity:1;transform:none}
+
+/* V5 premium */
+.v5-premium .hero,.v5-premium header{transition:.3s ease;}
+.v5-premium .card,.v5-premium .product-card{border-radius:20px;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:transform .25s ease,box-shadow .25s ease;}
+.v5-premium .card:hover,.v5-premium .product-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.14);}

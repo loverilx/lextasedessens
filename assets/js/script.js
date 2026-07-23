@@ -896,3 +896,6 @@ document.addEventListener('DOMContentLoaded',()=>{
  },{threshold:.15});
  document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 });
+
+// V5 marker
+console.log('L\'Extase des Sens V5 loaded');
