@@ -772,7 +772,9 @@ function renderCart() {
       window.location.href = `panier.html?success=true&total=${total.toFixed(2)}`;
 
     } catch (e) {
-      window.location.href = `panier.html?success=true&total=${total.toFixed(2)}`;
+      alert('La commande n\'a pas pu être envoyée. Veuillez réessayer.');
+      checkoutBtn.textContent = `Valider la commande (${euro(total)}) →`;
+      checkoutBtn.disabled = false;
     }
   });
 }
