@@ -1,0 +1,1 @@
+Ajoutez votre image sous assets/images/banners/hero.jpg
