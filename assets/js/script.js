@@ -5,7 +5,7 @@ const products = [
     category: 'Accessoires',
     price: 20.00,
     image: 'assets/images/products/art-144.jpg',
-    description: 'Découvrez un ensemble complet pensé pour explorer l’univers du BDSM et du bondage en toute confiance. Ce kit réunit les accessoires essentiels pour créer une expérience basée sur la découverte, la complicité et la communication entre partenaires.',
+    description: 'Explorez de nouvelles dimensions de complicité et de lâcher-prise avec cet ensemble complet, spécialement pensé pour aborder les pratiques du bondage en toute sérénité. Ce coffret réunit les indispensables pour structurer vos jeux érotiques tout en privilégiant le dialogue et la confiance mutuelle. Conçu pour s’adapter à vos envies, il intègre des attaches ajustables, des éléments de privation sensorielle ainsi que des accessoires de stimulation douce pour varier les rythmes. Une approche idéale pour allier découverte sensorielle et maîtrise du moment présent.',
     details: [
       'Système d’attache ajustable pour lit',
       '4 menottes rembourrées pour poignets et chevilles',
@@ -21,7 +21,7 @@ const products = [
     category: 'Accessoires',
     price: 10.00,
     image: 'assets/images/products/art-145.jpg',
-    description: 'Découvrez un ensemble complet de cockrings pensé pour varier les sensations et s’adapter facilement aux différentes morphologies. Avec son design octogonal moderne et ses multiples tailles, ce coffret permet une utilisation progressive et personnalisée.',
+    description: 'Apportez une dimension inédite à vos intimités grâce à ce set de cockrings aux formes géométriques étudiées. Conçu en silicone souple doté d’une finition mate très douce au toucher, cet assortiment de neuf pièces permet d’expérimenter différentes tailles et configurations selon vos sensations recherchées. Le modèle triple anneau inclus offre un maintien optimal et une répartition harmonieuse. Un choix judicieux pour conjuguer esthétisme contemporain, confort d’utilisation et intensité maîtrisée lors de vos moments à deux.',
     details: [
       'Design octogonal géométrique original',
       'Coffret complet de 9 pièces multi-tailles',
@@ -37,7 +37,7 @@ const products = [
     category: 'Bien-être',
     price: 20.00,
     image: 'assets/images/products/art-153.jpg',
-    description: 'Découvrez une solution pratique et discrète dédiée au bien-être intime et à l’hygiène personnelle. Grâce à son format compact et ses différents embouts interchangeables, cette douche intime permet une utilisation simple à la maison comme en déplacement.',
+    description: 'Prenez soin de votre bien-être intime au quotidien avec cet accessoire nomade, discret et fonctionnel. Pensé pour vous accompagner aussi bien à la maison qu’en voyage, ce kit de douche intime dispose d’une canule ergonomique inclinée et d’embouts interchangeables pour s’adapter précisément à vos besoins d’hygiène. Son système de pompage par tuyau d’aspiration garantit une utilisation fluide et maîtrisée. Livré dans un coffret de rangement compartimenté, il assure une discrétion absolue et un entretien simplifié après chaque usage.',
     details: [
       'Format nomade compact et transportable',
       'Embouts interchangeables inclus',
@@ -53,7 +53,7 @@ const products = [
     category: 'Bien-être',
     price: 20.00,
     image: 'assets/images/products/art-140.jpg',
-    description: 'Découvrez une solution moderne dédiée au bien-être intime et à l’hygiène personnelle. Cette douche intime électrique rechargeable associe simplicité d’utilisation, confort et technologie pour une routine d’hygiène plus pratique.',
+    description: 'Modernisez votre routine de soins personnels avec cette douche intime électrique et rechargeable par USB. Conçue pour offrir un confort d’utilisation optimal, elle intègre un système motorisé automatique qui dispense un flux régulier sans effort. Son réservoir transparent permet de contrôler facilement le niveau d’eau, tandis que son embout ergonomique en silicone et ABS souple assure une manipulation douce et respectueuse des zones sensibles. Un équipement technique, discret et parfaitement adapté aux exigences d’hygiène actuelles.',
     details: [
       'Système électrique automatique motorisé',
       'Réservoir intégré transparent',
@@ -69,7 +69,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-148.jpg',
-    description: 'Découvrez un modèle au design spectaculaire combinant réalisme, texture travaillée et sensations intenses. Avec son apparence inspirée de la roche en fusion et ses détails anatomiques soignés, ce gode apporte une expérience visuelle et sensorielle originale.',
+    description: 'Laissez-vous séduire par l’esthétisme unique de ce gode à ventouse, dont l’apparence évoque la roche en fusion avec un élégant marbré noir et orange. Fabriqué en silicone haute densité au toucher soyeux, il présente des reliefs anatomiques minutieusement travaillés pour procurer un réalisme visuel et tactile saisissant. Sa base dotée d’une ventouse solidement renforcée permet une utilisation mains libres en toute stabilité sur les surfaces lisses. Une pièce de choix qui allie caractère visuel, ergonomie soignée et confort d’insertion.',
     details: [
       'Longueur totale : 21,6 cm',
       'Diamètre : 5,1 cm',
@@ -86,7 +86,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-142.jpg',
-    description: 'Découvrez une nouvelle génération de stimulateurs connectés alliant mouvement automatique, vibrations puissantes et contrôle intelligent. Conçu pour offrir une expérience immersive, ce modèle associe plusieurs technologies dans un design élégant et performant.',
+    description: 'Plongez au cœur de l’innovation avec ce stimulateur polyvalent qui associe un mouvement de va-et-vient motorisé à des pulsations vibratoires profondes. Pilotable à distance via une application mobile dédiée ou sa télécommande, il s’adapte à toutes vos envies d’exploration connectée. Son design ergonomique met en valeur une zone texturée pensée pour cibler les zones érogènes avec précision. Reposant sur une base ventouse stable pour un usage mains libres et une conception étanche rechargeable, cet accessoire incarne l’alliance parfaite entre technologie de pointe et plaisir personnalisable.',
     details: [
       'Longueur totale : 14,33 cm',
       'Diamètre : 3,32 cm (pointe) à 3,88 cm (zone texturée)',
@@ -104,7 +104,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-151.jpg',
-    description: 'Apportez une touche d\'originalité à votre collection avec ce modèle au design inspiré de l\'univers fantasy. Sa silhouette torsadée, son dégradé de couleurs et sa forme évolutive en font un accessoire aussi esthétique qu\'agréable à découvrir.',
+    description: 'Invitez la fantaisie dans votre intimité avec ce modèle sculpté en spirale aux superbes nuances allant du violet au bleu profond. Sa forme conique progressive et ses reliefs torsadés offrent une stimulation originale et changeante au gré des mouvements. Confectionné en silicone de qualité supérieure au toucher extrêmement doux, ce gode garantit une glisse agréable et un entretien facile. Sa base évasée assure quant à elle une parfaite stabilité pour une utilisation en toute quiétude.',
     details: [
       'Longueur totale : 19 cm',
       'Diamètre du corps : 4,1 cm (jusqu\'à 5,5 cm max)',
@@ -122,7 +122,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-150.jpg',
-    description: 'Conçu pour les amateurs de modèles généreux, ce gode XL associe un design élégant, des dimensions imposantes et une finition soignée. Son dégradé de couleurs et sa forme ergonomique en font un accessoire aussi esthétique que performant.',
+    description: 'Destiné aux amateurs de sensations amples et généreuses, ce gode XL séduit par ses dimensions imposantes et son esthétique moderne aux teintes roses et violettes. Sa silhouette effilée vers la pointe facilite l’insertion tandis que son corps volumineux procure un remplissage intense et satisfaisant. Réalisé en silicone souple haut de gamme, il procure un contact chaleureux et respectueux de la peau. Doté d’une base évasée sécurisante, il associe robustesse, confort et élégance visuelle.',
     details: [
       'Longueur totale : 23 cm',
       'Diamètre du corps : 5 cm (jusqu\'à 7,3 cm max)',
@@ -135,11 +135,11 @@ const products = [
   },
   {
     id: 'art-147',
-    name: 'Gode Gonflable Premium – Volume Ajustable & Design Galaxy',
+    name: 'Gode Gonflable Premium – Volume Adjustable & Design Galaxy',
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-147.jpg',
-    description: 'Conçu pour les amateurs de sensations personnalisées, ce modèle associe un système de gonflage innovant à un design inspiré des couleurs de l\'univers. Grâce à son volume ajustable, il permet d\'adapter progressivement les sensations selon vos envies.',
+    description: 'Maîtrisez chaque instant de votre plaisir grâce à ce gode gonflable innovant qui permet de moduler le volume du corps selon vos préférences du moment. Équipé d’une discrète poire de gonflage manuelle, il passe en quelques instants d’un profil confortable à une épaisseur plus soutenue. Son design aux inspirations cosmiques s’associe à une fabrication en silicone souple de grande qualité pour un confort optimal. Sa base large et stable complète l’ensemble pour des expériences variées en toute sécurité.',
     details: [
       'Longueur totale : 16,2 cm',
       'Longueur insérable : 12,7 cm',
@@ -156,7 +156,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-165.jpg',
-    description: 'Conçu pour les amateurs de modèles longs, ce gode vibrant associe des dimensions généreuses, une texture réaliste et des vibrations puissantes pour offrir une expérience immersive. Son design anatomique et sa base ventouse en font un accessoire polyvalent, aussi confortable que performant.',
+    description: 'Alliez le plaisir du format XXL à la puissance de vibrations modulables avec ce modèle conçu pour des vagues de sensations profondes. Sa structure longue et ses finitions texturées épousent naturellement les formes pour une immersion totale. Fabriqué en silicone souple hypoallergénique, il offre un toucher particulièrement soyeux et respectueux de l’épiderme. Grâce à sa base ventouse intégrée, vous profitez d’un maintien stable sur toutes les surfaces lisses, libérant ainsi vos mouvements pour un confort d’utilisation absolu.',
     details: [
       'Longueur totale : 21,5 cm',
       'Diamètre : 4 cm',
@@ -172,7 +172,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-159.jpg',
-    description: 'Conçu pour les amateurs de modèles au format généreux, ce gode chauffant et vibrant associe un diamètre important à des fonctionnalités avancées pour offrir une expérience personnalisable. Son design réaliste, sa fonction chauffante et ses vibrations en font un modèle pensé pour allier confort et technologie.',
+    description: 'Découvrez une expérience sensorielle enveloppante grâce à ce modèle XXL qui intègre une fonction chauffante relaxante et des vibrations ajustables. Son diamètre généreux procure une sensation de plénitude immédiate, tandis que la douce chaleur diffusée simule une proximité naturelle et chaleureuse. Revêtu de silicone haut de gamme au toucher velouté, il garantit un confort d’insertion optimal et une glisse parfaite. Sa base ventouse assure une fixation sûre pour explorer vos envies en toute tranquillité.',
     details: [
       'Longueur totale : 15 cm',
       'Diamètre : 6,05 cm',
@@ -189,7 +189,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-158.jpg',
-    description: 'Conçu pour les amateurs de sensations réalistes, ce gode chauffant et vibrant associe une finition anatomique soignée à des technologies avancées pour offrir une expérience immersive. Son format XL, sa fonction chauffante et ses vibrations personnalisables en font un modèle alliant confort, performance et élégance.',
+    description: 'Associez la chaleur réconfortante à l’efficacité de vibrations stimulantes avec ce gode au format XL pensé pour les adeptes de réalisme. Son design anatomique détaillé épouse harmonieusement l’anatomie, tandis que la technologie chauffante intégrée procure une sensation de réalisme saisissante dès les premiers contacts. Conçu en silicone souple de qualité supérieure, il offre un toucher extrêmement doux et hygiénique. Sa base ventouse stable permet de varier les positions et les usages en toute liberté.',
     details: [
       'Longueur totale : 18 cm',
       'Diamètre : 4 cm',
@@ -206,7 +206,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-156.jpg',
-    description: 'Conçu pour les amateurs de sensations réalistes, ce gode associe une finition anatomique soignée à une double technologie de pointe. Grâce à sa fonction chauffante et à ses vibrations personnalisables, il offre une expérience immersive tout en conservant un format équilibré et facile à prendre en main.',
+    description: 'Profitez d’un équilibre parfait entre dimensions maniables et technologies de pointe avec ce gode chauffant et vibrant. Sa fonction de chauffe procure une tiédeur corporelle très appréciable, tandis que son moteur à vibrations réglables stimule intensément vos zones sensibles. Doté d’une silhouette réaliste aux finitions soignées en silicone doux, il garantit un confort d’utilisation remarquable. La base ventouse intégrée offre par ailleurs la liberté d’une utilisation stable et mains libres.',
     details: [
       'Longueur totale : 16 cm',
       'Diamètre : 4 cm',
@@ -223,7 +223,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-155.jpg',
-    description: 'Conçu pour les amateurs de réalisme, ce modèle associe une finition anatomique soignée à un système permettant de simuler une éjaculation. Son format équilibré, sa texture détaillée et sa base ventouse en font un accessoire pensé pour offrir une expérience immersive.',
+    description: 'Poussez le réalisme de vos jeux intimes encore plus loin grâce à ce gode doté d’un ingénieux système de simulation d’éjaculation. Équipé d’un réservoir interne et d’une pompe discrète, il permet de restituer visuellement les moments de plénitude avec un réalisme saisissant. Sa texture détaillée et sa composition en silicone souple de qualité supérieure assurent un confort d’insertion irréprochable et un toucher agréable. Sa base ventouse assure une excellente stabilité pour profiter pleinement de chaque instant.',
     details: [
       'Longueur totale : 16 cm',
       'Diamètre : 3,5 cm',
@@ -239,7 +239,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-154.jpg',
-    description: 'Conçu pour offrir une expérience complète, ce modèle associe une texture réaliste, des vibrations intégrées et un stimulateur externe. Son design ergonomique permet de combiner plusieurs types de stimulation dans un seul accessoire, tout en conservant un format confortable et facile à utiliser.',
+    description: 'Multipliez les sources de plaisir avec ce modèle pensé pour offrir une double stimulation simultanée, interne et externe. Son corps texturé aux finitions réalistes s’accompagne d’un stimulateur externe flexible pour éveiller toutes vos zones érogènes en un seul geste. Les vibrations réglables permettent d’ajuster l’intensité selon vos envies du moment, tandis que le silicone soyeux garantit une douceur de chaque instant. Muni d’une base ventouse stable, il se fixe aisément pour des moments de détente en toute autonomie.',
     details: [
       'Longueur totale : 18 cm',
       'Diamètre : 4 cm',
@@ -256,7 +256,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-152.jpg',
-    description: 'Conçu pour les amateurs de modèles élégants, ce gode vibrant associe une silhouette élancée, une légère courbure anatomique et des vibrations puissantes. Sa finition violette rehaussée de détails dorés lui confère un design raffiné, tout en offrant une expérience confortable et immersive.',
+    description: 'Alliez raffinement esthétique et performances vibratoires avec ce modèle élancé à la teinte pourpre rehaussée de délicats détails. Sa légère courbure anatomique a été pensée pour cibler précisément les zones sensibles avec un grand confort. Équipé d’un moteur puissant et discret, il propose des modes de vibration variés facilement pilotables depuis sa base ergonomique. Façonné en silicone de haute qualité, il offre un toucher velouté pour des explorations sensorielles tout en douceur.',
     details: [
       'Longueur totale : 22 cm',
       'Diamètre : 3,9 cm',
@@ -272,7 +272,7 @@ const products = [
     category: 'Vibromasseurs',
     price: 25.00,
     image: 'assets/images/products/art-149.jpg',
-    description: 'Conçu pour les amateurs de technologies et de confort, ce gode vibrant associe une silhouette légèrement arquée à un système de vibrations pilotable à distance. Son design bicolore moderne et sa prise en main ergonomique en font un modèle aussi élégant que performant.',
+    description: 'Goûtez au confort du contrôle à distance avec ce gode vibrant à la silhouette subtilement arquée. Conçu pour épouser les lignes naturelles du corps, il associe un design bicolore moderne à des vibrations performantes pilotables via une télécommande sans fil intuitive. Sa prise en main ergonomique et sa matière en silicone souple garantissent une utilisation agréable et intuitive, que vous soyez seul ou à deux. Un accessoire élégant qui facilite le lâcher-prise et renouvelle vos pratiques.',
     details: [
       'Longueur totale : 18 cm',
       'Diamètre : 3,5 cm',
@@ -288,7 +288,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-167.jpg',
-    description: 'Conçu pour les amateurs de modèles généreux, ce gode ventouse associe un design sobre et raffiné à des dimensions confortables. Sa finition noire intense met en valeur ses détails anatomiques et apporte une touche d\'élégance à cette pièce pensée pour les utilisateurs en quête de sensations de volume.',
+    description: 'Affirmez vos préférences avec cette édition spéciale habillée d’un noir ébène profond, conjuguant sobriété visuelle et dimensions généreuses. Ce modèle ventouse met en valeur des détails anatomiques soignés pour offrir une prise en main et un confort d’insertion optimisés. Sa composition en silicone doux de haute qualité assure un contact respectueux de la peau et une excellente durabilité. Compatible avec les harnais et doté d’une base stable, il s’adapte à toutes vos envies de découverte.',
     details: [
       'Longueur totale : 22 cm',
       'Diamètre : 4,5 cm',
@@ -304,7 +304,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-166.jpg',
-    description: 'Conçu pour les amateurs de modèles très généreux, ce gode XXL associe des dimensions imposantes à une finition anatomique soignée. Sa texture réaliste, son silicone premium et sa base ventouse renforcée en font un modèle pensé pour offrir une expérience confortable et immersive.',
+    description: 'Découvrez des sensations de plénitude absolue avec ce gode XXL conçu pour répondre aux attentes des amateurs de grands formats. Sa structure robuste et son réalisme anatomique prononcé procurent un remplissage intense et des sensations profondes. Fabriqué en silicone souple haut de gamme, il intègre une base ventouse renforcée garantissant une stabilité irréprochable lors de vos utilisations mains libres. Une pièce maîtresse alliant dimensions remarquables et confort d’utilisation.',
     details: [
       'Longueur totale : 20 cm',
       'Diamètre : 5,5 cm',
@@ -319,7 +319,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-164.jpg',
-    description: 'Conçu pour les amateurs de réalisme, ce gode ventouse associe une finition anatomique détaillée à un format équilibré. Sa texture travaillée, ses dimensions confortables et son silicone premium en font un modèle idéal pour profiter d\'une expérience naturelle et agréable.',
+    description: 'Appréciez la simplicité et l’efficacité d’un modèle intemporel avec ce gode ventouse au format équilibré. Ses finitions anatomiques détaillées et sa texture soigneusement étudiée procurent un ressenti naturel à chaque utilisation. Conçu en silicone souple de qualité supérieure, il garantit une hygiène irréprochable et un toucher extrêmement doux. Sa base ventouse stable permet de l’utiliser en toute autonomie sur toute surface adaptée, pour des moments de détente privilégiés.',
     details: [
       'Longueur totale : 16 cm',
       'Diamètre : 3,8 cm',
@@ -334,7 +334,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-163.jpg',
-    description: 'Conçu pour les amateurs de réalisme, ce gode ventouse associe une silhouette élancée à une finition anatomique particulièrement soignée. Son format équilibré, sa texture détaillée et son silicone premium en font un modèle idéal pour une expérience naturelle et confortable.',
+    description: 'Laissez-vous charmer par la finesse et le réalisme de ce gode ventouse à la silhouette élancée. Pensé pour offrir une insertion progressive et confortable, il reproduit fidèlement les formes naturelles grâce à un travail minutieux des textures. Sa fabrication en silicone doux procure un contact agréable et respectueux. Équipé d’une base ventouse stable et compatible avec les harnais, il se révèle d’une grande polyvalence pour accompagner toutes vos explorations intimes.',
     details: [
       'Longueur totale : 17 cm',
       'Diamètre : 3,8 cm',
@@ -350,7 +350,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-162.jpg',
-    description: 'Conçu pour les amateurs de modèles compacts, ce gode ventouse privilégie un diamètre généreux afin d\'offrir une sensation de volume dès les premiers instants. Son design réaliste, sa texture soignée et son silicone premium en font un modèle aussi confortable qu\'élégant.',
+    description: 'Conçu pour celles et ceux qui privilégient les formats compacts sans compromis sur la plénitude, ce gode mise sur un diamètre généreux dès les premiers centimètres. Son design réaliste et ses finitions soignées en silicone souple garantissent un confort d’utilisation optimal et une prise en main aisée. Sa base ventouse stable offre une totale liberté de mouvement, tandis que sa compatibilité avec les harnais en fait un accessoire polyvalent pour diversifier vos expériences.',
     details: [
       'Longueur totale : 15 cm',
       'Diamètre : 4,5 cm',
@@ -366,7 +366,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-161.jpg',
-    description: 'Conçu pour les amateurs de réalisme, ce gode ventouse associe une silhouette harmonieuse à des finitions anatomiques particulièrement soignées. Son format polyvalent, sa texture détaillée et son silicone premium en font un modèle idéal pour une expérience naturelle, confortable et immersive.',
+    description: 'Trouvez l’harmonie parfaite entre longueur et largeur avec ce gode ventouse aux proportions minutieusement étudiées. Sa silhouette harmonieuse et ses détails anatomiques réalistes procurent un confort d’insertion naturel et des sensations enveloppantes. Réalisé en silicone de haute qualité au toucher velouté, il assure une hygiène parfaite et un entretien aisé. Sa base stable et sa compatibilité avec les harnais complètent les caractéristiques de ce modèle polyvalent.',
     details: [
       'Longueur totale : 17 cm',
       'Diamètre : 4,1 cm',
@@ -382,7 +382,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-160.jpg',
-    description: 'Conçu pour les amateurs de réalisme, ce gode ventouse associe des proportions harmonieuses à une finition anatomique soignée. Son diamètre équilibré, sa texture détaillée et son silicone premium en font un modèle idéal pour une expérience naturelle et confortable.',
+    description: 'Adapté à une multitude d’envies, ce gode ventouse se distingue par son diamètre équilibré et ses finitions anatomiques d’un grand réalisme. Sa texture travaillée épouse idéalement les courbes pour des sensations authentiques et un confort permanent. Confectionné en silicone souple haut de gamme, il garantit douceur et sécurité lors de chaque utilisation. Sa base ventouse solide permet une fixation aisée, vous offrant des moments de détente en toute sérénité.',
     details: [
       'Longueur totale : 17 cm',
       'Diamètre : 4,2 cm',
@@ -397,7 +397,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-157.jpg',
-    description: 'Conçu pour les amateurs de modèles réalistes, ce gode ventouse associe un format confortable à une finition anatomique particulièrement soignée. Sa texture détaillée, son silicone premium et son diamètre équilibré en font un modèle idéal pour une utilisation régulière.',
+    description: 'Appréciez la fiabilité et la discrétion de ce gode ventouse pensé pour un usage régulier et confortable. Son format intermédiaire et ses détails anatomiques soignés assurent une prise en main intuitive et un plaisir naturel. Fabriqué en silicone souple hypoallergénique, il offre un toucher extrêmement doux et respectueux de la peau. Compatible avec les harnais et doté d’une base stable, il s’intègre parfaitement à toutes vos routines de bien-être.',
     details: [
       'Longueur totale : 16 cm',
       'Diamètre : 3,8 cm',
@@ -413,7 +413,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-146.jpg',
-    description: 'Conçu pour les amateurs de modèles généreux, ce gode ventouse associe un grand format à une finition anatomique particulièrement soignée. Sa texture réaliste, son silicone premium et sa base ventouse en font un modèle pensé pour offrir confort, stabilité et une expérience immersive.',
+    description: 'Explorez des sensations d’envergure avec ce gode ventouse XXL qui associe un grand format à un design anatomique particulièrement réaliste. Ses dimensions généreuses et sa texture travaillée procurent un remplissage profond et satisfaisant. Conçu en silicone souple de qualité supérieure, il allie solidité, confort et douceur au toucher. Sa base ventouse stable et sa compatibilité avec les harnais vous offrent une totale liberté pour varier les plaisirs selon vos envies.',
     details: [
       'Longueur totale : 23 cm',
       'Diamètre : 4,8 cm',
@@ -429,7 +429,7 @@ const products = [
     category: 'Gode',
     price: 25.00,
     image: 'assets/images/products/art-143.jpg',
-    description: 'Un format réaliste et polyvalent en silicone premium, avec base ventouse stable et compatibilité harnais.',
+    description: 'Faites le choix de la polyvalence avec ce gode ventouse aux lignes réalistes et épurées. Conçu en silicone premium doux au toucher, il offre un confort d’insertion optimal et une excellente flexibilité d’utilisation. Sa base ventouse stable permet de profiter d’une utilisation mains libres en toute simplicité, tandis que sa compatibilité avec les harnais élargit vos possibilités de jeux. Un incontournable de qualité pour vos moments d’intimité.',
     details: [
       'Longueur totale : 20 cm',
       'Diamètre : 3,8 cm',
