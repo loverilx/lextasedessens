@@ -887,3 +887,12 @@ renderFeatured();
 renderShop();
 renderProduct();
 renderCart();
+
+// V4.6 reveal animation
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('section,.card,.product-card').forEach(e=>e.classList.add('reveal'));
+ const io=new IntersectionObserver(entries=>{
+   entries.forEach(en=>{if(en.isIntersecting) en.target.classList.add('is-visible');});
+ },{threshold:.15});
+ document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+});
