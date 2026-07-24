@@ -108,3 +108,16 @@ background:linear-gradient(90deg,#f7dde6,#f9f2ea)!important;
 .shop-content{padding-top:10px!important}
 
 .shop-hero h1{font-size:clamp(36px,4vw,58px)!important}.shop-shortcuts{margin:8px 0}.shop-toolbar{margin-top:0}
+
+/* V6 étape1 override */
+.shop-hero{
+padding:18px 0 10px !important;
+min-height:auto !important;
+}
+.shop-hero .container{padding:0 !important;}
+.shop-hero h1{margin:0 0 8px !important;font-size:2.1rem!important;}
+.shop-hero p{margin:0!important;}
+.shop-shortcuts{margin:10px 0!important;padding:8px 0!important;}
+.shop-toolbar{margin:10px 0!important;padding:10px!important;position:sticky;top:70px;background:#fff;z-index:10;}
+.shop-content{padding-top:0!important;margin-top:0!important;}
+.shop-product-grid{margin-top:10px!important;}
