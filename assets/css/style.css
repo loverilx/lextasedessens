@@ -76,3 +76,5 @@ border-radius:18px;
 
 .v52-premium{padding:5rem 1rem;background:linear-gradient(180deg,#fff,#f6f0f8);text-align:center}.v52-premium h2{font-size:2.2rem;margin-bottom:1rem}.v52-premium p{max-width:760px;margin:0 auto 2rem;color:#555}.v52-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}.v52-premium .btn{border-radius:999px;padding:.9rem 1.6rem;transition:.3s}.v52-premium .btn:hover{transform:translateY(-2px)}
 .reveal{opacity:0;transform:translateY(24px);transition:.6s}.reveal.visible{opacity:1;transform:none}
+
+.v5-showcase{padding:80px 20px;background:linear-gradient(180deg,#fff,#f7f2f7);text-align:center}.v5-showcase h2{font-size:2.2rem;margin-bottom:10px}.v5-showcase p{max-width:700px;margin:0 auto 25px;color:#555}.v5-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}

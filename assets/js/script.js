@@ -902,3 +902,4 @@ console.log('L\'Extase des Sens V5 loaded');
 
 // V5.2 reveal
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.15});document.querySelectorAll('section').forEach(s=>{s.classList.add('reveal');obs.observe(s);});
+console.log('V5.2 loaded');
