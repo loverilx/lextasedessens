@@ -121,3 +121,15 @@ min-height:auto !important;
 .shop-toolbar{margin:10px 0!important;padding:10px!important;position:sticky;top:70px;background:#fff;z-index:10;}
 .shop-content{padding-top:0!important;margin-top:0!important;}
 .shop-product-grid{margin-top:10px!important;}
+
+
+/* V6 FINAL OVERRIDE */
+.shop-hero{padding:20px 0 10px!important;min-height:auto!important}
+.shop-hero .container{margin-bottom:10px!important}
+.shop-hero h1{margin:.2rem 0!important;font-size:2.2rem!important}
+.shop-hero p{margin:.2rem 0!important}
+.shop-shortcuts{padding:6px 0!important;margin:0!important}
+.shop-content{padding-top:0!important;margin-top:0!important}
+.shop-toolbar{position:sticky;top:72px;z-index:20;background:#fff;padding:10px 0;margin:0 0 10px!important}
+.shop-product-grid{margin-top:0!important;padding-top:0!important}
+#products{scroll-margin-top:80px}
