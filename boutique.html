@@ -14,8 +14,6 @@
 .site-header .site-nav a,.site-header .site-nav__link,.site-header a{color:#2d2230!important;}
 .site-header .cart-pill,.site-header [class*="cart"]{color:#2d2230!important;border-color:#2d2230!important;}
 </style>
-
-
 <style>
 .shop-hero{padding:20px 0 10px!important;min-height:auto!important}
 .shop-hero h1{margin:0 0 8px!important;font-size:2rem!important}
@@ -25,8 +23,16 @@
 .shop-toolbar{position:sticky;top:70px;z-index:10;background:#fff;padding:10px 0;margin:0 0 15px!important}
 .shop-product-grid{margin-top:0!important}
 </style>
-
-</head>
+<style>
+/* V6 étape 3 */
+.shop-hero{padding:18px 0 10px!important;min-height:auto!important}
+.shop-hero h1{margin:0 0 .3rem!important;font-size:2rem!important}
+.shop-hero p{margin:0!important}
+.shop-shortcuts{margin:8px 0!important;padding:8px 0!important}
+.shop-toolbar{position:sticky;top:70px;background:#fff;z-index:100;padding:10px 0!important;margin:0!important}
+.shop-content{padding-top:0!important;margin-top:0!important}
+.shop-product-grid{margin-top:0!important}
+</style></head>
 <body>
 <header class="site-header" data-header="">
 <div class="container header-inner">
@@ -51,13 +57,13 @@
 <h1>Le plaisir commence ici.</h1>
 <p>Explorez notre sélection et trouvez l’accessoire qui accompagnera vos envies.</p>
 </div>
-</section>
+<a class="btn btn-primary" href="#products">Voir immédiatement les produits ↓</a></section>
 <section class="shop-shortcuts"><div class="container"><div class="filter-list">
 <a class="filter-button" href="#products">🔥 Meilleures ventes</a>
 <a class="filter-button" href="#products">✨ Nouveautés</a>
 <a class="filter-button" href="#products">💜 Promotions</a>
 </div></div></section>
-<section id="products" class="shop-content">
+<section class="shop-content" id="products">
 <div class="container">
 <div class="shop-toolbar">
 <label class="search-box">
